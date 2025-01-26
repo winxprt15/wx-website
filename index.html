@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=0.570">
+<title>WinXprt Page</title>
+<style>
+body {
+background-color: rgb(35, 35, 35);
+color: whitesmoke;
+font-family: Verdana;
+margin: 0;
+overflow-x: hidden;
+}
+.header {
+margin-top: -2vh;
+background: linear-gradient(75deg, blue, green, rgb(0, 205, 50));
+margin: 0;
+height: 2.6em;
+position: fixed;
+width: 100%;
+}
+.parent-div {
+display: flex;
+box-sizing: border-box;
+}
+.side-div {
+width: 16%;
+height: 16vh;
+position: fixed;
+}
+.side-div ul li:hover {
+list-style-type: "=>";
+}
+.a-links:hover {
+padding: 2px;
+border-radius: 100px;
+background-color: yellow;
+}
+.a-links {
+font-weight: 650;
+text-align: center;
+display: block;
+width: 100%;
+color: rgb(0, 0, 100);
+font-size: 10pt;
+}
+.main-div {
+width: 96vw;
+height: 200vh;
+background: linear-gradient(90deg, rgba(0, 15, 80, 0.5), rgba(0, 55, 100, 0.75));
+padding: 0;
+margin-top: -15px;
+padding-top: 15px;
+box-sizing: border-box;
+}
+.main-div div {
+height: 200vh;
+}
+.iframe1 {
+display: block;
+}
+.iframe2 {
+display: block;
+}
+.play-pause-btn:hover, .stop-btn:hover {
+cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+.iframe1 {
+transform: scale(70%);
+}
+}
+@media screen and (max-width: 707px) {
+body {
+overflow-x: hidden;
+}
+.iframe1 {
+transform: scale(80%);
+}
+}
+@media screen and (max-width: 501px) {
+.main-div {padding: 0;}
+}
+@media screen and (max-width: 944px) {
+.side-div {width: 150px;}
+}
+@media screen and (max-width: 412px) {
+.iframe1 {transform: scale(100%);}
+}
+@media screen and (max-width: 450px) {
+.main-div {height: 100%;}
+}
+@keyframes fade-in-out {
+0% {opacity: 1;}
+50% {opacity: 0.5;}
+100% {opacity: 1;}
+}
+</style>
+</head>
+<body>
+<center>
+<div class="header">
+<h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>
+</div>
+</center>
+<br><br>
+<audio class="audio" loop src="Life in Technicolor ii.mp3"></audio>
+<img style="position: fixed; z-index: -1; transform: rotate(10deg); margin-top: 30vh; margin-left: 5vw;" width="175" src="media-player.PNG"/>
+<img class="play-pause-btn" title="Play music" style="display: block; position: fixed; margin-top: 38vh; margin-left: 89vw;" width="75" src="play-xxl.png" onclick="PlayPause();"/>
+<img class="stop-btn" title="Stop music" style="display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw;" width="75" src="stop-xxl.png" onclick="StopAudio();"/>
+<div class="parent-div">
+<div class="side-div">
+<div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));">
+<h2 style="margin-bottom: -0.5em; padding-left: 1em;">Links</h2>
+<ul style="list-style-type: '=&rArr; ';">
+<li><a class="a-links" href="https://instagram.com/winxprt/" target="_blank">Instagram</a></li>
+<li><a class="a-links" href="https://youtube.com/@winxprt/" target="_blank">YouTube</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="main-div">
+<div>
+<center>
+<h3>Welcome to my website!</h3>
+<span>Hello World!</span>
+<fieldset style="border-radius: 25px; border-color: blue; width: 95%;">
+<legend style="background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 30vw;">Page Settings</legend>
+<span>Choose theme: </span>
+<input style="display: inline-block;" name="sett-green-blue" id="sett1" type="radio" onclick="BlueTheme();"/><label style="display: inline;" for="sett1" onclick="BlueTheme();">Blue</label>
+<input style="display: inline;" name="sett-green-blue" id="sett2" type="radio" onclick="GreenTheme();"/><label for="sett2" onclick="GreenTheme();">Green</label>
+</fieldset>
+<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Tuesday 21/1/2025&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<hr class="hr1" style="border-color: lime;">
+<h2 style="display: inline-block;">Upgrading Windows ME until it freezes&nbsp;</h2><h4 style="display: inline-block;">GREEK</h4>
+<br><span style="display: block; margin: 0; padding-left: 105px; padding-right: 105px;">The ultimate experiment! It wasn't until 19th of April 2023 when I tried to install Windows ME and upgrade it without changing any hardware settings until I barely could install Windows 8.1 (I had all my ISOs in Greek language back then)</span>
+<p style="display: block;"><iframe class="iframe1" src="https://www.youtube.com/embed/07kkCVbjY7E?hl=en-us&rel=0&mute=1&autoplay=0" width="560" height="315" title="Upgrading Windows ME until it crashes GREEK" frameborder="0" allowfullscreen></iframe></p>
+</center>
+<hr class="hr2" style="border-color: lightblue;">
+<center>
+<h2>Easter eggs of old Windows versions</h2>
+<br>
+<p><iframe class="iframe1" src="https://www.youtube-nocookie.com/embed/SFmRsIMJ0aE?rel=0&color=white&disablekb=1&mute=1&autoplay=0" width="560" height="315" title="Easter Eggs of old Windows OSes" frameborder="0" allowfullscreen></iframe></p>
+</center>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
