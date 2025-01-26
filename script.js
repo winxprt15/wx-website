@@ -1,5 +1,5 @@
 function PlayPause() {
-if (document.querySelector(".audio").paused) {
+if (document.querySelector("audio").paused) {
 document.querySelector("audio").play();
 document.querySelector(".play-pause-btn").src = 'pause-xxl.png'
 document.querySelector(".play-pause-btn").style = "position: fixed; margin-top: 38vh; margin-left: 89vw; animation: fade-in-out 2.5s linear infinite;";
