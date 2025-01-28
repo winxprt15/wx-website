@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=0.570">
-<title>WinXprt Page</title>
+<title>WinXprt Page (My Projects)</title>
 <style>
 body {
 background-color: rgb(35, 35, 35);
@@ -95,6 +95,35 @@ transform: scale(80%);
 50% {opacity: 0.5;}
 100% {opacity: 1;}
 }
+/* Projects page changes */
+fieldset {
+display: none;
+}
+@media screen and (max-width: 870px) {
+.hr1 {margin-bottom: 120px;}
+.control10v4-image, .newtabhtml-image {transform: scale(105%);}
+}
+@media screen and (min-width: 1700px) {
+.section-desc {font-size: 16pt;}
+.control10v4-image, .newtabhtml-image {transform: scale(105%);}
+}
+@media screen and (max-width: 1230px) {
+.control10v4-image, .newtabhtml-image {transform: scale(85%);}
+.main-div {height: 222vh;}
+}
+@media screen and (max-width: 1397px) {
+.main-div {height: 200vh;}
+}
+@media screen and (max-width: 1536px) {
+.main-div {height: 180vh;}
+}
+@media screen and (max-width: 1707px) {
+.main-div {height: 170vh;}
+}
+.hr1 {transition: margin-bottom 1s ease;}
+.side-div {z-index: 5;}
+.header {z-index: 5;}
+.section-desc {display: block; width: 74%; transition: font-size 1s ease;}
 </style>
 </head>
 <body>
@@ -107,8 +136,8 @@ transform: scale(80%);
 <audio class="audio" loop src="Life in Technicolor ii.mp3"></audio>
 <img style="position: fixed; z-index: -1; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw;" width="175" src="media-player.PNG"/>
 <img style="position: fixed; z-index: -1; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw;" width="465" src="code-notepad.PNG"/>
-<img class="play-pause-btn" title="Play music" style="display: block; position: fixed; margin-top: 38vh; margin-left: 89vw;" width="75" src="play-xxl.png" onclick="PlayPause();"/>
-<img class="stop-btn" title="Stop music" style="display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw;" width="75" src="stop-xxl.png" onclick="StopAudio();"/>
+<img class="play-pause-btn" title="Play music" style="display: block; position: fixed; margin-top: 38vh; margin-left: 89vw; z-index: 5;" width="75" src="play-xxl.png" onclick="PlayPause();"/>
+<img class="stop-btn" title="Stop music" style="display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw; z-index: 5;" width="75" src="stop-xxl.png" onclick="StopAudio();"/>
 <div class="parent-div">
 <div class="side-div">
 <div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));">
@@ -118,17 +147,16 @@ transform: scale(80%);
 <li><a class="a-links" href="https://youtube.com/@winxprt/" target="_blank">YouTube</a></li>
 <hr>
 <h3 style="display: block; margin-top: 0; margin-bottom: 6px;">Other pages: </h3>
-<li><a class="a-links" href="projects.html">Projects by me</a></li>
-<li style="cursor: not-allowed;"><s class="a-links" onclick="IdiotQuiz();">Home page</s></li>
+<li><a class="a-links" href="index.html">Home page</a></li>
+<li style="cursor: not-allowed;"><s class="a-links" onclick="IdiotQuiz();">Projects by me</s></li>
 </ul>
 </div>
 </div>
 </div>
 <div class="main-div">
-<div>
 <center>
-<h3>Welcome to my website!</h3>
-<span style="margin-bottom: 10px; display: block;">Hello World!</span>
+<h4>Welcome to the projects site!</h4>
+<span style="margin-bottom: 5px; margin-top: -5px; display: block; padding-left: 150px; padding-right: 150px;">Have a look on some of the projects I've made since the last years!</span>
 <fieldset style="border-radius: 25px; border-color: blue; width: 95%;">
 <legend style="z-index: -1; background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 30vw;">Page Settings</legend>
 <span>Choose theme: </span>
@@ -136,21 +164,16 @@ transform: scale(80%);
 <input style="display: inline;" name="sett-green-blue" id="sett2" type="radio" onclick="GreenTheme();"/><label for="sett2" onclick="GreenTheme();">Green</label>
 <button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button>
 </fieldset>
-<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Tuesday 21/1/2025&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Tuesday 28/1/2025&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <hr class="hr1" style="border-color: lime;">
-<h2 style="display: inline-block;">Upgrading Windows ME until it freezes&nbsp;</h2><h4 style="display: inline-block;">GREEK</h4>
-<br><span style="display: block; margin: 0; padding-left: 105px; padding-right: 105px;">The ultimate experiment! It wasn't until 19th of April 2023 when I tried to install Windows ME and upgrade it without changing any hardware settings until I barely could install Windows 8.1 (I had all my ISOs in Greek language back then)</span>
-<p style="display: block;"><iframe class="iframe1" src="https://www.youtube.com/embed/07kkCVbjY7E?hl=en-us&rel=0&mute=1&autoplay=0&color=white&disablekb=1" width="560" height="315" title="Upgrading Windows ME until it crashes GREEK" frameborder="0" allowfullscreen></iframe></p>
-</center>
+<h2>The ultimate settings tool just from batch!</h2>
+<p class="section-desc">This project is the one that took me the most time to make! With this batch script you can change system settings, customize appearance (+ Access to 'hidden' settings), change date/time and region settings and even more!</p>
+<a href="control10v4.PNG" target="_blank"><img class="control10v4-image" style="transition: transform ease 1s; z-index: -3;" src="control10v4.PNG" width="725" title="Screenshot of the batch script. Click/Tap to view on new tab!"/></a>
 <hr class="hr2" style="border-color: lightblue;">
-<center>
-<h2>Easter eggs of old Windows versions</h2>
-<span style="display: block; padding-left: 105px; padding-right: 105px;">On the video above I have showed easter eggs of old Windows OSes. It would be quite ironical not knowing the existence of these back in the days when XP came out.
-But it wasn't until 2001 when Microsoft had decided to remove these easter eggs and never put them again.
-</span>
-<p><iframe class="iframe1" src="https://www.youtube-nocookie.com/embed/SFmRsIMJ0aE?hl=en-us&rel=0&color=white&disablekb=1&mute=1&autoplay=0" width="560" height="315" title="Easter Eggs of old Windows OSes" frameborder="0" allowfullscreen></iframe></p>
+<h2>The NewTab HTML project</h2>
+<p class="section-desc">The best way to start browing the web just from an HTML! This HTML page has the ability to search on the web for you and even pick between Google's search engine or Bing's search engine. You also have the ability to go to any pages you want just by typing the FULL URL ADDRESS</p>
+<a href="NewTabHTMLStartup.PNG" target="_blank"><img class="newtabhtml-image" style="transition: transform 1s ease; z-index: -3;" src="NewTabHTMLStartup.PNG" width="725" title="Image of the NewTab startup. Click/Tap to view on new tab"/></a>
 </center>
-</div>
 </div>
 </div>
 <script src="script.js"></script>
