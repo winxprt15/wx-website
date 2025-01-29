@@ -22,16 +22,16 @@ document.querySelector(".stop-btn").style = "position: fixed; margin-top: 50.5vh
 }
 let ThemeForWxSite;
 function BlueTheme() {
-document.querySelector(".main-div").style = "width: 100vw; height: 200vh; background: linear-gradient(90deg, rgba(0, 15, 80, 0.5), rgba(0, 55, 100, 0.75)); padding: 0; margin-top: -15px; padding-top: 15px; box-sizing: border-box;";
+document.body.style = "background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));";
 document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));";
 document.querySelector(".hr1").style = "border-color: lime;";
 document.querySelector(".hr2").style = "border-color: lightblue;";
-document.querySelector("fieldset").style = "border-radius: 25px; border-color: blue; width: 95%;"
+document.querySelector("fieldset").style = "border-radius: 25px; border-color: blue; width: 95%;";
 localStorage.setItem('themeforwxsite', 'blue');
 document.getElementById('sett1').checked = ' ';
 }
 function GreenTheme() {
-document.querySelector(".main-div").style = "width: 100vw; height: 200vh; background: linear-gradient(90deg, rgba(0, 80, 15, 0.5), rgba(0, 100, 55, 0.75)); padding: 0; margin-top: -15px; padding-top: 15px; box-sizing: border-box;";
+document.body.style = "background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55));";
 document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, green, rgba(0, 175, 40, 0.7));";
 document.querySelector(".hr1").style = "border-color: lightblue;";
 document.querySelector(".hr2").style = "border-color: lime;";
