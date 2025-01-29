@@ -5,7 +5,7 @@
 <title>WinXprt Page (My Projects)</title>
 <style>
 body {
-background-color: rgb(35, 35, 35);
+background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));
 color: whitesmoke;
 font-family: Verdana;
 margin: 0;
@@ -46,15 +46,10 @@ font-size: 10pt;
 }
 .main-div {
 width: 100vw;
-height: 200vh;
-background: linear-gradient(90deg, rgba(0, 15, 80, 0.5), rgba(0, 55, 100, 0.75));
 padding: 0;
 margin-top: -15px;
 padding-top: 15px;
 box-sizing: border-box;
-}
-.main-div div {
-height: 200vh;
 }
 .iframe1 {
 display: block;
@@ -87,9 +82,6 @@ transform: scale(80%);
 @media screen and (max-width: 412px) {
 .iframe1 {transform: scale(100%);}
 }
-@media screen and (max-width: 450px) {
-.main-div {height: 100%;}
-}
 @keyframes fade-in-out {
 0% {opacity: 1;}
 50% {opacity: 0.5;}
@@ -99,8 +91,8 @@ transform: scale(80%);
 fieldset {
 display: none;
 }
-@media screen and (max-width: 870px) {
-.hr1 {margin-bottom: 120px;}
+@media screen and (max-width: 935px) {
+.hr1 {margin-bottom: 75px;}
 .control10v4-image, .newtabhtml-image {transform: scale(105%);}
 }
 @media screen and (min-width: 1700px) {
@@ -109,16 +101,6 @@ display: none;
 }
 @media screen and (max-width: 1230px) {
 .control10v4-image, .newtabhtml-image {transform: scale(88%);}
-.main-div {height: 222vh;}
-}
-@media screen and (max-width: 1397px) {
-.main-div {height: 200vh;}
-}
-@media screen and (max-width: 1536px) {
-.main-div {height: 180vh;}
-}
-@media screen and (max-width: 1707px) {
-.main-div {height: 170vh;}
 }
 @media screen and (max-width: 415px) {
 .control10v4-image, .newtabhtml-image {transform: scale(45%);}
@@ -146,10 +128,10 @@ display: none;
 </center>
 <br><br>
 <audio class="audio" loop src="Life in Technicolor ii.mp3"></audio>
-<img style="position: fixed; z-index: -1; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw;" width="175" src="media-player.PNG"/>
-<img style="position: fixed; z-index: -1; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw;" width="465" src="Code-Notepad.PNG"/>
-<img class="play-pause-btn" title="Play music" style="display: block; position: fixed; margin-top: 38vh; margin-left: 89vw; z-index: 10;" width="75" src="play-xxl.png" onclick="PlayPause();"/>
-<img class="stop-btn" title="Stop music" style="display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw; z-index: 10;" width="75" src="stop-xxl.png" onclick="StopAudio();"/>
+<img style="position: fixed; z-index: -1; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG"/>
+<img style="position: fixed; z-index: -1; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG"/>
+<img class="play-pause-btn" title="Play music" style="display: block; position: fixed; margin-top: 38vh; margin-left: 89vw; z-index: 15;" width="75" src="play-xxl.png" onclick="PlayPause();"/>
+<img class="stop-btn" title="Stop music" style="display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw; z-index: 15;" width="75" src="stop-xxl.png" onclick="StopAudio();"/>
 <div class="parent-div">
 <div class="side-div">
 <div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));">
@@ -180,11 +162,11 @@ display: none;
 <hr class="hr1" style="border-color: lime;">
 <h2>The ultimate settings tool just from batch!</h2>
 <p class="section-desc">This project is the one that took me the most time to make! With this batch script you can change system settings, customize appearance (+ Access to 'hidden' settings), change date/time and region settings and even more!</p>
-<img class="control10v4-image" style="transition: transform ease 1s; z-index: -5;" src="Control10V4.PNG" width="600" title="Screenshot of the batch script"/>
+<a target="_blank" href="Control10V4.PNG"><img class="control10v4-image" style="transition: transform ease 1s; z-index: 1;" src="Control10V4.PNG" width="600" title="Screenshot of the batch script. Click to view on new tab"/></a>
 <hr class="hr2" style="border-color: lightblue;">
 <h2>The NewTab HTML project</h2>
 <p class="section-desc">The best way to start browing the web just from an HTML! This HTML page has the ability to search on the web for you and even pick between Google's search engine or Bing's search engine. You also have the ability to go to any pages you want just by typing the FULL URL ADDRESS</p>
-<img class="newtabhtml-image" style="transition: transform 1s ease; z-index: -5;" src="NewTabHTMLStartup.PNG" width="600" title="Screenshot of the NewTab startup"/>
+<a href="NewTabHTMLStartup.PNG" target="_blank"><img class="newtabhtml-image" style="transition: transform 1s ease; z-index: 1; margin-bottom: 40px;" src="NewTabHTMLStartup.PNG" width="600" title="Screenshot of the NewTab startup. Click to view on new tab"/></a>
 </center>
 </div>
 </div>
