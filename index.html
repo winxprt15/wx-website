@@ -5,7 +5,7 @@
 <title>WinXprt Page</title>
 <style>
 body {
-background-color: rgb(35, 35, 35);
+background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));
 color: whitesmoke;
 font-family: Verdana;
 margin: 0;
@@ -46,8 +46,6 @@ font-size: 10pt;
 }
 .main-div {
 width: 100vw;
-height: 200vh;
-background: linear-gradient(90deg, rgba(0, 15, 80, 0.5), rgba(0, 55, 100, 0.75));
 padding: 0;
 margin-top: -15px;
 padding-top: 15px;
@@ -87,18 +85,19 @@ transform: scale(80%);
 @media screen and (max-width: 412px) {
 .iframe1 {transform: scale(100%);}
 }
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
 .main-div {height: 100%;}
-}
+} */
 @keyframes fade-in-out {
 0% {opacity: 1;}
 50% {opacity: 0.5;}
 100% {opacity: 1;}
 }
-/* Changes after projects.html created */
+
 @media screen and (min-width: 1700px) {
 .section-desc {font-size: 16pt;}
 }
+/*
 @media screen and (max-width: 1230px) {
 .main-div {height: 206vh;}
 }
@@ -111,6 +110,7 @@ transform: scale(80%);
 @media screen and (max-width: 1707px) {
 .main-div {height: 170vh;}
 }
+*/
 .hr1 {transition: margin-bottom 1s ease;}
 .side-div {z-index: 5;}
 .header {z-index: 5;}
@@ -124,8 +124,8 @@ transform: scale(80%);
 </center>
 <br><br>
 <audio class="audio" loop src="Life in Technicolor ii.mp3"></audio>
-<img style="position: fixed; z-index: -1; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw;" width="175" src="media-player.PNG"/>
-<img style="position: fixed; z-index: -1; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw;" width="465" src="Code-Notepad.PNG"/>
+<img style="position: fixed; z-index: -10; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG"/>
+<img style="position: fixed; z-index: -10; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw; opacity: 0.5;" width="465" src="code-notepad.PNG"/>
 <img class="play-pause-btn" title="Play music" style="display: block; position: fixed; margin-top: 38vh; margin-left: 89vw;" width="75" src="play-xxl.png" onclick="PlayPause();"/>
 <img class="stop-btn" title="Stop music" style="display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw;" width="75" src="stop-xxl.png" onclick="StopAudio();"/>
 <div class="parent-div">
