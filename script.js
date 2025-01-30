@@ -28,7 +28,7 @@ document.querySelector(".hr1").style = "border-color: lime;";
 document.querySelector(".hr2").style = "border-color: lightblue;";
 document.querySelector("fieldset").style = "border-radius: 25px; border-color: blue; width: 95%;";
 localStorage.setItem('themeforwxsite', 'blue');
-document.getElementById('sett1').checked = ' ';
+document.getElementById('sett1').checked = true;
 }
 function GreenTheme() {
 document.body.style = "background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55));";
@@ -37,7 +37,7 @@ document.querySelector(".hr1").style = "border-color: lightblue;";
 document.querySelector(".hr2").style = "border-color: lime;";
 document.querySelector("fieldset").style = "border-radius: 25px; border-color: green; width: 95%;"
 localStorage.setItem('themeforwxsite', 'green');
-document.getElementById('sett2').checked = ' ';
+document.getElementById('sett2').checked = true;
 }
 if (localStorage.getItem('themeforwxsite') == 'green') {
 document.body.style = "background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55));";
@@ -46,14 +46,14 @@ document.querySelector(".hr1").style = "border-color: lightblue;";
 document.querySelector(".hr2").style = "border-color: lime;";
 document.querySelector("fieldset").style = "border-radius: 25px; border-color: green; width: 95%;"
 localStorage.setItem('themeforwxsite', 'green');
-document.getElementById('sett2').checked = ' ';
+document.getElementById('sett2').checked = true;
 } else {
 document.body.style = "background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));";
 document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));";
 document.querySelector(".hr1").style = "border-color: lime;";
 document.querySelector(".hr2").style = "border-color: lightblue;";
 document.querySelector("fieldset").style = "border-radius: 25px; border-color: blue; width: 95%;";
-document.getElementById('sett1').checked = ' ';
+document.getElementById('sett1').checked = true;
 }
 function IdiotQuiz() {
 let IdiotTest = window.prompt(`Idiot Test!! \nType below the answer of the following question: \nIf X=3 and Y=1 then solve this: 2x+3y=??`);
@@ -70,4 +70,21 @@ document.write(`
 </center>
 `)
 }
+}
+function YtIframeCookies(value) {
+if (value == '0') {
+document.querySelector('.iframe1').src="https://www.youtube-nocookie.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;mute=1&amp;autoplay=0&amp;color=white&amp;disablekb=1";
+document.querySelector('.iframe2').src="https://www.youtube-nocookie.com/embed/SFmRsIMJ0aE?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
+localStorage.setItem('ytcookiesforwxsite', '0');
+} else if (value == '1') {
+document.querySelector('.iframe1').src="https://www.youtube.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;mute=1&amp;autoplay=0&amp;color=white&amp;disablekb=1";
+document.querySelector('.iframe2').src="https://www.youtube.com/embed/SFmRsIMJ0aE?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
+localStorage.setItem('ytcookiesforwxsite', '1');
+}
+}
+YtIframeCookies(localStorage.getItem('ytcookiesforwxsite'));
+if (localStorage.getItem('ytcookiesforwxsite') == '0') {
+document.getElementById('sett4').checked = true;
+} else {
+document.getElementById('sett3').checked = true;
 }
