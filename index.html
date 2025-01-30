@@ -128,6 +128,10 @@ transform: scale(80%);
 <span>Choose theme: </span>
 <input checked="" style="display: inline-block;" name="sett-green-blue" id="sett1" type="radio" onclick="BlueTheme();"><label style="display: inline;" for="sett1" onclick="BlueTheme();">Blue</label>
 <input style="display: inline;" name="sett-green-blue" id="sett2" type="radio" onclick="GreenTheme();"><label for="sett2" onclick="GreenTheme();">Green</label>
+<br>
+<span>Allow cookies on YouTube Embed Videos?</span>
+<input checked style="display: inline-block;" name="sett-yt-cookies" id="sett3" type="radio" onclick="YtIframeCookies('1');" title="Allow cookies on YouTube Embed Videos. This will allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through allowing you to save the video to watch later on your current account without being redirected to YouTube's site."><label style="display: inline;" for="sett3" onclick="YtIframeCookies('0');" title="Allow cookies on YouTube Embed Videos. This will allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through allowing you to save the video to watch later on your current account without being redirected to YouTube's site.">Consent to cookies</label>
+<input style="display: inline;" name="sett-yt-cookies" id="sett4" type="radio" onclick="YtIframeCookies('0');" title="Do not allow cookies on YouTube Embed Videos. This will not allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through."><label for="sett4" onclick="YtIframeCookies('1');" title="Do not allow cookies on YouTube Embed Videos. This will not allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through.">Do not consent to cookies</label>
 <button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button>
 </fieldset>
 <span style="font-size: 11pt; display: inline-block; width: 100%; text-align: right;">Last update: Tuesday 21/1/2025&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -142,7 +146,7 @@ transform: scale(80%);
 <span style="display: inline-block; padding-left: 12%; padding-right: 12%;" class="section-desc">On the video above I have showed easter eggs of old Windows OSes. It would be quite ironical not knowing the existence of these back in the days when XP came out.
 But it wasn't until 2001 when Microsoft had decided to remove these easter eggs and never put them again.
 </span>
-<p><iframe class="iframe2" src="https://www.youtube-nocookie.com/embed/SFmRsIMJ0aE?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0" width="560" height="315" title="Easter Eggs of old Windows OSes" frameborder="0" allowfullscreen=""></iframe></p>
+<p><iframe class="iframe2" src="https://www.youtube.com/embed/SFmRsIMJ0aE?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0" width="560" height="315" title="Easter Eggs of old Windows OSes" frameborder="0" allowfullscreen=""></iframe></p>
 </center>
 </div>
 <script src="script.js"></script>
