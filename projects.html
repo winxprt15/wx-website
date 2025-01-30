@@ -18,15 +18,13 @@ margin: 0;
 height: 2.6em;
 position: fixed;
 width: 100%;
-}
-.parent-div {
-display: flex;
-box-sizing: border-box;
+top: 0;
 }
 .side-div {
 width: 16%;
 height: 16vh;
 position: fixed;
+top: 40px;
 }
 .side-div ul li:hover {
 list-style-type: "=>";
@@ -47,30 +45,15 @@ font-size: 10pt;
 .main-div {
 width: 100vw;
 padding: 0;
-margin-top: -15px;
-padding-top: 15px;
+padding-top: 35px;
 box-sizing: border-box;
-}
-.iframe1 {
-display: block;
-}
-.iframe2 {
-display: block;
 }
 .play-pause-btn:hover, .stop-btn:hover {
 cursor: pointer;
 }
-@media screen and (max-width: 500px) {
-.iframe1 {
-transform: scale(70%);
-}
-}
 @media screen and (max-width: 707px) {
 body {
 overflow-x: hidden;
-}
-.iframe1 {
-transform: scale(80%);
 }
 }
 @media screen and (max-width: 501px) {
@@ -78,9 +61,6 @@ transform: scale(80%);
 }
 @media screen and (max-width: 944px) {
 .side-div {width: 150px;}
-}
-@media screen and (max-width: 412px) {
-.iframe1 {transform: scale(100%);}
 }
 @keyframes fade-in-out {
 0% {opacity: 1;}
@@ -92,11 +72,11 @@ fieldset {
 display: none;
 }
 @media screen and (max-width: 935px) {
-.hr1 {margin-bottom: 75px;}
+.hr1 {margin-bottom: 120px;}
 .control10v4-image, .newtabhtml-image {transform: scale(105%);}
 }
 @media screen and (min-width: 1700px) {
-.section-desc {font-size: 16pt;}
+.section-desc {font-size: 16pt; margin-bottom: 25px;}
 .control10v4-image, .newtabhtml-image {transform: scale(110%);}
 }
 @media screen and (max-width: 1230px) {
@@ -108,67 +88,63 @@ display: none;
 @media screen and (max-width: 370px) {
 .control10v4-image, .newtabhtml-image {transform: scale(35%);}
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 351px) {
 .control10v4-image, .newtabhtml-image {transform: scale(20%);}
 }
-@media screen and (max-width: 1536px) {
+/* @media screen and (max-width: 1536px) {
 .control10v4-image, .newtabhtml-image {transform: scale(106%);}
-}
+} */
 .hr1 {transition: margin-bottom 1s ease;}
 .side-div {z-index: 5;}
 .header {z-index: 5;}
-.section-desc {display: block; width: 74%; transition: font-size 1s ease;}
+.section-desc {display: block; width: 75%; transition: font-size 1s ease;}
 </style>
 </head>
-<body>
+<body style="background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55));">
 <center>
 <div class="header">
 <h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>
 </div>
 </center>
-<br><br>
-<audio class="audio" loop src="Life in Technicolor ii.mp3"></audio>
-<img style="position: fixed; z-index: -1; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG"/>
-<img style="position: fixed; z-index: -1; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG"/>
-<img class="play-pause-btn" title="Play music" style="display: block; position: fixed; margin-top: 38vh; margin-left: 89vw; z-index: 15;" width="75" src="play-xxl.png" onclick="PlayPause();"/>
-<img class="stop-btn" title="Stop music" style="display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw; z-index: 15;" width="75" src="stop-xxl.png" onclick="StopAudio();"/>
-<div class="parent-div">
+<audio class="audio" loop="" src="Life in Technicolor ii.mp3"></audio>
+<img style="position: fixed; z-index: -1; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG">
+<img style="position: fixed; z-index: -1; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG">
+<img class="play-pause-btn" title="Play music" style="display: block; position: fixed; margin-top: 38vh; margin-left: 89vw; z-index: 15;" width="75" src="play-xxl.png" onclick="PlayPause();">
+<img class="stop-btn" title="Stop music" style="display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw; z-index: 15;" width="75" src="stop-xxl.png" onclick="StopAudio();">
 <div class="side-div">
-<div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));">
+<div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, green, rgba(0, 175, 40, 0.7));">
 <h2 style="margin-bottom: -0.5em; padding-left: 1em;">Links</h2>
-<ul style="list-style-type: '=&rArr; ';">
+<ul style="list-style-type: '=⇒ ';">
 <li><a class="a-links" href="https://instagram.com/winxprt/" target="_blank">Instagram</a></li>
 <li><a class="a-links" href="https://youtube.com/@winxprt/" target="_blank">YouTube</a></li>
 <hr>
-<h3 style="display: block; margin-top: 0; margin-bottom: 6px;">Other pages: </h3>
+<h3 style="display: block; margin-bottom: 6px;">Other pages: </h3>
 <li><a class="a-links" href="index.html">Home page</a></li>
 <li style="cursor: not-allowed;"><s class="a-links" onclick="IdiotQuiz();">Projects by me</s></li>
 </ul>
 </div>
 </div>
-</div>
 <div class="main-div">
 <center>
-<h4>Welcome to the projects site!</h4>
-<span style="margin-bottom: 5px; margin-top: -5px; display: block; padding-left: 150px; padding-right: 150px;">Have a look on some of the projects I've made since the last years!</span>
-<fieldset style="border-radius: 25px; border-color: blue; width: 95%;">
+<h4 style="display: block; margin-bottom: 5px;">Welcome to the projects site!</h4>
+<span style="margin-bottom: 5px; display: block; padding-left: 12%; padding-right: 12%; font-size: 10pt;">Have a look on some of the projects I've made since the last years!</span>
+<fieldset style="border-radius: 25px; border-color: green; width: 95%;">
 <legend style="z-index: -1; background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 30vw;">Page Settings</legend>
 <span>Choose theme: </span>
-<input checked style="display: inline-block;" name="sett-green-blue" id="sett1" type="radio" onclick="BlueTheme();"/><label style="display: inline;" for="sett1" onclick="BlueTheme();">Blue</label>
-<input style="display: inline;" name="sett-green-blue" id="sett2" type="radio" onclick="GreenTheme();"/><label for="sett2" onclick="GreenTheme();">Green</label>
+<input checked="" style="display: inline-block;" name="sett-green-blue" id="sett1" type="radio" onclick="BlueTheme();"><label style="display: inline;" for="sett1" onclick="BlueTheme();">Blue</label>
+<input style="display: inline;" name="sett-green-blue" id="sett2" type="radio" onclick="GreenTheme();"><label for="sett2" onclick="GreenTheme();">Green</label>
 <button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button>
 </fieldset>
 <span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Tuesday 28/1/2025&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<hr class="hr1" style="border-color: lime;">
-<h2>The ultimate settings tool just from batch!</h2>
-<p class="section-desc">This project is the one that took me the most time to make! With this batch script you can change system settings, customize appearance (+ Access to 'hidden' settings), change date/time and region settings and even more!</p>
-<a target="_blank" href="Control10V4.PNG"><img class="control10v4-image" style="transition: transform ease 1s; z-index: 1;" src="Control10V4.PNG" width="600" title="Screenshot of the batch script. Click to view on new tab"/></a>
-<hr class="hr2" style="border-color: lightblue;">
-<h2>The NewTab HTML project</h2>
-<p class="section-desc">The best way to start browing the web just from an HTML! This HTML page has the ability to search on the web for you and even pick between Google's search engine or Bing's search engine. You also have the ability to go to any pages you want just by typing the FULL URL ADDRESS</p>
-<a href="NewTabHTMLStartup.PNG" target="_blank"><img class="newtabhtml-image" style="transition: transform 1s ease; z-index: 1; margin-bottom: 40px;" src="NewTabHTMLStartup.PNG" width="600" title="Screenshot of the NewTab startup. Click to view on new tab"/></a>
+<hr class="hr1" style="border-color: lightblue;">
+<h2 style="display: block;">The ultimate settings tool just from batch!</h2>
+<span class="section-desc">This project is the one that took me the most time to make! With this batch script you can change system settings, customize appearance (+ Access to 'hidden' settings), change date/time and region settings and even more!</span>
+<a target="_blank" href="Control10V4.PNG"><img class="control10v4-image" style="transition: transform ease 1s; z-index: 1;" src="Control10V4.PNG" width="600" title="Screenshot of the batch script. Click to view on new tab"></a>
+<hr class="hr2" style="border-color: lime;">
+<h2 style="display: block;">The NewTab HTML project</h2>
+<span class="section-desc">The best way to start browing the web just from an HTML! This HTML page has the ability to search on the web for you and even pick between Google's search engine or Bing's search engine. You also have the ability to go to any pages you want just by typing the FULL URL ADDRESS</span>
+<a href="NewTabHTMLStartup.PNG" target="_blank"><img class="newtabhtml-image" style="transition: transform 1s ease; z-index: 1; margin-bottom: 40px;" src="NewTabHTMLStartup.PNG" width="600" title="Screenshot of the NewTab startup. Click to view on new tab"></a>
 </center>
-</div>
 </div>
 <script src="script.js"></script>
 </body>
