@@ -39,17 +39,25 @@ document.querySelector("fieldset").style = "border-radius: 25px; border-color: g
 localStorage.setItem('themeforwxsite', 'green');
 document.getElementById('sett2').checked = ' ';
 }
-if (localStorage.getItem('themeforwxsite') == 'blue') {
-BlueTheme();
-document.getElementById('sett1').checked = ' ';
-}
 if (localStorage.getItem('themeforwxsite') == 'green') {
-GreenTheme();
+document.body.style = "background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55));";
+document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, green, rgba(0, 175, 40, 0.7));";
+document.querySelector(".hr1").style = "border-color: lightblue;";
+document.querySelector(".hr2").style = "border-color: lime;";
+document.querySelector("fieldset").style = "border-radius: 25px; border-color: green; width: 95%;"
+localStorage.setItem('themeforwxsite', 'green');
 document.getElementById('sett2').checked = ' ';
+} else {
+document.body.style = "background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));";
+document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));";
+document.querySelector(".hr1").style = "border-color: lime;";
+document.querySelector(".hr2").style = "border-color: lightblue;";
+document.querySelector("fieldset").style = "border-radius: 25px; border-color: blue; width: 95%;";
+document.getElementById('sett1').checked = ' ';
 }
 function IdiotQuiz() {
 let IdiotTest = window.prompt(`Idiot Test!! \nType below the answer of the following question: \nIf X=3 and Y=1 then solve this: 2x+3y=??`);
-if (IdiotTest == '9') {
+if (IdiotTest == 9) {
 window.alert('Okay! You are good to go');
 } else if (IdiotTest == null) {
 
