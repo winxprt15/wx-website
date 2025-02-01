@@ -75,16 +75,16 @@ document.querySelector(".play-pause-btn").src = 'pause-xxl.png'
 document.querySelector(".play-pause-btn").style = "z-index: 15; position: fixed; margin-top: 38vh; margin-left: 89vw; animation: fade-in-out 2.5s linear infinite;";
 document.querySelector(".play-pause-btn").title = "Pause music";
 document.querySelector(".stop-btn").style = "position: fixed; margin-top: 50.5vh; margin-left: 89vw; animation: fade-in-out 2.5s linear infinite;";
-document.querySelector(".next-track").style = "margin-left: 15px; display: inline-block; position: fixed; margin-top: 50vh; cursor: pointer; animation: fade-in-out 2.5s linear infinite;";
-document.querySelector(".prev-track").style = "transform: scaleX(-1); margin-left: 15px; display: inline-block; position: fixed; margin-top: 62vh; cursor: pointer; animation: fade-in-out 2.5s linear infinite;";
+document.querySelector(".next-track").style = "z-index: 15; margin-left: 15px; display: inline-block; position: fixed; margin-top: 50vh; cursor: pointer; animation: fade-in-out 2.5s linear infinite;";
+document.querySelector(".prev-track").style = "z-index: 15; transform: scaleX(-1); margin-left: 15px; display: inline-block; position: fixed; margin-top: 62vh; cursor: pointer; animation: fade-in-out 2.5s linear infinite;";
 };
 document.querySelector("audio").onpause = function () {
 document.querySelector(".play-pause-btn").src = 'play-xxl.png'
 document.querySelector(".play-pause-btn").style = "z-index: 15; position: fixed; margin-top: 38vh; margin-left: 89vw;";
 document.querySelector(".play-pause-btn").title = "Play music";
 document.querySelector(".stop-btn").style = "position: fixed; margin-top: 50.5vh; margin-left: 89vw;"
-document.querySelector(".next-track").style = "margin-left: 15px; display: inline-block; position: fixed; margin-top: 50vh; cursor: pointer;";
-document.querySelector(".prev-track").style = "transform: scaleX(-1); margin-left: 15px; display: inline-block; position: fixed; margin-top: 62vh; cursor: pointer;";
+document.querySelector(".next-track").style = "z-index: 15; margin-left: 15px; display: inline-block; position: fixed; margin-top: 50vh; cursor: pointer;";
+document.querySelector(".prev-track").style = "z-index: 15; transform: scaleX(-1); margin-left: 15px; display: inline-block; position: fixed; margin-top: 62vh; cursor: pointer;";
 };
 var CurrentSong;
 const SongArray = ["Coldplay - The Scientist", "Coldplay - In My Place", "Coldplay - Yellow", "Green Day - Boulevard of Broken Dreams", "Green Day - When I Come Around", "Green Day - Good Riddance", "blink-182 - Adam's Song", "blink-182 - I Miss You", "blink-182 - Story Of A Lonely Guy"];
