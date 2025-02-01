@@ -20,7 +20,6 @@ document.querySelector(".play-pause-btn").src = 'play-xxl.png'
 document.querySelector(".play-pause-btn").style = "position: fixed; margin-top: 38vh; margin-left: 89vw;";
 document.querySelector(".stop-btn").style = "position: fixed; margin-top: 50.5vh; margin-left: 89vw;"
 }
-let ThemeForWxSite;
 function BlueTheme() {
 document.body.style = "background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));";
 document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));";
@@ -71,6 +70,53 @@ document.write(`
 `)
 }
 }
+document.querySelector("audio").onplay = function() {
+document.querySelector(".play-pause-btn").src = 'pause-xxl.png'
+document.querySelector(".play-pause-btn").style = "position: fixed; margin-top: 38vh; margin-left: 89vw; animation: fade-in-out 2.5s linear infinite;";
+document.querySelector(".play-pause-btn").title = "Pause music";
+document.querySelector(".stop-btn").style = "position: fixed; margin-top: 50.5vh; margin-left: 89vw; animation: fade-in-out 2.5s linear infinite;";
+document.querySelector(".next-track").style = "margin-left: 35px; display: inline-block; position: fixed; margin-top: 50vh; cursor: pointer; animation: fade-in-out 2.5s linear infinite;";
+document.querySelector(".prev-track").style = "transform: scaleX(-1); margin-left: 35px; display: inline-block; position: fixed; margin-top: 62vh; cursor: pointer; animation: fade-in-out 2.5s linear infinite;";
+};
+document.querySelector("audio").onpause = function () {
+document.querySelector(".play-pause-btn").src = 'play-xxl.png'
+document.querySelector(".play-pause-btn").style = "position: fixed; margin-top: 38vh; margin-left: 89vw;";
+document.querySelector(".play-pause-btn").title = "Play music";
+document.querySelector(".stop-btn").style = "position: fixed; margin-top: 50.5vh; margin-left: 89vw;"
+document.querySelector(".next-track").style = "margin-left: 35px; display: inline-block; position: fixed; margin-top: 50vh; cursor: pointer;";
+document.querySelector(".prev-track").style = "transform: scaleX(-1); margin-left: 35px; display: inline-block; position: fixed; margin-top: 62vh; cursor: pointer;";
+};
+var CurrentSong;
+const SongArray = ["Coldplay - In My Place.mp3", "Coldplay - Yellow.mp3", "Green Day - Boulevard of Broken Dreams.mp3", "Green Day - When I Come Around.mp3"];
+function ShuffleSong() {
+CurrentSongNum = Math.round(Math.random() * 3);
+document.querySelector(".audio").src = SongArray[CurrentSongNum];
+}
+ShuffleSong();
+function TrackChange(value) {
+if (value == 1) {
+if (CurrentSongNum == 3) {
+CurrentSongNum = 0;
+document.querySelector("audio").src = SongArray[CurrentSongNum];
+document.querySelector("audio").play();
+return;
+}
+CurrentSongNum += 1;
+document.querySelector("audio").src = SongArray[CurrentSongNum];
+document.querySelector("audio").play();
+} else if (value == -1) {
+if (CurrentSongNum == 0) {
+CurrentSongNum = 3;
+document.querySelector("audio").src = SongArray[CurrentSongNum];
+document.querySelector("audio").play();
+return;
+}
+CurrentSongNum -= 1;
+document.querySelector("audio").src = SongArray[CurrentSongNum];
+document.querySelector("audio").play();
+}
+}
+//ONLY ON INDEX.HTML. CODE ABOVE
 function YtIframeCookies(value) {
 if (value == '0') {
 document.querySelector('.iframe1').src="https://www.youtube-nocookie.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;mute=1&amp;autoplay=0&amp;color=white&amp;disablekb=1";
