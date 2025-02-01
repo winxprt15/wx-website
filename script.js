@@ -92,7 +92,7 @@ function ShuffleSong() {
 CurrentSongNum = Math.round(Math.random() * 8);
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector(".music-info").innerHTML = `
-<span>♫:</span> 
+<span>♫&nbsp;</span> 
 <span>${SongArray[CurrentSongNum].split(" - ")[0]}</span>
 <hr style="margin: 0;">
 <span>${SongArray[CurrentSongNum].split(" - ")[1]}</span>
@@ -106,7 +106,7 @@ CurrentSongNum = 0;
 document.querySelector("audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector("audio").play();
 document.querySelector(".music-info").innerHTML = `
-<span>♫:</span> 
+<span>♫&nbsp;</span> 
 <span>${SongArray[CurrentSongNum].split(" - ")[0]}</span>
 <hr style="margin: 0;">
 <span>${SongArray[CurrentSongNum].split(" - ")[1]}</span>
@@ -117,7 +117,7 @@ CurrentSongNum += 1;
 document.querySelector("audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector("audio").play();
 document.querySelector(".music-info").innerHTML = `
-<span>♫:</span> 
+<span>♫&nbsp;</span> 
 <span>${SongArray[CurrentSongNum].split(" - ")[0]}</span>
 <hr style="margin: 0;">
 <span>${SongArray[CurrentSongNum].split(" - ")[1]}</span>
@@ -139,7 +139,7 @@ CurrentSongNum -= 1;
 document.querySelector("audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector("audio").play();
 document.querySelector(".music-info").innerHTML = `
-<span>♫:</span> 
+<span>♫&nbsp;</span> 
 <span>${SongArray[CurrentSongNum].split(" - ")[0]}</span>
 <hr style="margin: 0;">
 <span>${SongArray[CurrentSongNum].split(" - ")[1]}</span>
