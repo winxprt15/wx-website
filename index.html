@@ -35,6 +35,7 @@ list-style-type: "=>";
 padding: 2px;
 border-radius: 100px;
 background-color: yellow;
+color: darkblue;
 }
 .a-links {
 font-weight: 650;
@@ -43,6 +44,7 @@ display: block;
 width: 100%;
 color: rgb(0, 0, 100);
 font-size: 10pt;
+color: yellow;
 }
 .main-div {
 padding: 0px;
@@ -103,11 +105,19 @@ transform: scale(80%);
 </div>
 </center>
 <br><br>
-<audio class="audio" loop="" src="Life in Technicolor ii.mp3"></audio>
+<audio class="audio" onended="TrackChange(1)"></audio>
 <img style="position: fixed; z-index: -10; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG">
 <img style="position: fixed; z-index: -10; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG">
 <img class="play-pause-btn" title="Play music" style="display: block; position: fixed; margin-top: 38vh; margin-left: 89vw;" width="75" src="play-xxl.png" onclick="PlayPause();">
 <img class="stop-btn" title="Stop music" style="display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw;" width="75" src="stop-xxl.png" onclick="StopAudio();">
+<div class="next-track" style="margin-left: 35px; display: inline-block; position: fixed; margin-top: 50vh; cursor: pointer;" title="Next Track" onclick="TrackChange(1);">
+<img width="50" height="75" src="play-xxl.png"/>
+<img style="margin-left: -25px;" width="50" height="75" src="play-xxl.png"/>
+</div>
+<div class="prev-track" style="transform: scaleX(-1); margin-left: 35px; display: inline-block; position: fixed; margin-top: 62vh; cursor: pointer;" title="Previous Track" onclick="TrackChange(-1);">
+<img width="50" height="75" src="play-xxl.png"/>
+<img style="margin-left: -25px;" width="50" height="75" src="play-xxl.png"/>
+</div>
 <div class="side-div">
 <div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, green, rgba(0, 175, 40, 0.7));">
 <h2 style="margin-bottom: -0.5em; padding-left: 1em;">Links</h2>
