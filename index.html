@@ -111,15 +111,19 @@ transform: scale(80%);
 <audio class="audio" onended="TrackChange(1)"></audio>
 <img style="position: fixed; z-index: -10; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG">
 <img style="position: fixed; z-index: -10; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG">
-<img class="play-pause-btn" title="Play music" style="z-index: 15; display: block; position: fixed; margin-top: 38vh; margin-left: 89vw;" width="75" src="play-xxl.png" onclick="PlayPause();">
-<img class="stop-btn" title="Stop music" style="z-index: 15; display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw;" width="75" src="stop-xxl.png" onclick="StopAudio();">
-<div class="next-track" style="z-index: 15; margin-left: 15px; display: inline-block; position: fixed; margin-top: 50vh; cursor: pointer;" title="Next Track" onclick="TrackChange(1);">
+<div class="play-pause-stop-div" style="z-index: 15; position: fixed; display: inline-block; margin-top: 38vh; margin-left: 89vw;">
+<img class="play-pause-btn" title="Play music" style="display: block; curs" width="75" src="play-xxl.png" onclick="PlayPause();">
+<img class="stop-btn" title="Stop music" style="display: block; margin-top: 10px; cursor: pointer;" width="75" src="stop-xxl.png" onclick="StopAudio();">
+</div>
+<div class="next-prev-tracks" style="position: fixed; display: inline-block; z-index: 15; margin-top: 50vh; margin-left: 15px;">
+<div class="prev-track" style="z-index: 15; transform: scaleX(-1); cursor: pointer;" title="Previous Track" onclick="TrackChange(-1);">
 <img width="50" height="75" src="play-xxl.png"/>
 <img style="margin-left: -25px;" width="50" height="75" src="play-xxl.png"/>
 </div>
-<div class="prev-track" style="z-index: 15; transform: scaleX(-1); margin-left: 15px; display: inline-block; position: fixed; margin-top: 62vh; cursor: pointer;" title="Previous Track" onclick="TrackChange(-1);">
+<div class="next-track" style="z-index: 15; cursor: pointer;" title="Next Track" onclick="TrackChange(1);">
 <img width="50" height="75" src="play-xxl.png"/>
 <img style="margin-left: -25px;" width="50" height="75" src="play-xxl.png"/>
+</div>
 </div>
 <div class="side-div">
 <div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, green, rgba(0, 175, 40, 0.7));">
