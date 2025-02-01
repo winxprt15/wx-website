@@ -25,7 +25,7 @@ box-sizing: border-box;
 }
 .side-div {
 width: 16%;
-height: 16vh;
+height: 35vh;
 position: fixed;
 }
 .side-div ul li:hover {
@@ -62,7 +62,7 @@ cursor: pointer;
 transform: scale(70%);
 }
 }
-@media screen and (max-width: 707px) {
+@media screen and (max-width: 720px) {
 body {
 overflow-x: hidden;
 }
@@ -95,6 +95,9 @@ transform: scale(80%);
 .side-div {z-index: 5;}
 .header {z-index: 5;}
 .section-desc {transition: font-size 1s ease;}
+@media screen and (max-width: 750px) {
+.hr1 {margin-bottom: 55px;}
+}
 </style>
 </head>
 <body style="background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55));">
@@ -108,13 +111,13 @@ transform: scale(80%);
 <audio class="audio" onended="TrackChange(1)"></audio>
 <img style="position: fixed; z-index: -10; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG">
 <img style="position: fixed; z-index: -10; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG">
-<img class="play-pause-btn" title="Play music" style="display: block; position: fixed; margin-top: 38vh; margin-left: 89vw;" width="75" src="play-xxl.png" onclick="PlayPause();">
-<img class="stop-btn" title="Stop music" style="display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw;" width="75" src="stop-xxl.png" onclick="StopAudio();">
-<div class="next-track" style="margin-left: 35px; display: inline-block; position: fixed; margin-top: 50vh; cursor: pointer;" title="Next Track" onclick="TrackChange(1);">
+<img class="play-pause-btn" title="Play music" style="z-index: 15; display: block; position: fixed; margin-top: 38vh; margin-left: 89vw;" width="75" src="play-xxl.png" onclick="PlayPause();">
+<img class="stop-btn" title="Stop music" style="z-index: 15; display: block; position: fixed; margin-top: 50.5vh; margin-left: 89vw;" width="75" src="stop-xxl.png" onclick="StopAudio();">
+<div class="next-track" style="z-index: 15; margin-left: 15px; display: inline-block; position: fixed; margin-top: 50vh; cursor: pointer;" title="Next Track" onclick="TrackChange(1);">
 <img width="50" height="75" src="play-xxl.png"/>
 <img style="margin-left: -25px;" width="50" height="75" src="play-xxl.png"/>
 </div>
-<div class="prev-track" style="transform: scaleX(-1); margin-left: 35px; display: inline-block; position: fixed; margin-top: 62vh; cursor: pointer;" title="Previous Track" onclick="TrackChange(-1);">
+<div class="prev-track" style="z-index: 15; transform: scaleX(-1); margin-left: 15px; display: inline-block; position: fixed; margin-top: 62vh; cursor: pointer;" title="Previous Track" onclick="TrackChange(-1);">
 <img width="50" height="75" src="play-xxl.png"/>
 <img style="margin-left: -25px;" width="50" height="75" src="play-xxl.png"/>
 </div>
@@ -129,6 +132,14 @@ transform: scale(80%);
 <li><a class="a-links" href="projects.html">Projects by me</a></li>
 <li style="cursor: not-allowed;"><s class="a-links" onclick="IdiotQuiz();">Home page</s></li>
 </ul>
+<hr>
+<div class="music-info" style="padding-left: 15px;">
+<span>♫:</span> 
+<span></span>
+<hr style="margin: 0;">
+<span></span>
+</div>
+<br>
 </div>
 </div>
 <div class="main-div">
