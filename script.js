@@ -14,6 +14,7 @@ document.body.style = "background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0,
 document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));";
 document.querySelector(".hr1").style = "border-color: lime;";
 document.querySelector(".hr2").style = "border-color: lightblue;";
+document.querySelector(".hr3").style = "border-color: lime;";
 document.querySelector("fieldset").style = "border-radius: 25px; border-color: blue; width: 95%;";
 localStorage.setItem('themeforwxsite', 'blue');
 document.getElementById('sett1').checked = true;
@@ -23,6 +24,7 @@ document.body.style = "background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0,
 document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, green, rgba(0, 175, 40, 0.7));";
 document.querySelector(".hr1").style = "border-color: lightblue;";
 document.querySelector(".hr2").style = "border-color: lime;";
+document.querySelector(".hr3").style = "border-color: lightblue;";
 document.querySelector("fieldset").style = "border-radius: 25px; border-color: green; width: 95%;"
 localStorage.setItem('themeforwxsite', 'green');
 document.getElementById('sett2').checked = true;
@@ -139,12 +141,14 @@ document.querySelector(".music-info").innerHTML = `
 //ONLY ON INDEX.HTML. CODE ABOVE
 function YtIframeCookies(value) {
 if (value == '0') {
-document.querySelector('.iframe1').src="https://www.youtube-nocookie.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;mute=1&amp;autoplay=0&amp;color=white&amp;disablekb=1";
+document.querySelector('.iframe1').src="https://www.youtube-nocookie.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
 document.querySelector('.iframe2').src="https://www.youtube-nocookie.com/embed/SFmRsIMJ0aE?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
+document.querySelector('.iframe3').src="https://www.youtube-nocookie.com/embed/pAoysWh-PNY?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
 localStorage.setItem('ytcookiesforwxsite', '0');
 } else if (value == '1') {
-document.querySelector('.iframe1').src="https://www.youtube.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;mute=1&amp;autoplay=0&amp;color=white&amp;disablekb=1";
+document.querySelector('.iframe1').src="https://www.youtube.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
 document.querySelector('.iframe2').src="https://www.youtube.com/embed/SFmRsIMJ0aE?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
+document.querySelector('.iframe3').src="https://www.youtube.com/embed/pAoysWh-PNY?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
 localStorage.setItem('ytcookiesforwxsite', '1');
 }
 }
