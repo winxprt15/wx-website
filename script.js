@@ -150,7 +150,7 @@ if (document.querySelector(".audio").paused) {document.querySelector(".audio").p
 });
 document.body.addEventListener("mouseleave", function() {
 if (MouseOutMeme < 2) {
-document.querySelector(".mouse-leave-mess").style = "position: fixed; display: inline-block; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
+document.querySelector(".mouse-leave-mess").style = "animation: bigger-inputfield 7s linear; transform: scale(600%); position: fixed; display: inline-block; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
 document.querySelector(".audio-sfx").src="long-brain-fart.mp3";
 if (!document.querySelector(".audio").paused) {document.querySelector(".audio").pause(); PausedMusic = 1;}
 document.querySelector(".audio-sfx").play();
