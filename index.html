@@ -98,9 +98,9 @@ transform: scale(80%);
 @media screen and (max-width: 750px) {
 .hr1 {margin-bottom: 55px;}
 }
-@keyframes bigger-input {
+@keyframes bigger-inputfield {
 0% {transform: scale(100%);}
-100% {transform: scale(1000%);}
+100% {transform: scale(600%);}
 }
 </style>
 </head>
@@ -153,10 +153,10 @@ transform: scale(80%);
 </div>
 <div class="main-div">
 <center>
-<div style="position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.55); margin-top: 40vh; margin-right: 26vw;" class="mouse-leave-mess">
+<div style="animation: bigger-inputfield 7s linear; transform: scale(600%); position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.55); margin-top: 40vh; margin-right: 26vw;" class="mouse-leave-mess">
 What are you doing outside??
 <br><br>
-<input style="animation: bigger-input 7s linear; transform: scale(1000%);" class="input-mouse-leave" type="text" placeholder="Please Describe">
+<input class="input-mouse-leave" type="text" placeholder="Please Describe">
 </div>
 <h3>Welcome to my website!</h3>
 <span style="margin-bottom: 10px; display: block;">Hello World!</span>
