@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=0.570">
-<link rel="stylesheet" type="text/css" href="shared-styles.css"/>
 <title>WinXprt Page (My Projects)</title>
 <style>
 body {
@@ -95,24 +94,33 @@ h4 {font-size: 15px;}
 @media screen and (max-width: 351px) {
 .control10v4-image, .newtabhtml-image {transform: scale(20%);}
 }
-/* @media screen and (max-width: 1536px) {
-.control10v4-image, .newtabhtml-image {transform: scale(106%);}
-} */
 .hr1 {transition: margin-bottom 1s ease;}
 .side-div {z-index: 5;}
 .header {z-index: 5;}
 h1, h2, h3, h4 {transition: font-size 1s ease;}
 .section-desc {display: block; width: 75%; transition: font-size 1s ease;}
+@keyframes bigger-input {
+0% {transform: scale(100%) rotate(0deg);}
+15% {transform: scale(275%) rotate(0deg);}
+25% {transform: scale(200%) rotate(0deg);}
+35% {transform: scale(275%) rotate(10deg);}
+45% {transform: scale(200%) rotate(0deg);}
+55% {transform: scale(275%) rotate(0deg);}
+65% {transform: scale(200%) rotate(-10deg);}
+75% {transform: scale(275%) rotate(0deg);}
+85% {transform: scale(200%) rotate(0deg);}
+100% {transform: scale(100%) rotate(0deg);}
+}
 </style>
 </head>
 <body style="background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55));">
 <center>
 <div class="header">
 <!--<h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>-->
-<marquee direction="left" behavior="alternate" scrollamount="20" loop="2"><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">HAPPY BIRTHDAY TO&nbsp;</h2><h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">&nbsp;(LUKE)!!!!</h2></marquee>
+<marquee direction="left" behavior="alternate" scrollamount="20" loop="2"><h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">&nbsp;'S (LUKE) BIRTHDAY WAS YESTERDAY</h2></marquee>
 </div>
 </center>
-<audio class="audio" onended="TrackChange(1)"></audio>
+<audio class="audio" onended="TrackChange(1)" autoplay></audio>
 <img style="position: fixed; z-index: -1; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG">
 <img style="position: fixed; z-index: -1; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG">
 <div class="play-pause-stop-div" style="z-index: 15; position: fixed; display: inline-block; margin-top: 38vh; margin-left: 89vw;">
@@ -152,6 +160,11 @@ h1, h2, h3, h4 {transition: font-size 1s ease;}
 </div>
 <div class="main-div">
 <center>
+<div style="position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.55); margin-top: 40vh; margin-right: 26vw;" class="mouse-leave-mess">
+What are you doing outside??
+<br><br>
+<input style="animation: bigger-input 5s infinite linear; transform: scale(200%);" class="input-mouse-leave" type="text" placeholder="Please Describe">
+</div>
 <h4 style="display: block; margin-bottom: 5px;">Welcome to the projects site!</h4>
 <span style="margin-bottom: 5px; display: block; padding-left: 12%; padding-right: 12%; font-size: 10pt;">Have a look on some of the projects I've made since the last years!</span>
 <fieldset style="border-radius: 25px; border-color: green; width: 95%;">
