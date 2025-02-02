@@ -99,16 +99,8 @@ transform: scale(80%);
 .hr1 {margin-bottom: 55px;}
 }
 @keyframes bigger-input {
-0% {transform: scale(100%) rotate(0deg);}
-15% {transform: scale(275%) rotate(0deg);}
-25% {transform: scale(200%) rotate(0deg);}
-35% {transform: scale(275%) rotate(10deg);}
-45% {transform: scale(200%) rotate(0deg);}
-55% {transform: scale(275%) rotate(0deg);}
-65% {transform: scale(200%) rotate(-10deg);}
-75% {transform: scale(275%) rotate(0deg);}
-85% {transform: scale(200%) rotate(0deg);}
-100% {transform: scale(100%) rotate(0deg);}
+0% {transform: scale(100%);}
+100% {transform: scale(1000%);}
 }
 </style>
 </head>
@@ -121,6 +113,7 @@ transform: scale(80%);
 </center>
 <br><br>
 <audio class="audio" onended="TrackChange(1)" autoplay></audio>
+<audio class="audio-sfx" src=""></audio>
 <img style="position: fixed; z-index: -10; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG">
 <img style="position: fixed; z-index: -10; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG">
 <div class="play-pause-stop-div" style="z-index: 15; position: fixed; display: inline-block; margin-top: 38vh; margin-left: 89vw;">
@@ -163,7 +156,7 @@ transform: scale(80%);
 <div style="position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.55); margin-top: 40vh; margin-right: 26vw;" class="mouse-leave-mess">
 What are you doing outside??
 <br><br>
-<input style="animation: bigger-input 5s infinite linear; transform: scale(200%);" class="input-mouse-leave" type="text" placeholder="Please Describe">
+<input style="animation: bigger-input 7s linear; transform: scale(1000%);" class="input-mouse-leave" type="text" placeholder="Please Describe">
 </div>
 <h3>Welcome to my website!</h3>
 <span style="margin-bottom: 10px; display: block;">Hello World!</span>
