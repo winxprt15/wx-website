@@ -141,7 +141,7 @@ document.querySelector(".audio-sfx").volume = 0.6;
 var MouseOutMeme = 0;
 var PausedMusic;
 document.body.addEventListener("mouseenter", function() {
-document.querySelector(".mouse-leave-mess").style = "position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
+document.querySelector(".mouse-leave-mess").style = "z-index: 15; position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
 document.querySelector(".input-mouse-leave").value = null;
 document.querySelector(".audio-sfx").pause();
 if (PausedMusic == 1) {
@@ -150,7 +150,7 @@ if (document.querySelector(".audio").paused) {document.querySelector(".audio").p
 });
 document.body.addEventListener("mouseleave", function() {
 if (MouseOutMeme < 2) {
-document.querySelector(".mouse-leave-mess").style = "animation: bigger-inputfield 7s linear; transform: scale(600%); position: fixed; display: inline-block; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
+document.querySelector(".mouse-leave-mess").style = "z-index: 15; animation: bigger-inputfield 7s linear; transform: scale(600%); position: fixed; display: inline-block; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
 document.querySelector(".audio-sfx").src="long-brain-fart.mp3";
 if (!document.querySelector(".audio").paused) {document.querySelector(".audio").pause(); PausedMusic = 1;}
 document.querySelector(".audio-sfx").play();
@@ -159,8 +159,9 @@ MouseOutMeme++;
 });
 document.querySelector(".input-mouse-leave").addEventListener("keydown", function() {
 if (event.key == 'Enter') {
+document.querySelector(".mouse-leave-mess").style = "z-index: 15; transform: scale(150%); position: fixed; display: inline-block; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
 document.querySelector(".mouse-leave-mess").innerHTML = `<span style="font-size: 30pt;">Submitted succesfully! Now you may leave the fuck out</span>`;
-setTimeout(`window.location.href = "https://google.com"`, 2500);
+setTimeout(`window.location.href = "https://google.com"`, 1750);
 }
 });
 
