@@ -99,9 +99,9 @@ h4 {font-size: 15px;}
 .header {z-index: 5;}
 h1, h2, h3, h4 {transition: font-size 1s ease;}
 .section-desc {display: block; width: 75%; transition: font-size 1s ease;}
-@keyframes bigger-input {
+@keyframes bigger-inputfield {
 0% {transform: scale(100%);}
-100% {transform: scale(1000%);}
+100% {transform: scale(600%);}
 }
 </style>
 </head>
@@ -153,10 +153,10 @@ h1, h2, h3, h4 {transition: font-size 1s ease;}
 </div>
 <div class="main-div">
 <center>
-<div style="position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.55); margin-top: 40vh; margin-right: 26vw;" class="mouse-leave-mess">
+<div style="animation: bigger-inputfield 7s linear; transform: scale(600%); position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.55); margin-top: 40vh; margin-right: 26vw;" class="mouse-leave-mess">
 What are you doing outside??
 <br><br>
-<input style="animation: bigger-input 7s linear; transform: scale(1000%);" class="input-mouse-leave" type="text" placeholder="Please Describe">
+<input class="input-mouse-leave" type="text" placeholder="Please Describe">
 </div>
 <h4 style="display: block; margin-bottom: 5px;">Welcome to the projects site!</h4>
 <span style="margin-bottom: 5px; display: block; padding-left: 12%; padding-right: 12%; font-size: 10pt;">Have a look on some of the projects I've made since the last years!</span>
