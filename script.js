@@ -1,13 +1,13 @@
 function PlayPause() {
 if (document.querySelector(".audio").paused) {
-document.querySelector("audio").play();
+document.querySelector(".audio").play();
 } else {
-document.querySelector("audio").pause();
+document.querySelector(".audio").pause();
 }
 }
 function StopAudio() {
-document.querySelector("audio").pause();
-document.querySelector("audio").currentTime = 0;
+document.querySelector(".audio").pause();
+document.querySelector(".audio").currentTime = 0;
 }
 function BlueTheme() {
 document.body.style = "background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));";
@@ -61,7 +61,7 @@ document.write(`
 `)
 }
 }
-document.querySelector("audio").onplay = function() {
+document.querySelector(".audio").onplay = function() {
 document.querySelector(".play-pause-btn").src = 'pause-xxl.png'
 document.querySelector(".play-pause-btn").style = "cursor: pointer; display: block; animation: fade-in-out 2.5s linear infinite;";
 document.querySelector(".play-pause-btn").title = "Pause music";
@@ -69,7 +69,7 @@ document.querySelector(".stop-btn").style = "cursor: pointer; margin-top: 10px; 
 document.querySelector(".next-track").style = "cursor: pointer; animation: fade-in-out 2.5s linear infinite;";
 document.querySelector(".prev-track").style = "transform: scaleX(-1); cursor: pointer; animation: fade-in-out 2.5s linear infinite;";
 };
-document.querySelector("audio").onpause = function () {
+document.querySelector(".audio").onpause = function () {
 document.querySelector(".play-pause-btn").src = 'play-xxl.png'
 document.querySelector(".play-pause-btn").style = "display: block;";
 document.querySelector(".play-pause-btn").title = "Play music";
@@ -94,8 +94,8 @@ function TrackChange(value) {
 if (value == 1) {
 if (CurrentSongNum == 8) {
 CurrentSongNum = 0;
-document.querySelector("audio").src = SongArray[CurrentSongNum] + ".mp3";
-document.querySelector("audio").play();
+document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
+document.querySelector(".audio").play();
 document.querySelector(".music-info").innerHTML = `
 <span>♫&nbsp;</span> 
 <span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
@@ -105,8 +105,8 @@ document.querySelector(".music-info").innerHTML = `
 return;
 }
 CurrentSongNum += 1;
-document.querySelector("audio").src = SongArray[CurrentSongNum] + ".mp3";
-document.querySelector("audio").play();
+document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
+document.querySelector(".audio").play();
 document.querySelector(".music-info").innerHTML = `
 <span>♫&nbsp;</span> 
 <span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
@@ -116,8 +116,8 @@ document.querySelector(".music-info").innerHTML = `
 } else if (value == -1) {
 if (CurrentSongNum == 0) {
 CurrentSongNum = 8;
-document.querySelector("audio").src = SongArray[CurrentSongNum] + ".mp3";
-document.querySelector("audio").play();
+document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
+document.querySelector(".audio").play();
 document.querySelector(".music-info").innerHTML = `
 <span>♫&nbsp;</span> 
 <span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
@@ -127,8 +127,8 @@ document.querySelector(".music-info").innerHTML = `
 return;
 }
 CurrentSongNum -= 1;
-document.querySelector("audio").src = SongArray[CurrentSongNum] + ".mp3";
-document.querySelector("audio").play();
+document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
+document.querySelector(".audio").play();
 document.querySelector(".music-info").innerHTML = `
 <span>♫&nbsp;</span> 
 <span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
@@ -137,6 +137,14 @@ document.querySelector(".music-info").innerHTML = `
 `;
 }
 }
+
+document.body.addEventListener("mouseenter", function() {
+document.querySelector(".mouse-leave-mess").style = "position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
+document.querySelector(".input-mouse-leave").value = null;
+});
+document.body.addEventListener("mouseleave", function() {
+document.querySelector(".mouse-leave-mess").style = "position: fixed; display: inline-block; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
+});
 
 //ONLY ON INDEX.HTML. CODE ABOVE
 function YtIframeCookies(value) {
