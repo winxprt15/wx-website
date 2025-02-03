@@ -137,9 +137,15 @@ document.querySelector(".music-info").innerHTML = `
 `;
 }
 }
+function TrollSett(value, skip) {
+if (skip == 0) {localStorage.setItem("trollsettforwxsite", `${value}`)}
+if (localStorage.getItem("trollsettforwxsite") == '0') {document.getElementById("sett6").checked = true;}
+if (localStorage.getItem("trollsettforwxsite") == '1') {document.getElementById("sett5").checked = true;}
+}
 document.querySelector(".audio-sfx").volume = 0.6;
 var MouseOutMeme = 0;
 var PausedMusic;
+if (localStorage.getItem("trollsettforwxsite") == '1') {
 document.body.addEventListener("mouseenter", function() {
 document.querySelector(".mouse-leave-mess").style = "z-index: 15; position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
 document.querySelector(".input-mouse-leave").value = null;
@@ -164,8 +170,10 @@ document.querySelector(".mouse-leave-mess").innerHTML = `<span style="font-size:
 setTimeout(`window.location.href = "https://google.com"`, 1750);
 }
 });
+}
 
 //ONLY ON INDEX.HTML. CODE ABOVE
+TrollSett(null, 1);
 function YtIframeCookies(value) {
 if (value == '0') {
 document.querySelector('.iframe1').src="https://www.youtube-nocookie.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
