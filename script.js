@@ -1,3 +1,11 @@
+if (localStorage.getItem('idiottestfailedforwxsite') == '1') {
+document.addEventListener('contextmenu', function() {
+var MessArray = ["Another smart guy...", "You maybe probably fucking couldn't do that", "You thought so...", "You may use a browser extension for that. What?. You need help?? NO I WON'T HELP YOU.", "Hey hey stop right there.", "'Aim on missions not on cheats'"];
+window.alert(MessArray[Math.round(Math.random() * 5)])
+});
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.body.innerHTML = `\n<center style="font-family: Arial;">\n<span style="font-size: 40px; font-weight: 760;">Access denied on this page.<br>Message: We do not accept idiots</span>\n<p style="font-size: 20pt; font-weight: 450;">To ensure you are actually smart, try to find where the secret unlock button is</p>\n<button style="position: absolute; top: ${Math.round(Math.random() * 40 + 30)}vh; right: ${Math.round(Math.random() * 90)}vw; transform: scale(200%); opacity: 0.075; background-color: darkblue; color: rgb(0, 0, 75);" onclick="localStorage.removeItem('idiottestfailedforwxsite'); window.location.href = window.location.href;">UNLOCK</button>\n</div>\n</center>\n`;
+}
 function PlayPause() {
 if (document.querySelector(".audio").paused) {
 document.querySelector(".audio").play();
@@ -46,19 +54,19 @@ document.querySelector("fieldset").style = "border-radius: 25px; border-color: b
 document.getElementById('sett1').checked = true;
 }
 function IdiotQuiz() {
-let IdiotTest = window.prompt(`Idiot Test!! \nType below the answer of the following question: \nIf X=3 and Y=1 then solve this: 2x+3y=??`);
+if (localStorage.getItem("trollsettforwxsite") == '1') {
+var IdiotTest = window.prompt(`Idiot Test!! \nType below the answer of the following question: \nIf X=3 and Y=1 then solve this: 2x+3y=??`);
 if (IdiotTest == 9) {
 window.alert('Okay! You are good to go');
 } else if (IdiotTest == null) {
-
-} else if (IdiotTest == '') {
-window.alert("I'll skip that and go ahead")
+document.querySelector(".header").innerHTML = `<h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>&nbsp;<span style="color: darkblue; font-size: 14pt; font-weight: 900; display: inline-block; vertical-align: bottom;">(At least you chose wisely)</span>`;
+setTimeout(`document.querySelector(".header").innerHTML = \`\n<h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>\n\``, 5000);
 } else {
-document.write(`
-<center>
-<span style="font-family: Arial; font-size: 40px; font-weight: 760;">Access denied on this page. Message: We do not accept idiots</span>
-</center>
-`)
+localStorage.setItem('idiottestfailedforwxsite', '1');
+window.location.href = window.location.href;
+}
+} else {
+window.alert("You're already here!")
 }
 }
 document.querySelector(".audio").onplay = function() {
@@ -138,14 +146,14 @@ document.querySelector(".music-info").innerHTML = `
 }
 }
 function TrollSett(value, skip) {
-if (skip == 0) {localStorage.setItem("trollsettforwxsite", `${value}`)}
+if (skip == 0) {localStorage.setItem("trollsettforwxsite", `${value}`);}
 if (localStorage.getItem("trollsettforwxsite") == '0') {document.getElementById("sett6").checked = true;}
 if (localStorage.getItem("trollsettforwxsite") == '1') {document.getElementById("sett5").checked = true;}
 }
 document.querySelector(".audio-sfx").volume = 0.6;
 var MouseOutMeme = 0;
 var PausedMusic;
-if (localStorage.getItem("trollsettforwxsite") == '1') {
+if ((localStorage.getItem("trollsettforwxsite") == '1') || (TrollSettValue == 1)) {
 document.body.addEventListener("mouseenter", function() {
 document.querySelector(".mouse-leave-mess").style = "z-index: 15; position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
 document.querySelector(".input-mouse-leave").value = null;
@@ -171,9 +179,9 @@ setTimeout(`window.location.href = "https://google.com"`, 1750);
 }
 });
 }
+TrollSett(null, 1);
 
 //ONLY ON INDEX.HTML. CODE ABOVE
-TrollSett(null, 1);
 function YtIframeCookies(value) {
 if (value == '0') {
 document.querySelector('.iframe1').src="https://www.youtube-nocookie.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
