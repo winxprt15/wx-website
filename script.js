@@ -4,7 +4,7 @@ var MessArray = ["Another smart guy...", "You maybe probably fucking couldn't do
 window.alert(MessArray[Math.round(Math.random() * 5)])
 });
 document.addEventListener('contextmenu', event => event.preventDefault());
-document.body.innerHTML = `\n<center style="font-family: Arial;">\n<span style="font-size: 40px; font-weight: 760;">Access denied on this page.<br>Message: We do not accept idiots</span>\n<p style="font-size: 20pt; font-weight: 450;">To ensure you are actually smart, try to find where the secret unlock button is</p>\n<button style="position: absolute; top: ${Math.round(Math.random() * 40 + 30)}vh; right: ${Math.round(Math.random() * 90)}vw; transform: scale(200%); opacity: 0.075; background: transparent; color: rgb(0, 0, 75);" onclick="localStorage.removeItem('idiottestfailedforwxsite'); window.location.href = window.location.href;">UNLOCK</button>\n</div>\n</center>\n`;
+document.body.innerHTML = `\n<center style="font-family: Arial;">\n<span style="font-size: 40px; font-weight: 760;">Access denied on this page.<br>Message: We do not accept idiots</span>\n<p style="font-size: 20pt; font-weight: 450;">To ensure you are actually smart, try to find where the secret unlock button is</p>\n<button style="position: absolute; top: ${Math.round(Math.random() * 40 + 30)}vh; right: ${Math.round(Math.random() * 90)}vw; transform: scale(200%); opacity: 0.075; background-color: darkblue; color: rgb(0, 0, 75);" onclick="localStorage.removeItem('idiottestfailedforwxsite'); window.location.href = window.location.href;">UNLOCK</button>\n</div>\n</center>\n`;
 }
 function PlayPause() {
 if (document.querySelector(".audio").paused) {
@@ -71,19 +71,19 @@ window.alert("You're already here!")
 }
 document.querySelector(".audio").onplay = function() {
 document.querySelector(".play-pause-btn").src = 'pause-xxl.png'
-document.querySelector(".play-pause-btn").style = "cursor: pointer; display: block; animation: fade-in-out 2.5s linear infinite;";
+document.querySelector(".play-pause-btn").style.animation = "fade-in-out 2.5s linear infinite";
 document.querySelector(".play-pause-btn").title = "Pause music";
-document.querySelector(".stop-btn").style = "cursor: pointer; margin-top: 10px; display: block; animation: fade-in-out 2.5s linear infinite;";
-document.querySelector(".next-track").style = "cursor: pointer; animation: fade-in-out 2.5s linear infinite;";
-document.querySelector(".prev-track").style = "transform: scaleX(-1); cursor: pointer; animation: fade-in-out 2.5s linear infinite;";
+document.querySelector(".stop-btn").style.animation = "fade-in-out 2.5s linear infinite";
+document.querySelector(".next-track").style.animation = "fade-in-out 2.5s linear infinite";
+document.querySelector(".prev-track").style.animation = "fade-in-out 2.5s linear infinite";
 };
 document.querySelector(".audio").onpause = function () {
 document.querySelector(".play-pause-btn").src = 'play-xxl.png'
-document.querySelector(".play-pause-btn").style = "display: block;";
+document.querySelector(".play-pause-btn").style.animtaion = "";
 document.querySelector(".play-pause-btn").title = "Play music";
-document.querySelector(".stop-btn").style = "cursor: pointer; margin-top: 10px; display: block;"
-document.querySelector(".next-track").style = "cursor: pointer;";
-document.querySelector(".prev-track").style = "transform: scaleX(-1); cursor: pointer;";
+document.querySelector(".stop-btn").style.animation = "";
+document.querySelector(".next-track").style.animation = "";
+document.querySelector(".prev-track").style.animation = "";
 };
 var CurrentSong;
 const SongArray = ["Coldplay - The Scientist", "Coldplay - In My Place", "Coldplay - Yellow", "Green Day - Boulevard of Broken Dreams", "Green Day - When I Come Around", "Green Day - Good Riddance", "blink-182 - Adam's Song", "blink-182 - I Miss You", "blink-182 - Story Of A Lonely Guy"];
@@ -98,52 +98,44 @@ document.querySelector(".music-info").innerHTML = `
 `;
 }
 ShuffleSong();
+function RenderMusicInfo() {
+document.querySelector(".music-info").innerHTML = `
+<span>♫&nbsp;</span> 
+<span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
+<hr style="margin: 0;">
+<span>${SongArray[CurrentSongNum].split(" - ")[1]}</span>
+`;
+for (let o = 0; o < SongArray.length; o++) {
+for (let i = 0; i < SongArray.length; i++) {
+document.querySelector(".song-name-" + i).style = "color: white; cursor: pointer;";
+}
+document.querySelector(".song-name-" + CurrentSongNum).style = "color: yellow; cursor: pointer;";
+}
+}
 function TrackChange(value) {
 if (value == 1) {
 if (CurrentSongNum == 8) {
 CurrentSongNum = 0;
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector(".audio").play();
-document.querySelector(".music-info").innerHTML = `
-<span>♫&nbsp;</span> 
-<span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
-<hr style="margin: 0;">
-<span>${SongArray[CurrentSongNum].split(" - ")[1]}</span>
-`;
+RenderMusicInfo();
 return;
 }
 CurrentSongNum += 1;
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector(".audio").play();
-document.querySelector(".music-info").innerHTML = `
-<span>♫&nbsp;</span> 
-<span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
-<hr style="margin: 0;">
-<span>${SongArray[CurrentSongNum].split(" - ")[1]}</span>
-`;
 } else if (value == -1) {
 if (CurrentSongNum == 0) {
 CurrentSongNum = 8;
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector(".audio").play();
-document.querySelector(".music-info").innerHTML = `
-<span>♫&nbsp;</span> 
-<span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
-<hr style="margin: 0;">
-<span>${SongArray[CurrentSongNum].split(" - ")[1]}</span>
-`;
 return;
 }
 CurrentSongNum -= 1;
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector(".audio").play();
-document.querySelector(".music-info").innerHTML = `
-<span>♫&nbsp;</span> 
-<span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
-<hr style="margin: 0;">
-<span>${SongArray[CurrentSongNum].split(" - ")[1]}</span>
-`;
 }
+RenderMusicInfo();
 }
 function TrollSett(value, skip) {
 if (skip == 0) {localStorage.setItem("trollsettforwxsite", `${value}`);}
@@ -153,7 +145,7 @@ if (localStorage.getItem("trollsettforwxsite") == '1') {document.getElementById(
 document.querySelector(".audio-sfx").volume = 0.6;
 var MouseOutMeme = 0;
 var PausedMusic;
-if ((localStorage.getItem("trollsettforwxsite") == '1') || (TrollSettValue == 1)) {
+if (localStorage.getItem("trollsettforwxsite") == '1') {
 document.body.addEventListener("mouseenter", function() {
 document.querySelector(".mouse-leave-mess").style = "z-index: 15; position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
 document.querySelector(".input-mouse-leave").value = null;
@@ -180,6 +172,33 @@ setTimeout(`window.location.href = "https://google.com"`, 1750);
 });
 }
 TrollSett(null, 1);
+function ShowPlaylist() {
+if (document.querySelector(".music-playlist").style.display == "none") {
+document.querySelector(".music-playlist").style.display = "block";
+document.querySelector(".playlist-shower").innerText = "Hide playlist";
+} else if (document.querySelector(".music-playlist").style.display == "block") {
+document.querySelector(".music-playlist").style.display = "none";
+document.querySelector(".playlist-shower").innerText = "Show playlist";
+}
+}
+var PlaylistHtml = '';
+var j;
+for (var i = 0; i < SongArray.length; i++) {
+if (SongArray[i] == SongArray[CurrentSongNum]) {
+PlaylistHtml += `<span class="song-names song-name-${i}" onclick="CurrentSongNum = ${i}; document.querySelector('.audio').src = \`${SongArray[i]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer; color: yellow;">&raquo; ${SongArray[i]}</span>\n<br>`;
+continue;
+}
+PlaylistHtml += `<span class="song-names song-name-${i}" onclick="CurrentSongNum = ${i}; document.querySelector('.audio').src = \`${SongArray[i]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer;">&raquo; ${SongArray[i]}</span>\n<br>`;
+}
+document.querySelector(".music-playlist-div").innerHTML = `\n<h2>Music playlist:</h2>${PlaylistHtml}`;
+for (let j = 0; j < SongArray.length; j++) {
+document.querySelector(".song-name-" + j).addEventListener("click", function() {
+for (let i = 0; i < SongArray.length; i++) {
+document.querySelector(".song-name-" + i).style = "color: white; cursor: pointer;";
+}
+this.style = "color: yellow; cursor: pointer;";
+});
+}
 
 //ONLY ON INDEX.HTML. CODE ABOVE
 function YtIframeCookies(value) {
