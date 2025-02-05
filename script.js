@@ -129,6 +129,7 @@ if (CurrentSongNum == 0) {
 CurrentSongNum = 8;
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector(".audio").play();
+RenderMusicInfo();
 return;
 }
 CurrentSongNum -= 1;
