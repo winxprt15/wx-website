@@ -8,22 +8,25 @@ body {
 background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));
 color: whitesmoke;
 font-family: Verdana;
-margin: 0;
+margin-top: -21px;
+margin-right: 0;
+margin-left: 0;
+margin-bottom: 0;
 overflow-x: hidden;
 }
 .header {
-margin-top: -2vh;
 background: linear-gradient(75deg, blue, green, rgb(0, 205, 50));
 margin: 0;
-height: 2.6em;
 position: fixed;
+top: 0px;
 width: 100%;
-top: 0;
+height: 2.6em;
 }
 .side-div {
 width: 16%;
 height: 35vh;
 position: fixed;
+z-index: 20;
 top: 40px;
 }
 .side-div ul li:hover {
@@ -45,9 +48,10 @@ font-size: 10pt;
 color: yellow;
 }
 .main-div {
-width: 100vw;
-padding: 0;
-padding-top: 35px;
+padding-top: 3em;
+padding-right: 0;
+padding-left: 0;
+padding-bottom: 0;
 box-sizing: border-box;
 }
 .play-pause-btn:hover, .stop-btn:hover {
@@ -103,13 +107,49 @@ h1, h2, h3, h4 {transition: font-size 1s ease;}
 0% {transform: scale(100%);}
 100% {transform: scale(600%);}
 }
+.music-playlist {
+right: 0;
+left: 0;
+margin: auto;
+z-index: 1;
+width: 100%;
+height: 100%;
+position: fixed;
+background-color: rgba(125, 120, 125, 0.9);
+transition: opacity 0.5s linear;
+border-radius: 15px;
+border: outset 15px grey;
+padding-top: 35px;
+}
+.music-playlist:active {
+border: inset 15px grey;
+}
+.playlist-shower {
+color: yellow;
+padding: 2px 2px 2px 2px;
+display: block;
+text-align: center;
+cursor: pointer;
+user-select: none;
+}
+.playlist-shower:hover {
+background-color: yellow;
+color: darkblue;
+border-radius: 50px;
+}
+.music-playlist-div {
+font-size: 14.5pt;
+text-align: right;
+position: absolute;
+right: 15vw;
+margin: 0;
+}
 </style>
 </head>
 <body style="background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55));">
 <center>
 <div class="header">
 <h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>
-<!--<marquee direction="left" behavior="alternate" scrollamount="20" loop="2"><h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">&nbsp;'S (LUKE) BIRTHDAY WAS YESTERDAY</h2></marquee>-->
 </div>
 </center>
 <audio class="audio" onended="TrackChange(1)" autoplay></audio>
@@ -131,6 +171,14 @@ h1, h2, h3, h4 {transition: font-size 1s ease;}
 <img style="margin-left: -25px;" width="50" height="75" src="play-xxl.png"/>
 </div>
 </div>
+<div class="music-playlist" style="display: none;">
+<center>
+<div class="music-playlist-div">
+<h2>Music playlist:</h2>
+...
+</div>
+</center>
+</div>
 <div class="side-div">
 <div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, green, rgba(0, 175, 40, 0.7));">
 <h2 style="margin-bottom: -0.5em; padding-left: 1em;">Links</h2>
@@ -143,13 +191,14 @@ h1, h2, h3, h4 {transition: font-size 1s ease;}
 <li style="cursor: not-allowed;"><s class="a-links" onclick="IdiotQuiz();">Projects by me</s></li>
 </ul>
 <hr>
-<div class="music-info" style="padding-left: 15px; padding-bottom: 18px;">
+<div class="music-info" style="padding-left: 15px; padding-bottom: 0px;">
 <span>♫&nbsp;</span> 
 <span>...</span>
 <hr style="margin: 0;">
 <span>...</span>
 <br>
 </div>
+<u class="playlist-shower" onclick="ShowPlaylist();">Show playlist</u>
 </div>
 </div>
 <div class="main-div">
@@ -176,7 +225,7 @@ What are you doing outside??
 <input checked style="display: inline;" name="sett-troll" id="sett6" type="radio" onclick="TrollSett(0, 0);"><label for="sett6" onclick="TrollSett(0, 0);">No</label>
 <button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button>
 </fieldset>
-<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Tuesday 4/2/2025&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Tuesday 4/2/2025</span>
 <hr class="hr1" style="border-color: lightblue;">
 <h2 style="display: block;">The ultimate settings tool just from batch!</h2>
 <span class="section-desc">This project is the one that took me the most time to make! With this batch script you can change system settings, customize appearance (+ Access to 'hidden' settings), change date/time and region settings and even more!</span>
