@@ -8,10 +8,7 @@ body {
 background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));
 color: whitesmoke;
 font-family: Verdana;
-margin-top: -21px;
-margin-right: 0;
-margin-left: 0;
-margin-bottom: 0;
+margin: 0;
 overflow-x: hidden;
 }
 .header {
@@ -27,7 +24,6 @@ width: 16%;
 height: 35vh;
 position: fixed;
 z-index: 20;
-top: 40px;
 }
 .side-div ul li:hover {
 list-style-type: "=>";
@@ -48,11 +44,13 @@ font-size: 10pt;
 color: yellow;
 }
 .main-div {
-padding-top: 3em;
-padding-right: 0;
-padding-left: 0;
-padding-bottom: 0;
+margin-top: 0;
+padding: 0;
 box-sizing: border-box;
+position: absolute;
+top: 70px;
+right: 0;
+left: 0;
 }
 .play-pause-btn:hover, .stop-btn:hover {
 cursor: pointer;
@@ -77,8 +75,8 @@ overflow-x: hidden;
 fieldset {
 display: none;
 }
-@media screen and (max-width: 935px) {
-.hr1 {margin-bottom: 160px;}
+@media screen and (max-width: 900px) {
+.hr1 {margin-bottom: 250px;}
 .control10v4-image, .newtabhtml-image {transform: scale(105%);}
 h4 {font-size: 15px;}
 }
@@ -107,19 +105,30 @@ h1, h2, h3, h4 {transition: font-size 1s ease;}
 0% {transform: scale(100%);}
 100% {transform: scale(600%);}
 }
+@keyframes music-playlist-div-anim {
+from {opacity: 0; right: -200px;}
+to {opacity: 1;}
+}
+@keyframes music-playlist-div-rev-anim {
+from {opacity: 1;}
+to {opacity: 0; right: -200px;}
+}
 .music-playlist {
-right: 0;
-left: 0;
-margin: auto;
-z-index: 1;
 width: 100%;
 height: 100%;
 position: fixed;
+z-index: 1;
 background-color: rgba(125, 120, 125, 0.9);
-transition: opacity 0.5s linear;
-border-radius: 15px;
 border: outset 15px grey;
-padding-top: 35px;
+}
+.music-playlist-div {
+transition: all 0.5s linear;
+border-radius: 15px;
+position: absolute;
+top: 120px;
+bottom: 0;
+height: 500px;
+animation: music-playlist-div-anim 1.2s ease;
 }
 .music-playlist:active {
 border: inset 15px grey;
@@ -152,6 +161,7 @@ margin: 0;
 <h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>
 </div>
 </center>
+<br><br>
 <audio class="audio" onended="TrackChange(1)" autoplay></audio>
 <audio class="audio-sfx" src=""></audio>
 <img style="position: fixed; z-index: -10; transform: rotate(10deg); margin-top: 22vh; margin-left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG">
@@ -183,22 +193,22 @@ margin: 0;
 <div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, green, rgba(0, 175, 40, 0.7));">
 <h2 style="margin-bottom: -0.5em; padding-left: 1em;">Links</h2>
 <ul style="list-style-type: '=⇒ ';">
-<li><a class="a-links" href="https://instagram.com/winxprt/" target="_blank">Instagram</a></li>
-<li><a class="a-links" href="https://youtube.com/@winxprt/" target="_blank">YouTube</a></li>
+<li><a class="a-links a-link1" href="https://instagram.com/winxprt/" target="_blank">Instagram</a></li>
+<li><a class="a-links a-link2" href="https://youtube.com/@winxprt/" target="_blank">YouTube</a></li>
 <hr>
-<h3 style="display: block; margin-top: 0px; margin-bottom: 6px;">Other pages: </h3>
-<li><a class="a-links" href="index.html">Home page</a></li>
-<li style="cursor: not-allowed;"><s class="a-links" onclick="IdiotQuiz();">Projects by me</s></li>
+<h3 style="display: block; margin-top: 0; margin-bottom: 6px;">Other pages: </h3>
+<li><a class="a-links a-link3" href="index.html">Home page</a></li>
+<li style="cursor: not-allowed;"><s class="a-links a-link4" onclick="IdiotQuiz();">Projects by me</s></li>
 </ul>
 <hr>
-<div class="music-info" style="padding-left: 15px; padding-bottom: 0px;">
+<div class="music-info" style="padding-left: 15px;">
 <span>♫&nbsp;</span> 
-<span>...</span>
+<span></span>
 <hr style="margin: 0;">
-<span>...</span>
-<br>
+<span></span>
 </div>
 <u class="playlist-shower" onclick="ShowPlaylist();">Show playlist</u>
+<br>
 </div>
 </div>
 <div class="main-div">
@@ -208,7 +218,7 @@ What are you doing outside??
 <br><br>
 <input class="input-mouse-leave" type="text" placeholder="Please Describe">
 </div>
-<h4 style="display: block; margin-bottom: 5px;">Welcome to the projects site!</h4>
+<h4 style="margin-bottom: 5px; margin-top: 0;">Welcome to the projects site!</h4>
 <span style="margin-bottom: 5px; display: block; padding-left: 12%; padding-right: 12%; font-size: 10pt;">Have a look on some of the projects I've made since the last years!</span>
 <fieldset style="display: none; border-radius: 25px; border-color: green; width: 95%;">
 <legend style="z-index: -1; background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 30vw;">Page Settings</legend>
