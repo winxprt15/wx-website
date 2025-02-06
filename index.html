@@ -99,18 +99,30 @@ transform: scale(80%);
 0% {transform: scale(100%);}
 100% {transform: scale(600%);}
 }
+@keyframes music-playlist-div-anim {
+from {opacity: 0; right: -200px;}
+to {opacity: 1;}
+}
+@keyframes music-playlist-div-rev-anim {
+from {opacity: 1;}
+to {opacity: 0; right: -200px;}
+}
 .music-playlist {
-right: 0;
-left: 0;
-margin: auto;
-z-index: 1;
 width: 100%;
 height: 100%;
 position: fixed;
+z-index: 1;
 background-color: rgba(125, 120, 125, 0.9);
-transition: opacity 0.5s linear;
-border-radius: 15px;
 border: outset 15px grey;
+}
+.music-playlist-div {
+transition: all 0.5s linear;
+border-radius: 15px;
+position: absolute;
+top: 120px;
+bottom: 0;
+height: 500px;
+animation: music-playlist-div-anim 1.2s ease;
 }
 .music-playlist:active {
 border: inset 15px grey;
@@ -172,7 +184,7 @@ margin: 0;
 </center>
 </div>
 <div class="side-div">
-<div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, green, rgba(0, 175, 40, 0.7));">
+<div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));">
 <h2 style="margin-bottom: -0.5em; padding-left: 1em;">Links</h2>
 <ul style="list-style-type: '=⇒ ';">
 <li><a class="a-links a-link1" href="https://instagram.com/winxprt/" target="_blank">Instagram</a></li>
@@ -237,6 +249,8 @@ But it wasn't until 2001 when Microsoft had decided to remove these easter eggs 
 <h2 style="display: block; margin-bottom: -20px;">Installing Windows Whistler Build 2446</h2><h3 style="display: block;">(20th Anniversary)</h3>
 <span class="section-desc" style="display: inline-block; padding-left: 12%; padding-right: 12%;">On the video below, I installed and tried one of Windows Whistler's builds on a VM, since it was its 20th anniversary day. This build had many differences in comparison to the final and famous Windows XP version at a closer look, for instance the Red Moon Desert, shown as default in this build, was replaced with Bliss wallpaper in the final build</span>
 <p><iframe class="iframe3" width="560" height="315" src="https://www.youtube.com/embed/pAoysWh-PNY?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0" title="Installing Windows Whistler Build 2446" frameborder="0" allowfullscreen></iframe></p>
+<hr>
+<p>Καλή διαμονή σε παγκάκι</p>
 </center>
 </div>
 </div>
