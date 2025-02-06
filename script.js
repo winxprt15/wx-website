@@ -9,7 +9,7 @@ document.body.innerHTML = `\n<center style="font-family: Arial;">\n<span style="
 function PlayPause() {
 if (document.querySelector(".audio").paused) {
 document.querySelector(".audio").play();
-} else {
+} else if (!document.querySelector(".audio").paused) {
 document.querySelector(".audio").pause();
 }
 }
@@ -18,22 +18,22 @@ document.querySelector(".audio").pause();
 document.querySelector(".audio").currentTime = 0;
 }
 function BlueTheme() {
-document.body.style = "background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));";
-document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));";
-document.querySelector(".hr1").style = "border-color: lime;";
-document.querySelector(".hr2").style = "border-color: lightblue;";
-document.querySelector(".hr3").style = "border-color: lime;";
-document.querySelector("fieldset").style = "border-radius: 25px; border-color: blue; width: 95%;";
+document.body.style.background = "linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100))";
+document.querySelector(".side-div-div").style.background = "linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7))";
+document.querySelector(".hr1").style.borderColor = "lime";
+document.querySelector(".hr2").style.borderColor = "lightblue";
+document.querySelector(".hr3").style.borderColor = "lime";
+document.querySelector("fieldset").style.borderColor = "blue";
 localStorage.setItem('themeforwxsite', 'blue');
 document.getElementById('sett1').checked = true;
 }
 function GreenTheme() {
-document.body.style = "background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55));";
-document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, green, rgba(0, 175, 40, 0.7));";
-document.querySelector(".hr1").style = "border-color: lightblue;";
-document.querySelector(".hr2").style = "border-color: lime;";
-document.querySelector(".hr3").style = "border-color: lightblue;";
-document.querySelector("fieldset").style = "border-radius: 25px; border-color: green; width: 95%;"
+document.body.style.background = "linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55))";
+document.querySelector(".side-div-div").style.background = "linear-gradient(75deg, green, rgba(0, 175, 40, 0.7))";
+document.querySelector(".hr1").style.borderColor = "lightblue";
+document.querySelector(".hr2").style.borderColor = "lime";
+document.querySelector(".hr3").style.borderColor = "lightblue";
+document.querySelector("fieldset").style.borderColor = "green";
 localStorage.setItem('themeforwxsite', 'green');
 document.getElementById('sett2').checked = true;
 }
@@ -71,16 +71,16 @@ window.alert("You're already here!")
 }
 document.querySelector(".audio").onplay = function() {
 document.querySelector(".play-pause-btn").src = 'pause-xxl.png'
-document.querySelector(".play-pause-btn").style.animation = "fade-in-out 2.5s linear infinite";
 document.querySelector(".play-pause-btn").title = "Pause music";
+document.querySelector(".play-pause-btn").style.animation = "fade-in-out 2.5s linear infinite";
 document.querySelector(".stop-btn").style.animation = "fade-in-out 2.5s linear infinite";
 document.querySelector(".next-track").style.animation = "fade-in-out 2.5s linear infinite";
 document.querySelector(".prev-track").style.animation = "fade-in-out 2.5s linear infinite";
 };
 document.querySelector(".audio").onpause = function () {
 document.querySelector(".play-pause-btn").src = 'play-xxl.png'
-document.querySelector(".play-pause-btn").style.animtaion = "";
 document.querySelector(".play-pause-btn").title = "Play music";
+document.querySelector(".play-pause-btn").style.animation = "";
 document.querySelector(".stop-btn").style.animation = "";
 document.querySelector(".next-track").style.animation = "";
 document.querySelector(".prev-track").style.animation = "";
