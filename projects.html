@@ -129,6 +129,7 @@ top: 120px;
 bottom: 0;
 height: 500px;
 animation: music-playlist-div-anim 1.2s ease;
+user-select: none;
 }
 .music-playlist:active {
 border: inset 15px grey;
@@ -155,10 +156,10 @@ margin: 0;
 }
 </style>
 </head>
-<body style="background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55));">
+<body>
 <center>
 <div class="header">
-<h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>
+<h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s projects</h2>
 </div>
 </center>
 <br><br>
@@ -168,17 +169,17 @@ margin: 0;
 <img style="position: fixed; z-index: -10; transform: rotate(-4deg); margin-top: 45vh; margin-left: 60vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG">
 <img style="position: fixed; z-index: -10; transform: rotate(5deg); margin-top: 65vh; margin-left: 1vw; opacity: 0.65;" width="410" src="VMware-Image.PNG">
 <div class="play-pause-stop-div" style="z-index: 15; position: fixed; display: inline-block; margin-top: 38vh; margin-left: 89vw;">
-<img class="play-pause-btn" title="Play music" style="display: block; curs" width="75" src="play-xxl.png" onclick="PlayPause();">
-<img class="stop-btn" title="Stop music" style="display: block; margin-top: 10px; cursor: pointer;" width="75" src="stop-xxl.png" onclick="StopAudio();">
+<img class="play-pause-btn" title="Play music" style="display: block; curs" width="75" src="play-xxl.png" onclick="PlayPause();" draggable="false">
+<img class="stop-btn" title="Stop music" style="display: block; margin-top: 10px; cursor: pointer;" width="75" src="stop-xxl.png" onclick="StopAudio();" draggable="false">
 </div>
 <div class="next-prev-tracks" style="position: fixed; display: inline-block; z-index: 15; margin-top: 50vh; margin-left: 4%;">
 <div class="prev-track" style="z-index: 15; transform: scaleX(-1); cursor: pointer;" title="Previous Track" onclick="TrackChange(-1);">
-<img width="50" height="75" src="play-xxl.png"/>
-<img style="margin-left: -25px;" width="50" height="75" src="play-xxl.png"/>
+<img width="50" height="75" src="play-xxl.png" draggable="false"/>
+<img style="margin-left: -25px;" width="50" height="75" src="play-xxl.png" draggable="false"/>
 </div>
 <div class="next-track" style="z-index: 15; cursor: pointer;" title="Next Track" onclick="TrackChange(1);">
-<img width="50" height="75" src="play-xxl.png"/>
-<img style="margin-left: -25px;" width="50" height="75" src="play-xxl.png"/>
+<img width="50" height="75" src="play-xxl.png" draggable="false"/>
+<img style="margin-left: -25px;" width="50" height="75" src="play-xxl.png" draggable="false"/>
 </div>
 </div>
 <div class="music-playlist" style="display: none;">
@@ -235,7 +236,7 @@ What are you doing outside??
 <input checked style="display: inline;" name="sett-troll" id="sett6" type="radio" onclick="TrollSett(0, 0);"><label for="sett6" onclick="TrollSett(0, 0);">No</label>
 <button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button>
 </fieldset>
-<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Thursday 6/2/2025</span>
+<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Tuesday 4/2/2025</span>
 <hr class="hr1" style="border-color: lightblue;">
 <h2 style="display: block;">The ultimate settings tool just from batch!</h2>
 <span class="section-desc">This project is the one that took me the most time to make! With this batch script you can change system settings, customize appearance (+ Access to 'hidden' settings), change date/time and region settings and even more!</span>
