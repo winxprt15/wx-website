@@ -176,10 +176,12 @@ TrollSett(null, 1);
 function ShowPlaylist() {
 if (document.querySelector(".music-playlist").style.display == "none") {
 document.querySelector(".music-playlist").style.display = "block";
+document.querySelector(".music-playlist-div").style.animation = "music-playlist-div-anim 1.2s ease";
 document.querySelector(".playlist-shower").innerText = "Hide playlist";
 } else if (document.querySelector(".music-playlist").style.display == "block") {
-document.querySelector(".music-playlist").style.display = "none";
+document.querySelector(".music-playlist-div").style.animation = "music-playlist-div-rev-anim 0.5s ease";
 document.querySelector(".playlist-shower").innerText = "Show playlist";
+setTimeout(`document.querySelector\('.music-playlist'\).style.display = "none";`, 400);
 }
 }
 var PlaylistHtml = '';
