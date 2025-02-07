@@ -1,10 +1,17 @@
 if (localStorage.getItem('idiottestfailedforwxsite') == '1') {
+const ChancesOfIdiotTestFail = Math.round(Math.random() * 2);
+if (ChancesOfIdiotTestFail == 0) {
 document.addEventListener('contextmenu', function() {
 var MessArray = ["Another smart guy...", "You maybe probably fucking couldn't do that", "You thought so...", "You may use a browser extension for that. What?. You need help?? NO I WON'T HELP YOU.", "Hey hey stop right there.", "'Aim on missions not on cheats'"];
 window.alert(MessArray[Math.round(Math.random() * 5)])
 });
 document.addEventListener('contextmenu', event => event.preventDefault());
-document.body.innerHTML = `\n<center style="font-family: Arial;">\n<span style="font-size: 40px; font-weight: 760;">Access denied on this page.<br>Message: We do not accept idiots</span>\n<p style="font-size: 20pt; font-weight: 450;">To ensure you are actually smart, try to find where the secret unlock button is</p>\n<button style="position: absolute; top: ${Math.round(Math.random() * 40 + 30)}vh; right: ${Math.round(Math.random() * 90)}vw; transform: scale(200%); opacity: 0.075; background-color: darkblue; color: rgb(0, 0, 75);" onclick="localStorage.removeItem('idiottestfailedforwxsite'); window.location.href = window.location.href;">UNLOCK</button>\n</div>\n</center>\n`;
+document.body.innerHTML = `\n<center style="font-family: Arial;">\n<span style="font-size: 40px; font-weight: 760;">Access denied on this page.<br>Message: We do not accept idiots</span>\n<p style="font-size: 20pt; font-weight: 450;">To ensure you are actually smart, try to find where the secret unlock button is</p>\n<button style="position: absolute; top: ${Math.round(Math.random() * 40 + 30)}vh; right: ${Math.round(Math.random() * 90)}vw; transform: scale(200%); opacity: 0.075; background-color: transparent; color: rgb(70, 70, 70);" onclick="localStorage.removeItem('idiottestfailedforwxsite'); window.location.href = window.location.href;">UNLOCK</button>\n</div>\n</center>\n`;
+} else if (ChancesOfIdiotTestFail == 1) {
+document.querySelector(".main-div").innerHTML = `<center><video src="RickRoll.mp4" autoplay style="width: 91vw; height: 91vh;" controls></video><span style="display: block;">I'm trying to make you smart. Watch the video above till the end</span></center>`;
+} else if (ChancesOfIdiotTestFail == 2) {
+document.querySelector(".main-div").innerHTML = `<center><iframe style="background-color: rgba(200, 200, 200, 0.7); width: 65vw; height: 90vh;" src="https://www.mikusa.com/snake/snake.html"></iframe><span style="display: block;">Source: <a style="color: lime;" href="https://www.mikusa.com/snake/snake.html" target="_blank">https://www.mikusa.com/snake/snake.html</a></span></center>`;
+}
 }
 function PlayPause() {
 if (document.querySelector(".audio").paused) {
