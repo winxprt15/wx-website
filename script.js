@@ -80,6 +80,7 @@ document.querySelector(".backward-img-piece2").src = "play-xxl-green.png";
 document.querySelector(".forward-img-piece1").src = "play-xxl-green.png";
 document.querySelector(".forward-img-piece2").src = "play-xxl-green.png";
 document.getElementById('sett2').checked = true;
+AudioImgColors = "green";
 } else {
 document.body.style.background = "linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100))";
 document.querySelector(".side-div-div").style.background = "linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7))";
@@ -93,6 +94,7 @@ document.querySelector(".backward-img-piece2").src = "play-xxl-blue.png";
 document.querySelector(".forward-img-piece1").src = "play-xxl-blue.png";
 document.querySelector(".forward-img-piece2").src = "play-xxl-blue.png";
 document.getElementById('sett1').checked = true;
+AudioImgColors = "blue";
 }
 function IdiotQuiz() {
 if (localStorage.getItem("trollsettforwxsite") == '1') {
