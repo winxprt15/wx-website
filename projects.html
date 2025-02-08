@@ -77,30 +77,30 @@ display: none;
 }
 @media screen and (max-width: 900px) {
 .hr1 {margin-bottom: 250px;}
-.control10v4-image, .newtabhtml-image {transform: scale(105%);}
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(105%);}
 h4 {font-size: 15px;}
 }
 @media screen and (min-width: 1700px) {
 .section-desc {font-size: 16pt; margin-bottom: 25px;}
-.control10v4-image, .newtabhtml-image {transform: scale(110%);}
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(110%);}
 }
 @media screen and (max-width: 1230px) {
-.control10v4-image, .newtabhtml-image {transform: scale(88%);}
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(88%);}
 }
 @media screen and (max-width: 415px) {
-.control10v4-image, .newtabhtml-image {transform: scale(45%);}
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(45%);}
 }
 @media screen and (max-width: 370px) {
-.control10v4-image, .newtabhtml-image {transform: scale(35%);}
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(35%);}
 }
 @media screen and (max-width: 351px) {
-.control10v4-image, .newtabhtml-image {transform: scale(20%);}
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(20%);}
 }
 .hr1 {transition: margin-bottom 1s ease;}
 .side-div {z-index: 5;}
 .header {z-index: 5;}
 h1, h2, h3, h4 {transition: font-size 1s ease;}
-.section-desc {display: block; width: 75%; transition: font-size 1s ease;}
+.section-desc {display: block; width: 70%; transition: font-size 1s ease;}
 @keyframes bigger-inputfield {
 0% {transform: scale(100%);}
 100% {transform: scale(600%);}
@@ -236,14 +236,19 @@ What are you doing outside??
 <input checked style="display: inline;" name="sett-troll" id="sett6" type="radio" onclick="TrollSett(0, 0);"><label for="sett6" onclick="TrollSett(0, 0);">No</label>
 <button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button>
 </fieldset>
-<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Tuesday 4/2/2025</span>
+<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Saturday 8/2/2025</span>
 <hr class="hr1" style="border-color: lightblue;">
-<h2 style="display: block;">The ultimate settings tool just from batch!</h2>
-<span class="section-desc">This project is the one that took me the most time to make! With this batch script you can change system settings, customize appearance (+ Access to 'hidden' settings), change date/time and region settings and even more!</span>
-<a target="_blank" href="Control10V4.PNG"><img class="control10v4-image" style="transition: transform ease 1s; z-index: 1;" src="Control10V4.PNG" width="600" title="Screenshot of the batch script. Click to view on new tab"></a>
+<h2 style="display: block;">Secondary Locker</h2>
+<span class="section-desc">The script that got <mark>flagged</mark> as <i><u>trojan</u></i> by <cite><a style="color: yellow; text-decoration: none;" href="https://www.virustotal.com/" target="_blank">VirusTotal</a></cite> with 8% of all antivirus software flagging it as a <u>threat</u>. <br>In fact, this was a project that didn't even take over 4 months to complete. I was inspired by <i>a YouTube video called <q><a href="https://youtu.be/Tp5M00_SZD0?t=334s" target="_blank" style="color: yellow;">4 Cool VBS Scripts With Codes</a></q> which was uploaded by techkitv exactly the day I became a year old (1/2/2011)</i> and decided to remake one and add some special ingredients in it. And that was where I had never expected the project to be that heavy due to what virus tests resulted to.</span>
+<a href="SecondaryLocker.PNG" target="_blank"><img class="seclocker-image" src="SecondaryLocker.PNG" style="transition: transform ease 1s; z-index: 1;" width="600" title="Screenshot of the VBS Script. Click to view on new tab"/></a>
+<span class="section-desc" style="display: block;">Basically what this does is that it <q>locks your computer</q> with a password that you've set before. (It disables Task Manager, Registry Editor, Command Prompt, closes some known apps opened before and closes Explorer.exe)<br><u>Tip:</u> Put this file on your <b>startup folder</b><br>(<b title="Copy and pase this in search on Start Menu to open path"> \Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\ </b>) so it runs after user login (Delay may occur)<br><a href="https://github.com/winxprt15/secondarylocker/blob/main/SecondaryLocker.vbs" target="_blank" style="color: yellow;">Click to view it on GitHub</a></span>
 <hr class="hr2" style="border-color: lime;">
+<h2 style="display: block;">The ultimate settings tool just from batch!</h2>
+<span class="section-desc">This project is the one that took me the most time to make! With this batch script you can change system settings, customize appearance (+ Access to 'hidden' settings), change date/time and region settings and even more!<br>This project took me a year to finish (meaning I haven't found something else to put after research) and it has been of the most time-consuming projects I had ever worked on. I had firstly started this project οn Spring of 2023 but I didn't continue the project until Summer. After a year, I started thinking about ways to continue the project (I didn't even know where to start of honestly). And that led me to the 4th version of the script with much more settings and much more improvements made on October 2024.<br><a href="https://github.com/winxprt15/control10/blob/main/control10-v4.bat" target="_blank" style="color: yellow;">Click to view it on GitHub</a></span>
+<a target="_blank" href="Control10V4.PNG"><img class="control10v4-image" style="transition: transform ease 1s; z-index: 1;" src="Control10V4.PNG" width="600" title="Screenshot of the batch script. Click to view on new tab"></a>
+<hr class="hr3" style="display: block;">
 <h2 style="display: block;">The NewTab HTML project</h2>
-<span class="section-desc">The best way to start browing the web just from an HTML! This HTML page has the ability to search on the web for you and even pick between Google's search engine or Bing's search engine. You also have the ability to go to any pages you want just by typing the FULL URL ADDRESS</span>
+<span class="section-desc">The best way to start browing the web just from an HTML! This HTML page has the ability to search on the web for you and even pick between Google's search engine or Bing's search engine. You also have the ability to go to any pages you want just by typing the FULL URL ADDRESS<br><a href="https://github.com/winxprt15/newtabhtml/blob/main/index.html" target="_blank" style="color: yellow;">Click to view it on GitHub</a></span>
 <a href="NewTabHTMLStartup.PNG" target="_blank"><img class="newtabhtml-image" style="transition: transform 1s ease; z-index: 1; margin-bottom: 40px;" src="NewTabHTMLStartup.PNG" width="600" title="Screenshot of the NewTab startup. Click to view on new tab"></a>
 </center>
 </div>
