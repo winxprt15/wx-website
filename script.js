@@ -8,9 +8,9 @@ window.alert(MessArray[Math.round(Math.random() * 5)])
 document.addEventListener('contextmenu', event => event.preventDefault());
 document.body.innerHTML = `\n<center style="font-family: Arial;">\n<span style="font-size: 40px; font-weight: 760;">Access denied on this page.<br>Message: We do not accept idiots</span>\n<p style="font-size: 20pt; font-weight: 450;">To ensure you are actually smart, try to find where the secret unlock button is</p>\n<button style="position: absolute; top: ${Math.round(Math.random() * 40 + 30)}vh; right: ${Math.round(Math.random() * 90)}vw; transform: scale(200%); opacity: 0.075; background-color: transparent; color: rgb(70, 70, 70);" onclick="localStorage.removeItem('idiottestfailedforwxsite'); window.location.href = window.location.href;">UNLOCK</button>\n</div>\n</center>\n`;
 } else if (ChancesOfIdiotTestFail == 1) {
-document.querySelector(".main-div").innerHTML = `<center><video src="RickRoll.mp4" autoplay style="width: 91vw; height: 91vh;" controls></video><span style="display: block;">I'm trying to make you smart. Watch the video above till the end</span></center>`;
+document.querySelector(".main-div").innerHTML = `<center><video src="RickRoll.mp4" autoplay style="width: 91vw; height: 91vh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
 } else if (ChancesOfIdiotTestFail == 2) {
-document.querySelector(".main-div").innerHTML = `<center><iframe style="background-color: rgba(200, 200, 200, 0.7); width: 65vw; height: 90vh;" src="https://www.mikusa.com/snake/snake.html"></iframe><span style="display: block;">Source: <a style="color: lime;" href="https://www.mikusa.com/snake/snake.html" target="_blank">https://www.mikusa.com/snake/snake.html</a></span></center>`;
+document.querySelector(".main-div").innerHTML = `<center><video src="JoshHutchersonWhistle.mp4" autoplay style="width: 91vw; height: 91vh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
 }
 }
 function PlayPause() {
@@ -24,6 +24,7 @@ function StopAudio() {
 document.querySelector(".audio").pause();
 document.querySelector(".audio").currentTime = 0;
 }
+var AudioImgColors;
 function BlueTheme() {
 document.body.style.background = "linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100))";
 document.querySelector(".side-div-div").style.background = "linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7))";
@@ -31,6 +32,17 @@ document.querySelector(".hr1").style.borderColor = "lime";
 document.querySelector(".hr2").style.borderColor = "lightblue";
 document.querySelector(".hr3").style.borderColor = "lime";
 document.querySelector("fieldset").style.borderColor = "blue";
+AudioImgColors = "blue";
+if (document.querySelector(".audio").paused) {
+document.querySelector(".play-pause-btn").src = "play-xxl-blue.png";
+} else {
+document.querySelector(".play-pause-btn").src = "pause-xxl-blue.png";
+}
+document.querySelector(".stop-btn").src = "stop-xxl-blue.png";
+document.querySelector(".backward-img-piece1").src = "play-xxl-blue.png";
+document.querySelector(".backward-img-piece2").src = "play-xxl-blue.png";
+document.querySelector(".forward-img-piece1").src = "play-xxl-blue.png";
+document.querySelector(".forward-img-piece2").src = "play-xxl-blue.png";
 localStorage.setItem('themeforwxsite', 'blue');
 document.getElementById('sett1').checked = true;
 }
@@ -42,22 +54,44 @@ document.querySelector(".hr2").style.borderColor = "lime";
 document.querySelector(".hr3").style.borderColor = "lightblue";
 document.querySelector("fieldset").style.borderColor = "green";
 localStorage.setItem('themeforwxsite', 'green');
+AudioImgColors = "green";
+if (document.querySelector(".audio").paused) {
+document.querySelector(".play-pause-btn").src = "play-xxl-green.png";
+} else {
+document.querySelector(".play-pause-btn").src = "pause-xxl-green.png";
+}
+document.querySelector(".stop-btn").src = "stop-xxl-green.png";
+document.querySelector(".backward-img-piece1").src = "play-xxl-green.png";
+document.querySelector(".backward-img-piece2").src = "play-xxl-green.png";
+document.querySelector(".forward-img-piece1").src = "play-xxl-green.png";
+document.querySelector(".forward-img-piece2").src = "play-xxl-green.png";
 document.getElementById('sett2').checked = true;
 }
 if (localStorage.getItem('themeforwxsite') == 'green') {
-document.body.style = "background: linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55));";
-document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, green, rgba(0, 175, 40, 0.7));";
-document.querySelector(".hr1").style = "border-color: lightblue;";
-document.querySelector(".hr2").style = "border-color: lime;";
-document.querySelector("fieldset").style = "border-radius: 25px; border-color: green; width: 95%;"
-localStorage.setItem('themeforwxsite', 'green');
+document.body.style.background = "linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55))";
+document.querySelector(".side-div-div").style.background = "linear-gradient(75deg, green, rgba(0, 175, 40, 0.7))";
+document.querySelector(".hr1").style.borderColor = "lightblue;";
+document.querySelector(".hr2").style.borderColor = "lime";
+document.querySelector("fieldset").style.borderColor = "green";
+document.querySelector(".play-pause-btn").src = "play-xxl-green.png";
+document.querySelector(".stop-btn").src = "stop-xxl-green.png";
+document.querySelector(".backward-img-piece1").src = "play-xxl-green.png";
+document.querySelector(".backward-img-piece2").src = "play-xxl-green.png";
+document.querySelector(".forward-img-piece1").src = "play-xxl-green.png";
+document.querySelector(".forward-img-piece2").src = "play-xxl-green.png";
 document.getElementById('sett2').checked = true;
 } else {
-document.body.style = "background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));";
-document.querySelector(".side-div-div").style = "border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));";
-document.querySelector(".hr1").style = "border-color: lime;";
-document.querySelector(".hr2").style = "border-color: lightblue;";
-document.querySelector("fieldset").style = "border-radius: 25px; border-color: blue; width: 95%;";
+document.body.style.background = "linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100))";
+document.querySelector(".side-div-div").style.background = "linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7))";
+document.querySelector(".hr1").style.borderColor = "lime";
+document.querySelector(".hr2").style.borderColor = "lightblue";
+document.querySelector("fieldset").style.borderColor = "blue";
+document.querySelector(".play-pause-btn").src = "play-xxl-blue.png"
+document.querySelector(".stop-btn").src = "stop-xxl-blue.png";
+document.querySelector(".backward-img-piece1").src = "play-xxl-blue.png";
+document.querySelector(".backward-img-piece2").src = "play-xxl-blue.png";
+document.querySelector(".forward-img-piece1").src = "play-xxl-blue.png";
+document.querySelector(".forward-img-piece2").src = "play-xxl-blue.png";
 document.getElementById('sett1').checked = true;
 }
 function IdiotQuiz() {
@@ -77,7 +111,11 @@ window.alert("You're already here!")
 }
 }
 document.querySelector(".audio").onplay = function() {
-document.querySelector(".play-pause-btn").src = 'pause-xxl.png'
+if (AudioImgColors == "blue") {
+document.querySelector(".play-pause-btn").src = 'pause-xxl-blue.png';
+} else {
+document.querySelector(".play-pause-btn").src = 'pause-xxl-green.png';
+}
 document.querySelector(".play-pause-btn").title = "Pause music";
 document.querySelector(".play-pause-btn").style.animation = "fade-in-out 2.5s linear infinite";
 document.querySelector(".stop-btn").style.animation = "fade-in-out 2.5s linear infinite";
@@ -85,7 +123,11 @@ document.querySelector(".next-track").style.animation = "fade-in-out 2.5s linear
 document.querySelector(".prev-track").style.animation = "fade-in-out 2.5s linear infinite";
 };
 document.querySelector(".audio").onpause = function () {
-document.querySelector(".play-pause-btn").src = 'play-xxl.png'
+if (AudioImgColors == "blue") {
+document.querySelector(".play-pause-btn").src = "play-xxl-blue.png";
+} else if (AudioImgColors == "green") {
+document.querySelector(".play-pause-btn").src = "play-xxl-green.png";
+}
 document.querySelector(".play-pause-btn").title = "Play music";
 document.querySelector(".play-pause-btn").style.animation = "";
 document.querySelector(".stop-btn").style.animation = "";
