@@ -172,7 +172,7 @@ document.querySelector(".song-name-" + CurrentSongNum).style = "color: yellow; c
 }
 function TrackChange(value) {
 if (value == 1) {
-if (CurrentSongNum == 8) {
+if (CurrentSongNum == SongArray.length - 1) {
 CurrentSongNum = 0;
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector(".audio").play();
@@ -184,7 +184,7 @@ document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector(".audio").play();
 } else if (value == -1) {
 if (CurrentSongNum == 0) {
-CurrentSongNum = 8;
+CurrentSongNum = SongArray.length - 1;
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector(".audio").play();
 RenderMusicInfo();
