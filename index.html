@@ -118,12 +118,17 @@ border: outset 15px grey;
 .music-playlist-div {
 transition: all 0.5s linear;
 border-radius: 15px;
-position: absolute;
+overflow-y: scroll;
+position: relative;
 top: 120px;
 bottom: 0;
-height: 500px;
+height: 55vh;
 animation: music-playlist-div-anim 1.2s ease;
 user-select: none;
+font-size: 14.5pt;
+text-align: right;
+right: 15vw;
+margin: 0;
 }
 .music-playlist:active {
 border: inset 15px grey;
@@ -140,13 +145,6 @@ user-select: none;
 background-color: yellow;
 color: darkblue;
 border-radius: 50px;
-}
-.music-playlist-div {
-font-size: 14.5pt;
-text-align: right;
-position: absolute;
-right: 15vw;
-margin: 0;
 }
 </style>
 </head>
@@ -178,8 +176,8 @@ margin: 0;
 </div>
 <div class="music-playlist" style="display: none;">
 <center>
+<h1>Music playlist:</h1>
 <div class="music-playlist-div">
-<h2>Music playlist:</h2>
 ...
 </div>
 </center>
