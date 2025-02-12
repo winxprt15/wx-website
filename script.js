@@ -144,9 +144,53 @@ document.querySelector(".next-track").style.animation = "";
 document.querySelector(".prev-track").style.animation = "";
 };
 var CurrentSong;
-const SongArray = ["Coldplay - The Scientist", "Coldplay - In My Place", "Coldplay - Yellow", "Green Day - Boulevard of Broken Dreams", "Green Day - When I Come Around", "Green Day - Good Riddance", "blink-182 - Adam's Song", "blink-182 - I Miss You", "blink-182 - Story Of A Lonely Guy"];
+const SongArray = [
+"Coldplay - Viva la Vida",
+"Coldplay - Clocks",
+"Coldplay - The Scientist",
+"Coldplay - Yellow",
+"Coldplay - Fix you",
+"Coldplay - In My Place",
+"Coldplay - Don't Panic",
+"Coldplay - Warning Sign",
+"Coldplay - The Hardest Part",
+"Coldplay - Miracles",
+"Coldplay - Talk",
+"Coldplay - Everything's Not Lost",
+"Coldplay - Swallowed in the Sea",
+"Keane - Silenced By The Night",
+"He Is We - I Wouldn't Mind",
+"Cast - Walkaway",
+"Soul Asylum - Runaway Train",
+"Green Day - Boulevard of Broken Dreams",
+"Green Day - Wake Me Up When September Ends",
+"Green Day - Good Riddance",
+"Green Day - Holiday",
+"Green Day - When I Come Around",
+"Green Day - Basket Case",
+"Green Day - Give Me Novacaine",
+"Green Day - Redundant",
+"Green Day - When It's Time",
+"Red Hot Chili Peppers - Snow (Hey Oh)",
+"Red Hot Chili Peppers - Californication",
+"Rascal Flatts - Life Is A Highway",
+"blink-182 - All the Small Things",
+"blink-182 - What's My Age Again",
+"blink-182 - Adam's Song",
+"blink-182 - The Rock Show",
+"blink-182 - I Miss You",
+"blink-182 - First Date",
+"blink-182 - Anthem",
+"blink-182 - Anthem Part Two",
+"blink-182 - Story Of A Lonely Guy"
+"blink-182 - Josie",
+"blink-182 - Man Overboard",
+"blink-182 - M+M's",
+"Oasis - Wonderwall",
+"Oasis - Champagne Supernova"
+];
 function ShuffleSong() {
-CurrentSongNum = Math.round(Math.random() * 8);
+CurrentSongNum = Math.round(Math.random() * (SongArray.length - 1));
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
 document.querySelector(".music-info").innerHTML = `
 <span>♫&nbsp;</span> 
