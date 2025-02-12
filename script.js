@@ -161,6 +161,7 @@ const SongArray = [
 "Keane - Silenced By The Night",
 "He Is We - I Wouldn't Mind",
 "Cast - Walkaway",
+"Soul Asylum - Runaway Train",
 "Green Day - Boulevard of Broken Dreams",
 "Green Day - Wake Me Up When September Ends",
 "Green Day - Good Riddance",
@@ -208,9 +209,9 @@ document.querySelector(".music-info").innerHTML = `
 `;
 for (let o = 0; o < SongArray.length; o++) {
 for (let i = 0; i < SongArray.length; i++) {
-document.querySelector(".song-name-" + i).style = "color: white; cursor: pointer;";
+document.querySelector(".song-name-" + i).style.color = "white";
 }
-document.querySelector(".song-name-" + CurrentSongNum).style = "color: yellow; cursor: pointer;";
+document.querySelector(".song-name-" + CurrentSongNum).style.color = "yellow";
 }
 }
 function TrackChange(value) {
@@ -294,7 +295,7 @@ continue;
 }
 PlaylistHtml += `<span class="song-names song-name-${i}" onclick="CurrentSongNum = ${i}; document.querySelector('.audio').src = \`${SongArray[i]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer;">&raquo; ${SongArray[i]}</span>\n<br>`;
 }
-document.querySelector(".music-playlist-div").innerHTML = `\n<h2>Music playlist:</h2>${PlaylistHtml}`;
+document.querySelector(".music-playlist-div").innerHTML = `${PlaylistHtml}`;
 for (let j = 0; j < SongArray.length; j++) {
 document.querySelector(".song-name-" + j).addEventListener("click", function() {
 for (let i = 0; i < SongArray.length; i++) {
