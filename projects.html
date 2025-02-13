@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=0.570">
-<title>WinXprt Page (My Projects)</title>
+<title>WinXprt Projects</title>
 <style>
 body {
 background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));
@@ -152,12 +152,35 @@ background-color: yellow;
 color: darkblue;
 border-radius: 50px;
 }
+.gear-icon:hover {
+background-color: rgba(65, 65, 65, 0.1);
+border-radius: 100px;
+}
+@keyframes gear-rotate {
+from {/* transform: rotate(0deg); */}
+to {transform: rotate(90deg);}
+}
+@keyframes gear-rotate-reverse {
+from {/* transform: rotate(0deg); */}
+to {transform: rotate(-90deg);}
+}
+@keyframes fade-in {
+from {opacity: 0;}
+to {opacity: 1;}
+}
+@keyframes fade-out {
+from {opacity: 1;}
+to {opacity: 0;}
+}
 </style>
 </head>
 <body>
 <center>
 <div class="header">
 <h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s projects</h2>
+<div style="position: absolute; right: 20px; top: 3px; vertical-align: middle; display: inline-block;">
+<img class="gear-icon" style="cursor: pointer; display: inline;" src="settings-xxl.png" width="35"/>
+</div>
 </div>
 </center>
 <br><br>
@@ -182,9 +205,11 @@ border-radius: 50px;
 </div>
 <div class="music-playlist" style="display: none;">
 <center>
-<h1>Music playlist:</h1>
 <div class="music-playlist-div">
+<h2>Music playlist:</h2>
+<div class="music-playlist-list">
 ...
+</div>
 </div>
 </center>
 </div>
@@ -219,20 +244,21 @@ What are you doing outside??
 </div>
 <h4 style="margin-bottom: 5px; margin-top: 0;">Welcome to the projects site!</h4>
 <span style="margin-bottom: 5px; display: block; padding-left: 12%; padding-right: 12%; font-size: 10pt;">Have a look on some of the projects I've made since the last years!</span>
-<fieldset style="display: none; border-radius: 25px; border-color: green; width: 95%;">
-<legend style="z-index: -1; background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 30vw;">Page Settings</legend>
-<span>Choose theme: </span>
+<fieldset style="display: none; background-color: rgba(70, 70, 70, 0.9); text-align: right; position: fixed; border-radius: 25px; border-color: green; width: 50vw; top: 46px; right: 20px; z-index: 5;">
+<legend style="text-align: left; background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 28vw;">Page Settings</legend>
+<span>Choose theme: </span><br>
 <input checked="" style="display: inline-block;" name="sett-green-blue" id="sett1" type="radio" onclick="BlueTheme();"><label style="display: inline;" for="sett1" onclick="BlueTheme();">Blue</label>
 <input style="display: inline;" name="sett-green-blue" id="sett2" type="radio" onclick="GreenTheme();"><label for="sett2" onclick="GreenTheme();">Green</label>
 <br>
-<span>Allow cookies on YouTube Embed Videos?</span>
-<input checked style="display: inline-block;" name="sett-yt-cookies" id="sett3" type="radio" onclick="YtIframeCookies('1');" title="Allow cookies on YouTube Embed Videos. This will allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through allowing you to save the video to watch later on your current account without being redirected to YouTube's site."><label style="display: inline;" for="sett3" onclick="YtIframeCookies('0');" title="Allow cookies on YouTube Embed Videos. This will allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through allowing you to save the video to watch later on your current account without being redirected to YouTube's site.">Consent to cookies</label>
-<input style="display: inline;" name="sett-yt-cookies" id="sett4" type="radio" onclick="YtIframeCookies('0');" title="Do not allow cookies on YouTube Embed Videos. This will not allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through."><label for="sett4" onclick="YtIframeCookies('1');" title="Do not allow cookies on YouTube Embed Videos. This will not allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through.">Do not consent to cookies</label>
-<br>
-<span>Allow troll stuff?</span>
+<div style="opacity: 0.65; cursor: not-allowed; display: inline-block;">
+<span>Allow cookies on YouTube Embed Videos?</span><br>
+<input disabled checked style="display: inline-block;" name="sett-yt-cookies" id="sett3" type="radio" onclick="YtIframeCookies('1');" title="Allow cookies on YouTube Embed Videos. This will allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through allowing you to save the video to watch later on your current account without being redirected to YouTube's site."><label style="display: inline;" for="sett3" onclick="YtIframeCookies('0');" title="Allow cookies on YouTube Embed Videos. This will allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through allowing you to save the video to watch later on your current account without being redirected to YouTube's site.">Consent to cookies</label>
+<input disabled style="display: inline;" name="sett-yt-cookies" id="sett4" type="radio" onclick="YtIframeCookies('0');" title="Do not allow cookies on YouTube Embed Videos. This will not allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through."><label for="sett4" onclick="YtIframeCookies('1');" title="Do not allow cookies on YouTube Embed Videos. This will not allow information associated with your Google account (if you're signed in) and other cookies allowed on YouTube to pass through.">Do not consent to cookies</label>
+</div>
+<span style="display: block;">Allow troll stuff?</span>
 <input style="display: inline;" name="sett-troll" id="sett5" type="radio" onclick="TrollSett(1, 0);"><label for="sett5" onclick="TrollSett(1, 0);">Yes</label>
 <input checked style="display: inline;" name="sett-troll" id="sett6" type="radio" onclick="TrollSett(0, 0);"><label for="sett6" onclick="TrollSett(0, 0);">No</label>
-<button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button>
+<center><button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button></center>
 </fieldset>
 <span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Saturday 8/2/2025</span>
 <hr class="hr1" style="border-color: lightblue;">
