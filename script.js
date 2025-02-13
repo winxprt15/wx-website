@@ -277,13 +277,16 @@ setTimeout(`window.location.href = "https://google.com"`, 1750);
 TrollSett(null, 1);
 function ShowPlaylist() {
 if (document.querySelector(".music-playlist").style.display == "none") {
+document.querySelector(".music-playlist").style.animation = "fade-in ease 0.6s";
 document.querySelector(".music-playlist").style.display = "block";
 document.querySelector(".music-playlist-div").style.animation = "music-playlist-div-anim 1.2s ease";
 document.querySelector(".playlist-shower").innerText = "Hide playlist";
+setTimeout("document.querySelector('.music-playlist-div').style.animation = ''", 500);
 } else if (document.querySelector(".music-playlist").style.display == "block") {
 document.querySelector(".music-playlist-div").style.animation = "music-playlist-div-rev-anim 0.5s ease";
+document.querySelector(".music-playlist").style.animation = "fade-out 0.7s ease";
 document.querySelector(".playlist-shower").innerText = "Show playlist";
-setTimeout(`document.querySelector\('.music-playlist'\).style.display = "none";`, 400);
+setTimeout(`document.querySelector\('.music-playlist'\).style.display = "none";`, 500);
 }
 }
 var PlaylistHtml = '';
@@ -295,7 +298,7 @@ continue;
 }
 PlaylistHtml += `<span class="song-names song-name-${i}" onclick="CurrentSongNum = ${i}; document.querySelector('.audio').src = \`${SongArray[i]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer;">&raquo; ${SongArray[i]}</span>\n<br>`;
 }
-document.querySelector(".music-playlist-div").innerHTML = `${PlaylistHtml}`;
+document.querySelector(".music-playlist-list").innerHTML = `${PlaylistHtml}`;
 for (let j = 0; j < SongArray.length; j++) {
 document.querySelector(".song-name-" + j).addEventListener("click", function() {
 for (let i = 0; i < SongArray.length; i++) {
@@ -304,6 +307,19 @@ document.querySelector(".song-name-" + i).style = "color: white; cursor: pointer
 this.style = "color: yellow; cursor: pointer;";
 });
 }
+document.querySelector(".gear-icon").addEventListener("click", () => {
+if (document.querySelector("fieldset").style.display == "none") {
+document.querySelector("fieldset").style.display = "block";
+document.querySelector("fieldset").style.animation = "fade-in ease 1s";
+document.querySelector(".gear-icon").style.animation = "gear-rotate ease 1s";
+setTimeout("document.querySelector('.gear-icon').style.animation = '';", 1000);
+} else if (document.querySelector("fieldset").style.display == "block") {
+document.querySelector("fieldset").style.animation = "fade-out ease 0.5s";
+document.querySelector(".gear-icon").style.animation = "gear-rotate-reverse ease 0.5s";
+setTimeout("document.querySelector('.gear-icon').style.animation = '';", 500);
+setTimeout("document.querySelector('fieldset').style.display = 'none';", 500);
+}
+})
 
 //ONLY ON INDEX.HTML. CODE ABOVE
 function YtIframeCookies(value) {
