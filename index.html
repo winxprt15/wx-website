@@ -60,6 +60,7 @@ cursor: pointer;
 transform: scale(70%);
 }
 }
+.music-playlist-list {transition: font-size 1s ease;}
 @media screen and (max-width: 720px) {
 body {
 overflow-x: hidden;
@@ -67,6 +68,7 @@ overflow-x: hidden;
 .iframe1, .iframe2, .iframe3 {
 transform: scale(80%);
 }
+.music-playlist-list {font-size: 8pt;}
 }
 @media screen and (max-width: 501px) {
 .main-div {padding: 0;}
@@ -89,8 +91,8 @@ transform: scale(80%);
 .hr1 {
 transition: margin-bottom 1s ease;
 }
-@media screen and (max-width: 825px) {
-.section-desc {font-size: 10pt; padding-left: 10%; padding-right: 10%;}
+@media screen and (max-width: 925px) {
+.section-desc {font-size: 12pt; padding-left: 8%; padding-right: 8%;}
 .hr1 {
 margin-bottom: 230px;
 }
@@ -128,7 +130,7 @@ bottom: 0;
 height: 55vh;
 animation: music-playlist-div-anim 1.2s ease;
 user-select: none;
-font-size: 14.5pt;
+font-size: 10.5pt;
 text-align: right;
 right: 15vw;
 margin: 0;
@@ -241,7 +243,7 @@ What are you doing outside??
 </div>
 <h3>Welcome to my website!</h3>
 <span style="margin-bottom: 10px; display: block;">Hello World!</span>
-<fieldset style="display: none; background-color: rgba(70, 70, 70, 0.9); text-align: right; position: fixed; border-radius: 25px; border-color: green; width: 50vw; top: 46px; right: 20px;">
+<fieldset style="display: none; background-color: rgba(70, 70, 70, 0.9); text-align: right; position: fixed; border-radius: 25px; border-color: green; width: 50vw; top: 46px; right: 20px; z-index: 15;">
 <legend style="text-align: left; background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 28vw;">Page Settings</legend>
 <span>Choose theme: </span><br>
 <input checked="" style="display: inline-block;" name="sett-green-blue" id="sett1" type="radio" onclick="BlueTheme();"><label style="display: inline;" for="sett1" onclick="BlueTheme();">Blue</label>
