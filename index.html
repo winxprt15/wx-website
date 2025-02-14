@@ -183,7 +183,6 @@ to {opacity: 0;}
 </div>
 </center>
 <br><br>
-<audio class="audio" onended="TrackChange(1)" autoplay></audio>
 <audio class="audio-sfx"></audio>
 <img style="position: fixed; z-index: -10; transform: rotate(10deg); top: 32.5vh; left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG">
 <img style="position: fixed; z-index: -10; transform: rotate(-4deg); top: 40vh; left: 75vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG">
@@ -210,6 +209,7 @@ to {opacity: 0;}
 ...
 </div>
 </div>
+<audio controls class="audio" onended="TrackChange(1)" autoplay></audio>
 </center>
 </div>
 <div class="side-div">
@@ -243,8 +243,8 @@ What are you doing outside??
 </div>
 <h3>Welcome to my website!</h3>
 <span style="margin-bottom: 10px; display: block;">Hello World!</span>
-<fieldset style="display: none; background-color: rgba(70, 70, 70, 0.9); text-align: right; position: fixed; border-radius: 25px; border-color: green; width: 50vw; top: 46px; right: 20px; z-index: 15;">
-<legend style="text-align: left; background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 28vw;">Page Settings</legend>
+<fieldset style="display: none; background-color: rgba(70, 70, 70, 0.9); text-align: right; position: fixed; border-radius: 25px; border-color: green; width: 30vw; top: 46px; right: 20px; z-index: 5;">
+<legend style="text-align: left; background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 28vw; width: 100%;">Page Settings</legend>
 <span>Choose theme: </span><br>
 <input checked="" style="display: inline-block;" name="sett-green-blue" id="sett1" type="radio" onclick="BlueTheme();"><label style="display: inline;" for="sett1" onclick="BlueTheme();">Blue</label>
 <input style="display: inline;" name="sett-green-blue" id="sett2" type="radio" onclick="GreenTheme();"><label for="sett2" onclick="GreenTheme();">Green</label>
