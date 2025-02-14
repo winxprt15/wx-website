@@ -82,7 +82,7 @@ h4 {font-size: 15px;}
 }
 @media screen and (min-width: 1700px) {
 .section-desc {font-size: 16pt; margin-bottom: 25px;}
-.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(110%);}
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(110%); margin-bottom: 25px;}
 }
 @media screen and (max-width: 1230px) {
 .control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(88%);}
@@ -188,7 +188,6 @@ to {opacity: 0;}
 </div>
 </center>
 <br><br>
-<audio class="audio" onended="TrackChange(1)" autoplay></audio>
 <audio class="audio-sfx" src=""></audio>
 <img style="position: fixed; z-index: -10; transform: rotate(10deg); top: 32.5vh; left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG">
 <img style="position: fixed; z-index: -10; transform: rotate(-4deg); top: 40vh; left: 75vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG">
@@ -215,6 +214,7 @@ to {opacity: 0;}
 ...
 </div>
 </div>
+<audio controls class="audio" onended="TrackChange(1)" autoplay></audio>
 </center>
 </div>
 <div class="side-div">
@@ -248,8 +248,8 @@ What are you doing outside??
 </div>
 <h4 style="margin-bottom: 5px; margin-top: 0;">Welcome to the projects site!</h4>
 <span style="margin-bottom: 5px; display: block; padding-left: 12%; padding-right: 12%; font-size: 10pt;">Have a look on some of the projects I've made since the last years!</span>
-<fieldset style="display: none; background-color: rgba(70, 70, 70, 0.9); text-align: right; position: fixed; border-radius: 25px; border-color: green; width: 50vw; top: 46px; right: 20px; z-index: 5;">
-<legend style="text-align: left; background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 28vw;">Page Settings</legend>
+<fieldset style="display: none; background-color: rgba(70, 70, 70, 0.9); text-align: right; position: fixed; border-radius: 25px; border-color: green; width: 30vw; top: 46px; right: 20px; z-index: 5;">
+<legend style="text-align: left; background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 28vw; width: 100%;">Page Settings</legend>
 <span>Choose theme: </span><br>
 <input checked="" style="display: inline-block;" name="sett-green-blue" id="sett1" type="radio" onclick="BlueTheme();"><label style="display: inline;" for="sett1" onclick="BlueTheme();">Blue</label>
 <input style="display: inline;" name="sett-green-blue" id="sett2" type="radio" onclick="GreenTheme();"><label for="sett2" onclick="GreenTheme();">Green</label>
