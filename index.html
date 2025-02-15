@@ -68,7 +68,7 @@ overflow-x: hidden;
 .iframe1, .iframe2, .iframe3 {
 transform: scale(80%);
 }
-.music-playlist-list {font-size: 14px;}
+.music-playlist-list {font-size: 12px;}
 }
 @media screen and (max-width: 501px) {
 .main-div {padding: 0;}
@@ -173,12 +173,18 @@ to {opacity: 0;}
 }
 </style>
 </head>
-<body>
+<body onkeydown="
+if ((localStorage.getItem('kbaudiosettforwxsite') == '1') || (KbAudioSett == 1)) {
+windowEvent = event;
+OnKeyDownAudioControls(windowEvent);
+}">
 <center>
+<div class="outer-header">
 <div class="header">
 <h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>
-<div style="position: absolute; right: 20px; top: 3px; vertical-align: middle; display: inline-block;">
-<img class="gear-icon" style="cursor: pointer; display: inline;" src="settings-xxl.png" width="35"/>
+</div>
+<div style="position: fixed; right: 20px; top: 3px; vertical-align: middle; display: inline-block; z-index: 100;">
+<img class="gear-icon" style="cursor: pointer; display: inline;" src="settings-xxl.png" width="35" draggable="false"/>
 </div>
 </div>
 </center>
@@ -256,6 +262,9 @@ What are you doing outside??
 <span>Allow troll stuff?</span><br>
 <input style="display: inline;" name="sett-troll" id="sett5" type="radio" onclick="TrollSett(1, 0);"><label for="sett5" onclick="TrollSett(1, 0);">Yes</label>
 <input checked style="display: inline;" name="sett-troll" id="sett6" type="radio" onclick="TrollSett(0, 0);"><label for="sett6" onclick="TrollSett(0, 0);">No</label>
+<span style="display: block;">Allow keyboard audio controls?</span>
+<input checked style="display: inline;" name="sett-kb-audio" id="sett7" type="radio" onclick="AudioControlsSet(1);"><label for="sett7" onclick="AudioControlsSet(1);">Yes</label>
+<input style="display: inline;" name="sett-kb-audio" id="sett8" type="radio" onclick="AudioControlsSet(0);"><label for="sett8" onclick="AudioControlsSet(0);">No</label>
 <center><button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button></center>
 </fieldset>
 <span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Tuesday 4/2/2025</span>
