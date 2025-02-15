@@ -98,6 +98,15 @@ document.querySelector(".forward-img-piece2").src = "play-xxl-blue.png";
 document.getElementById('sett1').checked = true;
 AudioImgColors = "blue";
 }
+var windowEvent;
+var KbAudioSett;
+if (localStorage.getItem('kbaudiosettforwxsite') == '0') {
+KbAudioSett = 0;
+} else if (localStorage.getItem('kbaudiosettforwxsite') == '1') {
+KbAudioSett = 1;
+} else {
+KbAudioSett = 1;
+}
 function IdiotQuiz() {
 if (localStorage.getItem("trollsettforwxsite") == '1') {
 var IdiotTest = window.prompt(`Idiot Test!! \nType below the answer of the following question: \nIf X=3 and Y=1 then solve this: 2x+3y=??`);
@@ -105,7 +114,8 @@ if (IdiotTest == 9) {
 window.alert('Okay! You are good to go');
 } else if (IdiotTest == null) {
 if (document.querySelector(".header").innerText.indexOf("projects") == 10) {
-document.querySelector(".header").innerHTML = `<h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s projects</h2>&nbsp;<span style="color: darkblue; font-size: 14pt; font-weight: 900; display: inline-block; vertical-align: bottom;">(At least you chose wisely)</span>`;
+document.querySelector(".header").innerHTML = `
+<h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s projects</h2>&nbsp;<span style="color: darkblue; font-size: 14pt; font-weight: 900; display: inline-block; vertical-align: bottom;">(At least you chose wisely)</span>`;
 setTimeout(`document.querySelector(".header").innerHTML = \`\n<h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s projects</h2>\n\``, 5000);
 } else {
 document.querySelector(".header").innerHTML = `<h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>&nbsp;<span style="color: darkblue; font-size: 14pt; font-weight: 900; display: inline-block; vertical-align: bottom;">(At least you chose wisely)</span>`;
@@ -119,6 +129,13 @@ window.location.href = window.location.href;
 window.alert("You're already here!")
 }
 }
+
+function OnKeyDownAudioControls(event) {
+if (event.key == "ArrowRight") {document.querySelector(".next-track").click();}
+if (event.key == "ArrowLeft") {document.querySelector(".prev-track").click();}
+if (event.code == "Space") {PlayPause();}
+}
+
 document.querySelector(".audio").onplay = function() {
 if (AudioImgColors == "blue") {
 document.querySelector(".play-pause-btn").src = 'pause-xxl-blue.png';
@@ -275,6 +292,13 @@ setTimeout(`window.location.href = "https://google.com"`, 1750);
 });
 }
 TrollSett(null, 1);
+
+window.addEventListener('keydown', function() {
+if ((event.keyCode == 32) && (event.target == document.body)) {
+event.preventDefault();
+}
+});
+
 function ShowPlaylist() {
 if (document.querySelector(".music-playlist").style.display == "none") {
 document.querySelector(".music-playlist").style.animation = "fade-in ease 0.6s";
@@ -320,15 +344,26 @@ setTimeout("document.querySelector('.gear-icon').style.animation = '';", 500);
 setTimeout("document.querySelector('fieldset').style.display = 'none';", 500);
 }
 })
+function AudioControlsSet(value) {
+if (value == 1) {
+document.getElementById("sett7").checked = true;
+localStorage.setItem("kbaudiosettforwxsite", "1");
+KbAudioSett = 1;
+} else if (value == 0) {
+document.getElementById("sett8").checked = true;
+localStorage.setItem("kbaudiosettforwxsite", "0");
+KbAudioSett = 0;
+}
+}
 
 //ONLY ON INDEX.HTML. CODE ABOVE
 function YtIframeCookies(value) {
-if (value == '0') {
+if (value == 0) {
 document.querySelector('.iframe1').src="https://www.youtube-nocookie.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
 document.querySelector('.iframe2').src="https://www.youtube-nocookie.com/embed/SFmRsIMJ0aE?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
 document.querySelector('.iframe3').src="https://www.youtube-nocookie.com/embed/pAoysWh-PNY?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
 localStorage.setItem('ytcookiesforwxsite', '0');
-} else if (value == '1') {
+} else if (value == 1) {
 document.querySelector('.iframe1').src="https://www.youtube.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
 document.querySelector('.iframe2').src="https://www.youtube.com/embed/SFmRsIMJ0aE?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
 document.querySelector('.iframe3').src="https://www.youtube.com/embed/pAoysWh-PNY?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0";
