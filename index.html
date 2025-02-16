@@ -215,9 +215,20 @@ OnKeyDownAudioControls(windowEvent);
 ...
 </div>
 </div>
-<audio style="margin-top: 20vh;" controls class="audio" onended="TrackChange(1)" autoplay></audio>
+<audio style="margin-top: 20vh;" controls class="audio" onended="TrackChange(1)"></audio>
 </center>
 </div>
+<div class="prev-track-shower" style="display: none; cursor: default; top: 50vh; left: 25vw; position: fixed; padding: 10px; background: rgba(0, 0, 255, 0.7); color: white; border-radius: 100px; animation: fade-in 0.225s ease; transform: scale(150%);">
+<h1 style="margin: 0; user-select: none;">&laquo;</h1>
+</div>
+<div class="forw-track-shower" style="display: none; cursor: default; top: 50vh; right: 25vw; position: fixed; padding: 10px; background: rgba(0, 0, 255, 0.7); color: white; border-radius: 100px; animation: fade-in 0.225s ease; transform: scale(150%);">
+<h1 style="margin: 0; user-select: none;">&raquo;</h1>
+</div>
+<center>
+<div class="play-pause-shower" style="margin-left: 50vw; margin-right: 50vw; width: 30px; height: 30px; display: none; cursor: default; top: 80vh; position: fixed; padding: 15px; background: rgba(0, 0, 255, 0.7); color: white; border-radius: 100px; animation: fade-in 0.225s ease; transform: scale(150%);">
+<img width="30" class="play-pause-shower-img" src=""/>
+</div>
+</center>
 <div class="side-div">
 <div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));">
 <h2 style="margin-bottom: -0.5em; padding-left: 1em;">Links</h2>
