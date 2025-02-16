@@ -170,6 +170,27 @@ document.querySelector(".play-pause-shower-img").src = document.querySelector(".
 document.querySelector('.play-pause-shower').style.display = 'block';
 setTimeout("document.querySelector('.play-pause-shower').style.display = 'none';", 300);
 }
+if (event.code == "KeyP") {
+document.querySelector('.playlist-shower').click();
+}
+if (event.code == "KeyM") {
+if (document.querySelector('.audio').muted) {
+document.querySelector('.muted-audio-shower-img').src = "volume-up-xxl.png";
+document.querySelector('.audio').muted = false;
+} else {
+document.querySelector('.muted-audio-shower-img').src = "mute-xxl.png";
+document.querySelector('.audio').muted = true;
+}
+if (localStorage.getItem("themeforwxsite") == null) {var ThemeColor = "blue";} else {var ThemeColor = localStorage.getItem("themeforwxsite")}
+if (ThemeColor == "green") {
+ThemeColor = "rgba(0, 160, 0, 0.7)";
+} else {
+ThemeColor = "rgba(0, 0, 150, 0.7)";
+}
+document.querySelector('.muted-audio-shower').style.background = ThemeColor;
+document.querySelector('.muted-audio-shower').style.display = 'block';
+setTimeout("document.querySelector('.muted-audio-shower').style.display = 'none';", 300);
+}
 }
 
 document.querySelector(".audio").onplay = function() {
