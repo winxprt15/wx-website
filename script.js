@@ -191,6 +191,22 @@ document.querySelector('.muted-audio-shower').style.background = ThemeColor;
 document.querySelector('.muted-audio-shower').style.display = 'block';
 setTimeout("document.querySelector('.muted-audio-shower').style.display = 'none';", 300);
 }
+if (event.key == "0") {
+document.querySelector('.stop-btn').click();
+if (localStorage.getItem("themeforwxsite") == null) {var ThemeColor = "blue";} else {var ThemeColor = localStorage.getItem("themeforwxsite")}
+if (ThemeColor == "green") {
+ThemeColor = "rgba(0, 160, 0, 0.7)";
+} else {
+ThemeColor = "rgba(0, 0, 150, 0.7)";
+}
+document.querySelector('.play-pause-shower').style.background = ThemeColor;
+document.querySelector(".play-pause-shower-img").src = document.querySelector(".stop-btn").src;
+document.querySelector('.play-pause-shower').style.display = 'block';
+setTimeout("document.querySelector('.play-pause-shower').style.display = 'none';", 300);
+}
+if (event.code == "KeyS") {
+document.querySelector('.gear-icon').click();
+}
 }
 
 document.querySelector(".audio").onplay = function() {
