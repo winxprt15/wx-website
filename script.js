@@ -102,8 +102,10 @@ var windowEvent;
 var KbAudioSett;
 if (localStorage.getItem('kbaudiosettforwxsite') == '0') {
 KbAudioSett = 0;
+document.getElementById("sett8").checked = true;
 } else if (localStorage.getItem('kbaudiosettforwxsite') == '1') {
 KbAudioSett = 1;
+document.getElementById("sett7").checked = true;
 } else {
 KbAudioSett = 1;
 }
@@ -131,9 +133,43 @@ window.alert("You're already here!")
 }
 
 function OnKeyDownAudioControls(event) {
-if (event.key == "ArrowRight") {document.querySelector(".next-track").click();}
-if (event.key == "ArrowLeft") {document.querySelector(".prev-track").click();}
-if (event.code == "Space") {PlayPause();}
+if (event.key == "ArrowRight") {
+if (localStorage.getItem("themeforwxsite") == null) {var ThemeColor = "blue";} else {var ThemeColor = localStorage.getItem("themeforwxsite")}
+if (ThemeColor == "green") {
+ThemeColor = "rgba(0, 160, 0, 0.7)";
+} else {
+ThemeColor = "rgba(0, 0, 150, 0.7)";
+}
+document.querySelector('.forw-track-shower').style.background = ThemeColor;
+document.querySelector(".next-track").click();
+document.querySelector('.forw-track-shower').style.display = 'block';
+setTimeout("document.querySelector('.forw-track-shower').style.display = 'none';", 300);
+}
+if (event.key == "ArrowLeft") {
+document.querySelector(".prev-track").click();
+if (localStorage.getItem("themeforwxsite") == null) {var ThemeColor = "blue";} else {var ThemeColor = localStorage.getItem("themeforwxsite")}
+if (ThemeColor == "green") {
+ThemeColor = "rgba(0, 160, 0, 0.7)";
+} else {
+ThemeColor = "rgba(0, 0, 150, 0.7)";
+}
+document.querySelector('.prev-track-shower').style.background = ThemeColor;
+document.querySelector('.prev-track-shower').style.display = 'block';
+setTimeout("document.querySelector('.prev-track-shower').style.display = 'none';", 300);
+}
+if (event.code == "Space") {
+PlayPause();
+if (localStorage.getItem("themeforwxsite") == null) {var ThemeColor = "blue";} else {var ThemeColor = localStorage.getItem("themeforwxsite")}
+if (ThemeColor == "green") {
+ThemeColor = "rgba(0, 160, 0, 0.7)";
+} else {
+ThemeColor = "rgba(0, 0, 150, 0.7)";
+}
+document.querySelector('.play-pause-shower').style.background = ThemeColor;
+document.querySelector(".play-pause-shower-img").src = document.querySelector(".play-pause-btn").src;
+document.querySelector('.play-pause-shower').style.display = 'block';
+setTimeout("document.querySelector('.play-pause-shower').style.display = 'none';", 300);
+}
 }
 
 document.querySelector(".audio").onplay = function() {
