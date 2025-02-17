@@ -8,9 +8,9 @@ window.alert(MessArray[Math.round(Math.random() * 5)])
 document.addEventListener('contextmenu', event => event.preventDefault());
 document.body.innerHTML = `\n<center style="font-family: Arial;">\n<span style="font-size: 40px; font-weight: 760;">Access denied on this page.<br>Message: We do not accept idiots</span>\n<p style="font-size: 20pt; font-weight: 450;">To ensure you are actually smart, try to find where the secret unlock button is</p>\n<button style="position: absolute; top: ${Math.round(Math.random() * 40 + 30)}vh; right: ${Math.round(Math.random() * 90)}vw; transform: scale(200%); opacity: 0.075; background-color: transparent; color: rgb(70, 70, 70);" onclick="localStorage.removeItem('idiottestfailedforwxsite'); window.location.href = window.location.href;" tabindex="-1">UNLOCK</button>\n</div>\n</center>\n`;
 } else if (ChancesOfIdiotTestFail == 1) {
-document.querySelector(".main-div").innerHTML = `<center><video src="RickRoll.mp4" autoplay style="width: 90vw; height: 90vh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
+document.querySelector(".main-div").innerHTML = `<center><video src="RickRoll.mp4" autoplay style="width: 85vw; height: 85vh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
 } else if (ChancesOfIdiotTestFail == 2) {
-document.querySelector(".main-div").innerHTML = `<center><video src="JoshHutchersonWhistle.mp4" autoplay style="width: 90vw; height: 90vh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
+document.querySelector(".main-div").innerHTML = `<center><video src="JoshHutchersonWhistle.mp4" autoplay style="width: 85vw; height: 85vh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
 }
 }
 function PlayPause() {
