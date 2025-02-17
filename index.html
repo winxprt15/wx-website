@@ -171,6 +171,14 @@ to {opacity: 1;}
 from {opacity: 1;}
 to {opacity: 0;}
 }
+kbd {
+border-radius: 4px;
+background-color: rgb(50, 50, 50);
+color: whitesmoke;
+padding: 1px 6px 4px 4px;
+box-shadow: -1.4px -1.4px 0.6px rgb(120, 120, 120) inset, -1px -1px 10px -2px rgb(25, 25, 25);
+user-select: none;
+}
 </style>
 </head>
 <body onkeydown="
@@ -219,10 +227,10 @@ OnKeyDownAudioControls(windowEvent);
 </center>
 </div>
 <div class="prev-track-shower" style="display: none; cursor: default; top: 50vh; left: 25vw; position: fixed; padding: 10px; background: rgba(0, 0, 255, 0.7); color: white; border-radius: 100px; animation: fade-in 0.225s ease; transform: scale(150%); z-index: 100;">
-<h1 style="margin: 0; user-select: none;">&laquo;</h1>
+<h1 style="margin: 0; user-select: none;"><</h1>
 </div>
 <div class="forw-track-shower" style="display: none; cursor: default; top: 50vh; right: 25vw; position: fixed; padding: 10px; background: rgba(0, 0, 255, 0.7); color: white; border-radius: 100px; animation: fade-in 0.225s ease; transform: scale(150%); z-index: 100;">
-<h1 style="margin: 0; user-select: none;">&raquo;</h1>
+<h1 style="margin: 0; user-select: none;">></h1>
 </div>
 <center>
 <div class="play-pause-shower" style="margin-left: 50vw; margin-right: 50vw; width: 30px; height: 30px; display: none; cursor: default; top: 80vh; position: fixed; padding: 15px; background: rgba(0, 0, 255, 0.7); color: white; border-radius: 100px; animation: fade-in 0.225s ease; transform: scale(150%); z-index: 100;">
@@ -234,6 +242,110 @@ OnKeyDownAudioControls(windowEvent);
 <img width="30" class="muted-audio-shower-img" src=""/>
 </div>
 </center>
+<div style="display: none; position: fixed; width: 100vw; height: 100vh; background: rgba(120, 120, 120, 0.7); color: white; animation: fade-in 1s ease;" class="keyboard-bindings">
+<center>
+<h2>Keyboard bindings</h2>
+</center>
+<div style="margin-right: 25%; margin-left: 25%;">
+<li><span>Use <kbd onclick="
+document.querySelector('.prev-track').click();
+if (localStorage.getItem('themeforwxsite') == null) {var ThemeColor = 'blue';} else {var ThemeColor = localStorage.getItem('themeforwxsite')}
+if (ThemeColor == 'green') {
+ThemeColor = 'rgba(0, 160, 0, 0.7)';
+} else {
+ThemeColor = 'rgba(0, 0, 150, 0.7)';
+}
+document.querySelector('.prev-track-shower').style.background = ThemeColor;
+document.querySelector('.prev-track-shower').style.display = 'block';
+setTimeout(`document.querySelector('.prev-track-shower').style.display = 'none';`, 300);
+">&nbsp;< </kbd>&nbsp;<kbd onclick="
+if (localStorage.getItem('themeforwxsite') == null) {var ThemeColor = 'blue';} else {var ThemeColor = localStorage.getItem('themeforwxsite')}
+if (ThemeColor == 'green') {
+ThemeColor = 'rgba(0, 160, 0, 0.7)';
+} else {
+ThemeColor = 'rgba(0, 0, 150, 0.7)';
+}
+document.querySelector('.forw-track-shower').style.background = ThemeColor;
+document.querySelector('.next-track').click();
+document.querySelector('.forw-track-shower').style.display = 'block';
+setTimeout(`document.querySelector('.forw-track-shower').style.display = 'none';`, 300);
+">&nbsp;> </kbd>&nbsp;arrows to navigate through songs (Click to simulate)</span></li>
+<details style="cursor: default; width: 36vw;">
+<summary style="width: 100%;">Details for idiots</summary>
+<li><kbd onclick="
+document.querySelector('.prev-track').click();
+if (localStorage.getItem('themeforwxsite') == null) {var ThemeColor = 'blue';} else {var ThemeColor = localStorage.getItem('themeforwxsite')}
+if (ThemeColor == 'green') {
+ThemeColor = 'rgba(0, 160, 0, 0.7)';
+} else {
+ThemeColor = 'rgba(0, 0, 150, 0.7)';
+}
+document.querySelector('.prev-track-shower').style.background = ThemeColor;
+document.querySelector('.prev-track-shower').style.display = 'block';
+setTimeout(`document.querySelector('.prev-track-shower').style.display = 'none';`, 300);
+">&nbsp;< </kbd>&nbsp;is to go to previous song on playlist (Click to simulate)</li>
+<li><kbd onclick="
+if (localStorage.getItem('themeforwxsite') == null) {var ThemeColor = 'blue';} else {var ThemeColor = localStorage.getItem('themeforwxsite')}
+if (ThemeColor == 'green') {
+ThemeColor = 'rgba(0, 160, 0, 0.7)';
+} else {
+ThemeColor = 'rgba(0, 0, 150, 0.7)';
+}
+document.querySelector('.forw-track-shower').style.background = ThemeColor;
+document.querySelector('.next-track').click();
+document.querySelector('.forw-track-shower').style.display = 'block';
+setTimeout(`document.querySelector('.forw-track-shower').style.display = 'none';`, 300);
+">&nbsp;> </kbd> is to go to next song on playlist (Click to simulate)</li>
+<span style="font-size: 2px; user-select: none;">you better not be cuz Luke will go crazy😡</span>
+</details>
+<li><span>Use <kbd onclick="
+PlayPause();
+if (localStorage.getItem('themeforwxsite') == null) {var ThemeColor = 'blue';} else {var ThemeColor = localStorage.getItem('themeforwxsite')}
+if (ThemeColor == 'green') {
+ThemeColor = 'rgba(0, 160, 0, 0.7)';
+} else {
+ThemeColor = 'rgba(0, 0, 150, 0.7)';
+}
+document.querySelector('.play-pause-shower').style.background = ThemeColor;
+document.querySelector('.play-pause-shower-img').src = document.querySelector('.play-pause-btn').src;
+document.querySelector('.play-pause-shower').style.display = 'block';
+setTimeout(`document.querySelector('.play-pause-shower').style.display = 'none';`, 300);
+" style="display: inline-block; width: 100px; color: grey; text-align: center;">_</kbd> to play/pause music (Click to simulate)</span></li>
+<li><span>Use <kbd onclick="document.querySelector('.playlist-shower').click();">P</kbd> to see playlist (Click to simulate)</span></li>
+<li><span>Use <kbd onclick="
+if (document.querySelector('.audio').muted) {
+document.querySelector('.muted-audio-shower-img').src = 'volume-up-xxl.png';
+document.querySelector('.audio').muted = false;
+} else {
+document.querySelector('.muted-audio-shower-img').src = 'mute-xxl.png';
+document.querySelector('.audio').muted = true;
+}
+if (localStorage.getItem('themeforwxsite') == null) {var ThemeColor = 'blue';} else {var ThemeColor = localStorage.getItem('themeforwxsite');}
+if (ThemeColor == 'green') {
+ThemeColor = 'rgba(0, 160, 0, 0.7)';
+} else {
+ThemeColor = 'rgba(0, 0, 150, 0.7)';
+}
+document.querySelector('.muted-audio-shower').style.background = ThemeColor;
+document.querySelector('.muted-audio-shower').style.display = 'block';
+setTimeout(`document.querySelector('.muted-audio-shower').style.display = 'none';`, 300);
+">M</kbd> to mute/unmute music (Click to simulate)</span></li>
+<li><span>Use <kbd onclick="
+document.querySelector('.stop-btn').click();
+if (localStorage.getItem('themeforwxsite') == null) {var ThemeColor = 'blue';} else {var ThemeColor = localStorage.getItem('themeforwxsite')}
+if (ThemeColor == 'green') {
+ThemeColor = 'rgba(0, 160, 0, 0.7)';
+} else {
+ThemeColor = 'rgba(0, 0, 150, 0.7)';
+}
+document.querySelector('.play-pause-shower').style.background = ThemeColor;
+document.querySelector('.play-pause-shower-img').src = document.querySelector('.stop-btn').src;
+document.querySelector('.play-pause-shower').style.display = 'block';
+setTimeout(`document.querySelector('.play-pause-shower').style.display = 'none';`, 300);
+">0</kbd> to stop audio (Click to simulate)</span></li>
+<li><span>Use <kbd onclick="document.querySelector('.gear-icon').click();">S</kbd> to see settings (Click to simulate)</span></li>
+</div>
+</div>
 <div class="side-div">
 <div class="side-div-div" style="border-radius: 0px 0px 20px 50px; padding: 2px; background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7));">
 <h2 style="margin-bottom: -0.5em; padding-left: 1em;">Links</h2>
@@ -281,9 +393,18 @@ What are you doing outside??
 <span style="display: block;">Allow keyboard audio controls?</span>
 <input checked style="display: inline;" name="sett-kb-audio" id="sett7" type="radio" onclick="AudioControlsSet(1);"><label for="sett7" onclick="AudioControlsSet(1);">Yes</label>
 <input style="display: inline;" name="sett-kb-audio" id="sett8" type="radio" onclick="AudioControlsSet(0);"><label for="sett8" onclick="AudioControlsSet(0);">No</label>
+<button onclick="
+if (document.querySelector('.keyboard-bindings').style.display == 'none') {
+document.querySelector('.keyboard-bindings').style.animation = 'fade-in 1s ease';
+document.querySelector('.keyboard-bindings').style.display = 'block';
+} else {
+document.querySelector('.keyboard-bindings').style.animation = 'fade-out 0.5s ease';
+setTimeout(`document.querySelector('.keyboard-bindings').style.display = 'none';`, 500);
+}
+">See bindings</button>
 <center><button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button></center>
 </fieldset>
-<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Tuesday 4/2/2025</span>
+<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Sunday 16/2/2025</span>
 <hr class="hr1" style="border-color: lightblue;">
 <h2 style="display: inline-block; font-size: 126%;">Upgrading Windows ME until it freezes&nbsp;</h2><h4 style="display: inline-block;">GREEK</h4>
 <br><span style="display: block; margin: 0; padding-left: 12%; padding-right: 12%;" class="section-desc">The ultimate experiment! It wasn't until 19th of April 2023 when I tried to install Windows ME and upgrade it without changing any hardware settings until I barely could install Windows 8.1 (I had all my ISOs in Greek language back then)</span>
