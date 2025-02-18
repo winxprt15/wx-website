@@ -345,6 +345,14 @@ document.querySelector('.play-pause-shower').style.display = 'block';
 setTimeout(`document.querySelector('.play-pause-shower').style.display = 'none';`, 300);
 ">0</kbd> to stop audio (Click to simulate)</span></li>
 <li><span>Use <kbd onclick="document.querySelector('.gear-icon').click();">S</kbd> to see settings (Click to simulate)</span></li>
+<center>
+<br><br>
+<button onclick="
+document.querySelector('.keyboard-bindings').style.animation = 'fade-out 0.5s ease';
+setTimeout(`document.querySelector('.keyboard-bindings').style.display = 'none';`, 500);
+document.querySelector('.bindings-shower').innerText = 'See bindings';
+">Hide bindings</button>
+</center>
 </div>
 </div>
 <div class="side-div">
@@ -394,13 +402,15 @@ What are you doing outside??
 <span style="display: block;">Allow keyboard audio controls?</span>
 <input checked style="display: inline;" name="sett-kb-audio" id="sett7" type="radio" onclick="AudioControlsSet(1);"><label for="sett7" onclick="AudioControlsSet(1);">Yes</label>
 <input style="display: inline;" name="sett-kb-audio" id="sett8" type="radio" onclick="AudioControlsSet(0);"><label for="sett8" onclick="AudioControlsSet(0);">No</label>
-<button onclick="
+<button class="bindings-shower" onclick="
 if (document.querySelector('.keyboard-bindings').style.display == 'none') {
 document.querySelector('.keyboard-bindings').style.animation = 'fade-in 1s ease';
 document.querySelector('.keyboard-bindings').style.display = 'block';
+this.innerText = 'Hide bindings';
 } else {
 document.querySelector('.keyboard-bindings').style.animation = 'fade-out 0.5s ease';
 setTimeout(`document.querySelector('.keyboard-bindings').style.display = 'none';`, 500);
+this.innerText = 'See bindings';
 }
 ">See bindings</button>
 <center><button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button></center>
