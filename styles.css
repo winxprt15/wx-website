@@ -16,9 +16,8 @@ position: fixed;
 height: 35vh;
 width: 100%;
 position: fixed;
-z-index: 20;
 }
-.side-div-div {width: 16%;}
+.side-div-div {width: 16%; z-index: 5;}
 .side-div ul li:hover {
 list-style-type: "=>";
 }
