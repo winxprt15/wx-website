@@ -312,6 +312,7 @@ const SongArray = [
 "blink-182 - Josie",
 "blink-182 - Man Overboard",
 "blink-182 - M+M's",
+"blink-182 - Stay Together For The Kids",
 "Oasis - Wonderwall",
 "Oasis - Champagne Supernova"
 ];
@@ -336,8 +337,10 @@ document.querySelector(".music-info").innerHTML = `
 for (let o = 0; o < SongArray.length; o++) {
 for (let i = 0; i < SongArray.length; i++) {
 document.querySelector(".song-name-" + i).style.color = "white";
+document.querySelector(".song-name-" + i).innerText = `${i+1}. ${SongArray[i]}`;
 }
 document.querySelector(".song-name-" + CurrentSongNum).style.color = "yellow";
+document.querySelector(".song-name-" + CurrentSongNum).innerText = `» ${CurrentSongNum+1}. ${SongArray[CurrentSongNum]}`;
 }
 }
 function TrackChange(value) {
@@ -426,18 +429,20 @@ var PlaylistHtml = '';
 var j;
 for (var i = 0; i < SongArray.length; i++) {
 if (SongArray[i] == SongArray[CurrentSongNum]) {
-PlaylistHtml += `<span class="song-names song-name-${i}" onclick="CurrentSongNum = ${i}; document.querySelector('.audio').src = \`${SongArray[i]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer; color: yellow;">&raquo; ${SongArray[i]}</span>\n<br>`;
+PlaylistHtml += `<span class="song-names song-name-${i}" onclick="CurrentSongNum = ${i}; document.querySelector('.audio').src = \`${SongArray[i]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer; color: yellow;">» ${i+1}. ${SongArray[i]}</span>\n<br>`;
 continue;
 }
-PlaylistHtml += `<span class="song-names song-name-${i}" onclick="CurrentSongNum = ${i}; document.querySelector('.audio').src = \`${SongArray[i]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer;">&raquo; ${SongArray[i]}</span>\n<br>`;
+PlaylistHtml += `<span class="song-names song-name-${i}" onclick="CurrentSongNum = ${i}; document.querySelector('.audio').src = \`${SongArray[i]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer;">${i+1}. ${SongArray[i]}</span>\n<br>`;
 }
 document.querySelector(".music-playlist-list").innerHTML = `${PlaylistHtml}`;
 for (let j = 0; j < SongArray.length; j++) {
 document.querySelector(".song-name-" + j).addEventListener("click", function() {
 for (let i = 0; i < SongArray.length; i++) {
 document.querySelector(".song-name-" + i).style = "color: white; cursor: pointer;";
+document.querySelector(".song-name-" + i).innerText = `${i+1}. ${SongArray[i]}`;
 }
 this.style = "color: yellow; cursor: pointer;";
+this.innerText = `» ${CurrentSongNum+1}. ${SongArray[CurrentSongNum]}`;
 });
 }
 document.querySelector(".gear-icon").addEventListener("click", () => {
