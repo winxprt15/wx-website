@@ -215,14 +215,17 @@ document.querySelector('.bindings-shower').innerText = 'See bindings';
 <input checked style="display: inline;" name="sett-kb-audio" id="sett7" type="radio" onclick="AudioControlsSet(1);"><label for="sett7" onclick="AudioControlsSet(1);">Yes</label>
 <input style="display: inline;" name="sett-kb-audio" id="sett8" type="radio" onclick="AudioControlsSet(0);"><label for="sett8" onclick="AudioControlsSet(0);">No</label>
 <button class="bindings-shower" onclick="
-if (document.querySelector(\'.keyboard-bindings\').style.display == \'none\') {
-document.querySelector(\'.keyboard-bindings\').style.animation = \'fade-in 1s ease\';\ndocument.querySelector(\'.keyboard-bindings\').style.display = \'block\';
-this.innerText = \'Hide bindings\';
+if (document.querySelector('.keyboard-bindings').style.display == 'none') {
+document.querySelector('.keyboard-bindings').style.animation = 'fade-in 1s ease';
+document.querySelector('.keyboard-bindings').style.display = 'block';
+this.innerText = 'Hide bindings';
 } else {
-document.querySelector(\'.keyboard-bindings\').style.animation = \'fade-out 0.5s ease\';\nsetTimeout(`document.querySelector(\'.keyboard-bindings\').style.display = \'none\';`, 500);\nthis.innerText = \'See bindings\';
+document.querySelector('.keyboard-bindings').style.animation = 'fade-out 0.5s ease';
+setTimeout(`document.querySelector('.keyboard-bindings').style.display = 'none';`, 500);
+this.innerText = 'See bindings';
 }
 ">See bindings</button>
-<center><button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert(\'Changes will reset after reload\');">Clear all settings</button></center>
+<center><button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button></center>
 </fieldset>
 <div class="main-div">
 
