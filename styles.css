@@ -14,7 +14,6 @@ position: fixed;
 }
 .side-div {
 height: 35vh;
-width: 100%;
 position: fixed;
 }
 .side-div-div {width: 16%; z-index: 5;}
