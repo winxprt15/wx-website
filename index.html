@@ -200,6 +200,30 @@ document.querySelector('.bindings-shower').innerText = 'See bindings';
 <br>
 </div>
 </div>
+<fieldset style="display: none; background-color: rgba(70, 70, 70, 0.9); text-align: right; position: fixed; border-radius: 25px; border-color: blue; width: 30vw; top: 46px; right: 20px; z-index: 5;">
+<legend style="text-align: left; background-color: grey; font-weight: 550; border-radius: 25px; transform: scale(120%); padding: 4px 10px 6px 10px; margin-left: 28vw; width: 100%;">Page Settings</legend>
+<span>Choose theme: </span><br>
+<input checked="" style="display: inline-block;" name="sett-green-blue" id="sett1" type="radio" onclick="BlueTheme();"><label style="display: inline;" for="sett1" onclick="BlueTheme();">Blue</label>
+<input style="display: inline;" name="sett-green-blue" id="sett2" type="radio" onclick="GreenTheme();"><label for="sett2" onclick="GreenTheme();">Green</label>\n<br>
+<span>Allow cookies in YT Videos?</span><br>
+<input checked="" style="display: inline-block;" name="sett-yt-cookies" id="sett3" type="radio" onclick="YtIframeCookies(\'1\');" title="Allow cookies on YouTube Embed Videos. This will allow information associated with your Google account (if you\'re signed in) and other cookies allowed on YouTube to pass through allowing you to save the video to watch later on your current account without being redirected to YouTube\'s site."><label style="display: inline;" for="sett3" onclick="YtIframeCookies(\'0\');" title="Allow cookies on YouTube Embed Videos. This will allow information associated with your Google account (if you\'re signed in) and other cookies allowed on YouTube to pass through allowing you to save the video to watch later on your current account without being redirected to YouTube\'s site.">Yes</label>\n<input style="display: inline;" name="sett-yt-cookies" id="sett4" type="radio" onclick="YtIframeCookies(\'0\');" title="Do not allow cookies on YouTube Embed Videos. This will not allow information associated with your Google account (if you\'re signed in) and other cookies allowed on YouTube to pass through."><label for="sett4" onclick="YtIframeCookies(\'1\');" title="Do not allow cookies on YouTube Embed Videos. This will not allow information associated with your Google account (if you\'re signed in) and other cookies allowed on YouTube to pass through.">No</label>
+<br>
+<span>Allow troll stuff?</span><br>
+<input style="display: inline;" name="sett-troll" id="sett5" type="radio" onclick="TrollSett(1, 0);"><label for="sett5" onclick="TrollSett(1, 0);">Yes</label>
+<input checked="" style="display: inline;" name="sett-troll" id="sett6" type="radio" onclick="TrollSett(0, 0);"><label for="sett6" onclick="TrollSett(0, 0);">No</label>
+<span style="display: block;">Allow keyboard audio controls?</span>
+<input checked="" style="display: inline;" name="sett-kb-audio" id="sett7" type="radio" onclick="AudioControlsSet(1);"><label for="sett7" onclick="AudioControlsSet(1);">Yes</label>
+<input style="display: inline;" name="sett-kb-audio" id="sett8" type="radio" onclick="AudioControlsSet(0);"><label for="sett8" onclick="AudioControlsSet(0);">No</label>
+<button class="bindings-shower" onclick="
+if (document.querySelector(\'.keyboard-bindings\').style.display == \'none\') {
+document.querySelector(\'.keyboard-bindings\').style.animation = \'fade-in 1s ease\';\ndocument.querySelector(\'.keyboard-bindings\').style.display = \'block\';
+this.innerText = \'Hide bindings\';
+} else {
+document.querySelector(\'.keyboard-bindings\').style.animation = \'fade-out 0.5s ease\';\nsetTimeout(`document.querySelector(\'.keyboard-bindings\').style.display = \'none\';`, 500);\nthis.innerText = \'See bindings\';
+}
+">See bindings</button>
+<center><button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert(\'Changes will reset after reload\');">Clear all settings</button></center>
+</fieldset>
 <div class="main-div">
 
 </div>
