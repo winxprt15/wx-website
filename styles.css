@@ -12,13 +12,7 @@ height: 2.6em;
 width: 100%;
 position: fixed;
 }
-.side-div {
-height: 35vh;
-position: fixed;
-width: 100%;
-z-index: -1;
-}
-.side-div-div {width: 16%; z-index: 20;}
+.side-div-div {position: fixed; width: 16%; z-index: 20;}
 .side-div ul li:hover {
 list-style-type: "=>";
 }
