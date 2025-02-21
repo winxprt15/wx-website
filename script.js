@@ -12,7 +12,7 @@ document.querySelector(".main-div").innerHTML = `<center><video src="RickRoll.mp
 } else if (ChancesOfIdiotTestFail == 2) {
 document.querySelector(".main-div").innerHTML = `<center><video src="JoshHutchersonWhistle.mp4" autoplay style="width: 85vw; height: 85vh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
 }
-}
+} else {
 var HTMLPage = "Home";
 if (!window.location.search == "") {
 if ((HTMLPage == "Home") & (window.location.search.split("?")[1].split("page=")[1] == "home")) {
@@ -25,6 +25,7 @@ PageSwitch();
 } else {
 HTMLPage = "Projects";
 PageSwitch();
+}
 }
 function PageSwitch() {
 if (HTMLPage == "Projects") {
