@@ -1,0 +1,193 @@
+body {
+background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));
+color: whitesmoke;
+font-family: Verdana;
+margin: 0;
+overflow-x: hidden;
+}
+.header {
+background: linear-gradient(75deg, blue, green, rgb(0, 205, 50));
+margin: 0;
+height: 2.6em;
+width: 100%;
+position: fixed;
+}
+.side-div {
+height: 35vh;
+width: 100%;
+position: fixed;
+z-index: 20;
+}
+.side-div-div {width: 16%;}
+.side-div ul li:hover {
+list-style-type: "=>";
+}
+.a-links:hover {
+padding: 2px;
+border-radius: 100px;
+background-color: yellow;
+color: darkblue;
+}
+.a-links {
+font-weight: 650;
+text-align: center;
+display: block;
+width: 100%;
+color: rgb(0, 0, 100);
+font-size: 10pt;
+color: yellow;
+}
+.main-div {
+padding: 0;
+height: 100%;
+}
+iframe {
+display: block;
+transition: all 1s ease;
+z-index: 0;
+}
+.iframe1, .iframe2, .iframe3, .control10v4-image, .newtabhtml-image, .seclocker-image {z-index: 0;}
+.play-pause-btn:hover, .stop-btn:hover {
+cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+.iframe1, .iframe2, .iframe3 {
+transform: scale(70%);
+}
+}
+.music-playlist-list {transition: font-size 1s ease;}
+@media screen and (max-width: 720px) {
+body {
+overflow-x: hidden;
+}
+.music-playlist-list {font-size: 12px;}
+}
+@media screen and (max-width: 501px) {
+.main-div {padding: 0;}
+}
+@media screen and (max-width: 500px) {
+.hr1 {margin-bottom: 240px;}
+.iframe1, .iframe2, .iframe3 {transform: scale(70%);}
+}
+@media screen and (max-width: 412px) {
+.iframe1, .iframe2, .iframe3 {transform: scale(100%);}
+}
+@keyframes fade-in-out {
+0% {opacity: 1;}
+50% {opacity: 0.5;}
+100% {opacity: 1;}
+}
+@media screen and (min-width: 1700px) {
+.section-desc {font-size: 20px; margin-bottom: 25px;}
+.iframe1, .iframe2, .iframe3 {margin-top: -15px;}
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(110%); margin-bottom: 25px;}
+}
+@media screen and (max-width: 501px) {
+.main-div {padding: 0;}
+}
+@media screen and (max-width: 925px) {
+.section-desc {font-size: 20px; padding-left: 8%; padding-right: 8%;}
+.hr1 {margin-bottom: 230px;}
+}
+@media screen and (max-width: 900px) {
+.hr1 {margin-bottom: 250px;}
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(75%);}
+.iframe1, .iframe2, .iframe3 {transform: scale(78%);}
+.side-div-div {width: 150px;}
+}
+.music-playlist-list {transition: font-size 1s ease;}
+@media screen and (max-width: 720px) {
+.music-playlist-list {font-size: 12px;}
+}
+@media screen and (max-width: 415px) {
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(45%);}
+}
+@media screen and (max-width: 370px) {
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(35%);}
+}
+@media screen and (max-width: 351px) {
+.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(20%);}
+}
+.hr1 {transition: margin-bottom 1s ease;}
+.header {z-index: 5;}
+h1, h2, h3, h4 {transition: font-size 1s ease;}
+.section-desc {display: block; width: 70%; transition: font-size 1s ease;}
+@keyframes bigger-inputfield {
+0% {transform: scale(100%);}
+100% {transform: scale(600%);}
+}
+@keyframes music-playlist-div-anim {
+from {opacity: 0; right: -200px;}
+to {opacity: 1;}
+}
+@keyframes music-playlist-div-rev-anim {
+from {opacity: 1;}
+to {opacity: 0; right: -200px;}
+}
+.music-playlist {
+width: 100%;
+height: 100%;
+position: fixed;
+z-index: 1;
+background-color: rgba(125, 120, 125, 0.9);
+border: outset 15px grey;
+}
+.music-playlist-div {
+transition: all 0.5s linear;
+border-radius: 15px;
+overflow-y: scroll;
+position: relative;
+top: 120px;
+bottom: 0;
+height: 55vh;
+animation: music-playlist-div-anim 1.2s ease;
+user-select: none;
+font-size: 16px;
+text-align: right;
+right: 15vw;
+margin: 0;
+}
+.music-playlist:active {
+border: inset 15px grey;
+}
+.playlist-shower {
+color: yellow;
+padding: 2px 2px 2px 2px;
+display: block;
+text-align: center;
+cursor: pointer;
+user-select: none;
+}
+.playlist-shower:hover {
+background-color: yellow;
+color: darkblue;
+border-radius: 50px;
+}
+.gear-icon:hover {
+background-color: rgba(65, 65, 65, 0.1);
+border-radius: 100px;
+}
+@keyframes gear-rotate {
+from {/* transform: rotate(0deg); */}
+to {transform: rotate(90deg);}
+}
+@keyframes gear-rotate-reverse {
+from {/* transform: rotate(0deg); */}
+to {transform: rotate(-90deg);}
+}
+@keyframes fade-in {
+from {opacity: 0;}
+to {opacity: 1;}
+}
+@keyframes fade-out {
+from {opacity: 1;}
+to {opacity: 0;}
+}
+kbd {
+border-radius: 4px;
+background-color: rgb(50, 50, 50);
+color: whitesmoke;
+padding: 1px 6px 4px 4px;
+box-shadow: -1.4px -1.4px 0.6px rgb(120, 120, 120) inset, -1px -1px 10px -2px rgb(25, 25, 25);
+user-select: none;
+}
