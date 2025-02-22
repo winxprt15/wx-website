@@ -59,10 +59,10 @@ for (let j = 0; j < SongArray.length; j++) {
 document.querySelector(".song-name-" + j).addEventListener("click", function() {
 for (let ind2 = 0; ind2 < SongArray.length; ind2++) {
 document.querySelector(".song-name-" + ind2).style.color = "white";
-document.querySelector(".song-name-" + ind2).innerText = `<b>${ind2+1}.</b> ${SongArray[ind2]}`;
+document.querySelector(".song-name-" + ind2).innerHTML = `<b>${ind2+1}.</b> ${SongArray[ind2]}`;
 }
 this.style.color = "yellow";
-this.innerText = `» <b>${CurrentSongNum+1}.</b> ${SongArray[CurrentSongNum]}`;
+this.innerHTML = `» <b>${CurrentSongNum+1}.</b> ${SongArray[CurrentSongNum]}`;
 });
 }
 if (localStorage.getItem('idiottestfailedforwxsite') == '1') {
@@ -371,10 +371,10 @@ document.querySelector(".music-info").innerHTML = `
 for (let o = 0; o < SongArray.length; o++) {
 for (let i = 0; i < SongArray.length; i++) {
 document.querySelector(".song-name-" + i).style.color = "white";
-document.querySelector(".song-name-" + i).innerText = `<b>${i+1}.</b> ${SongArray[i]}`;
+document.querySelector(".song-name-" + i).innerHTML = `<b>${i+1}.</b> ${SongArray[i]}`;
 }
 document.querySelector(".song-name-" + CurrentSongNum).style.color = "yellow";
-document.querySelector(".song-name-" + CurrentSongNum).innerText = `» <b>${Number(CurrentSongNum)+1}.</b> ${SongArray[CurrentSongNum]}`;
+document.querySelector(".song-name-" + CurrentSongNum).innerHTML = `» <b>${Number(CurrentSongNum)+1}.</b> ${SongArray[CurrentSongNum]}`;
 }
 }
 function TrackChange(value) {
