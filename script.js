@@ -365,7 +365,7 @@ function RenderMusicInfo() {
 document.querySelector(".music-info").innerHTML = `
 <span>♫&nbsp;</span> 
 <span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
-<hr style="margin: 0;">
+<hr style="border-color: yellow; margin: 0;">
 <span><b style="color: yellow;">${CurrentSongNum+1}.</b> ${SongArray[CurrentSongNum].split(" - ")[1]}</span>
 `;
 for (let o = 0; o < SongArray.length; o++) {
