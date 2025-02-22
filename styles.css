@@ -12,12 +12,20 @@ height: 2.6em;
 width: 100%;
 position: fixed;
 }
-.side-div-div {position: fixed; width: 16%; z-index: 20;}
-.side-div ul li:hover {
-list-style-type: "=>";
+.side-div-div {
+position: fixed;
+width: 16%;
+z-index: 20;
+}
+.side-div-div ul li:hover {
+list-style-type: "O ";
+}
+.a-link3 {text-decoration: underline;}
+.a-links, .playlist-shower {
+transition: all 0.2s ease;
+padding: 2px;
 }
 .a-links:hover {
-padding: 2px;
 border-radius: 100px;
 background-color: yellow;
 color: darkblue;
@@ -31,6 +39,55 @@ color: rgb(0, 0, 100);
 font-size: 10pt;
 color: yellow;
 }
+.a-link1, .a-link2 {
+display: inline-block;
+width: 40px;
+padding: 5px;
+padding-top: 6.5px;
+border: 2.5px yellow solid;
+border-radius: 100px;
+margin: 2px;
+user-select: none;
+pointer: default;
+-webkit-tap-highlight-color: transparent;
+user-drag: none;
+}
+.a-link1:hover:after, .a-link2:hover:after {
+opacity: 1;
+}
+.a-link1:after, .a-link2:after {
+background-color: yellow;
+color: darkblue;
+font-size: 100%;
+position: absolute;
+white-space: nowrap;
+padding: 1px 4px 2px 4px;
+opacity: 0;
+top: 50px;
+left: 40px;
+border: 1px solid darkblue;
+z-index: 20;
+transition: opacity 0.25s ease;
+border-radius: 15px; 
+}
+.a-link1:after {content: "Visit my Instagram!";}
+.a-link2:after {content: "Visit my YouTube channel";}
+.a-link1:hover, .a-link2:hover {
+transform: scale(115%);
+background-color: transparent;
+box-shadow: 2.5px 3px 5px yellow;
+border: 0.05px yellow solid;
+}
+.a-link1:active, .a-link2:active {
+transform: scale(90%) scaleX(102.5%);
+box-shadow: 2px 4px 30px yellow;
+border: none;
+}
+.a-link1:hover {background-color: deeppink;}
+.a-link2:hover {background-color: darkred;}
+.a-link1:active {background-color: purple;}
+.a-link2:active {background-color: rgb(100, 0, 0);}
+.outer-social-links {height: 60px;}
 .main-div {
 padding: 0;
 height: 100%;
@@ -60,7 +117,7 @@ overflow-x: hidden;
 .main-div {padding: 0;}
 }
 @media screen and (max-width: 500px) {
-.hr1 {margin-bottom: 240px;}
+.hr1 {margin-bottom: 250px;}
 .iframe1, .iframe2, .iframe3 {transform: scale(70%);}
 }
 @media screen and (max-width: 412px) {
@@ -79,15 +136,15 @@ overflow-x: hidden;
 @media screen and (max-width: 501px) {
 .main-div {padding: 0;}
 }
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 975px) {
 .section-desc {font-size: 20px; padding-left: 8%; padding-right: 8%;}
 .hr1 {margin-bottom: 230px;}
+.side-div-div {width: 164px;}
 }
 @media screen and (max-width: 900px) {
 .hr1 {margin-bottom: 250px;}
 .control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(75%);}
 .iframe1, .iframe2, .iframe3 {transform: scale(78%);}
-.side-div-div {width: 150px;}
 }
 .music-playlist-list {transition: font-size 1s ease;}
 @media screen and (max-width: 720px) {
@@ -105,7 +162,14 @@ overflow-x: hidden;
 .hr1 {transition: margin-bottom 1s ease;}
 .header {z-index: 5;}
 h1, h2, h3, h4 {transition: font-size 1s ease;}
-.section-desc {display: block; width: 70%; transition: font-size 1s ease;}
+.section-desc {
+display: block;
+width: 70%;
+transition: font-size 1s ease;
+text-wrap: balance;
+padding-left: 12%;
+padding-right: 12%;
+}
 @keyframes bigger-inputfield {
 0% {transform: scale(100%);}
 100% {transform: scale(600%);}
@@ -146,16 +210,17 @@ border: inset 15px grey;
 }
 .playlist-shower {
 color: yellow;
-padding: 2px 2px 2px 2px;
+padding: 2px;
 display: block;
 text-align: center;
 cursor: pointer;
 user-select: none;
+border-radius: 50px;
+font-weight: 550;	
 }
 .playlist-shower:hover {
 background-color: yellow;
 color: darkblue;
-border-radius: 50px;
 }
 .gear-icon:hover {
 background-color: rgba(65, 65, 65, 0.1);
