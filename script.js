@@ -90,11 +90,9 @@ if (window.location.search.includes("page=")) {
 if (window.location.search.slice(window.location.search.indexOf("page=")).split("page=")[1].slice(window.location.search.slice(window.location.search.indexOf("page=")).split("page=")[1].indexOf("projects"), 8) == "projects") {
 HTMLPage = "Home";
 PageSwitch();
-console.log("home");
 } else {
 HTMLPage = "Projects";
 PageSwitch();
-console.log("projects");
 }
 }
 if (window.location.search.includes("songnum=")) {
