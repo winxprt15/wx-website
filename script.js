@@ -100,6 +100,7 @@ if (window.location.search.slice(window.location.search.indexOf("songnum=")).spl
 CurrentSongNum = window.location.search.slice(window.location.search.indexOf("songnum=")).split("songnum=")[1].slice(window.location.search.slice(window.location.search.indexOf("songnum=")), 2).split("&")[0] - 1;
 RenderMusicInfo();
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
+document.querySelector(".audio").autoplay = true;
 } else {
 ShuffleSong();
 RenderMusicInfo();
