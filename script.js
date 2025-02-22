@@ -1,3 +1,70 @@
+var CurrentSongNum;
+const SongArray = [
+"Coldplay - Viva la Vida",
+"Coldplay - Clocks",
+"Coldplay - The Scientist",
+"Coldplay - Yellow",
+"Coldplay - Fix you",
+"Coldplay - In My Place",
+"Coldplay - Don't Panic",
+"Coldplay - Warning Sign",
+"Coldplay - The Hardest Part",
+"Coldplay - Miracles",
+"Coldplay - Talk",
+"Coldplay - Everything's Not Lost",
+"Coldplay - Swallowed in the Sea",
+"Keane - Silenced By The Night",
+"He Is We - I Wouldn't Mind",
+"Cast - Walkaway",
+"Soul Asylum - Runaway Train",
+"Green Day - Boulevard of Broken Dreams",
+"Green Day - Wake Me Up When September Ends",
+"Green Day - Good Riddance",
+"Green Day - Holiday",
+"Green Day - When I Come Around",
+"Green Day - Basket Case",
+"Green Day - Give Me Novacaine",
+"Green Day - Redundant",
+"Green Day - When It's Time",
+"Red Hot Chili Peppers - Snow (Hey Oh)",
+"Red Hot Chili Peppers - Californication",
+"Rascal Flatts - Life Is A Highway",
+"blink-182 - All the Small Things",
+"blink-182 - What's My Age Again",
+"blink-182 - Adam's Song",
+"blink-182 - The Rock Show",
+"blink-182 - I Miss You",
+"blink-182 - First Date",
+"blink-182 - Anthem",
+"blink-182 - Anthem Part Two",
+"blink-182 - Story Of A Lonely Guy",
+"blink-182 - Josie",
+"blink-182 - Man Overboard",
+"blink-182 - M+M's",
+"blink-182 - Stay Together For The Kids",
+"Oasis - Wonderwall",
+"Oasis - Champagne Supernova"
+];
+var PlaylistHtml = '';
+var j;
+for (var ind = 0; ind < SongArray.length; ind++) {
+if (SongArray[ind] == SongArray[CurrentSongNum]) {
+PlaylistHtml += `<span class="song-names song-name-${ind}" onclick="CurrentSongNum = ${ind}; document.querySelector('.audio').src = \`${SongArray[ind]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer; color: yellow;">» ${ind+1}. ${SongArray[ind]}</span>\n<br>`;
+continue;
+}
+PlaylistHtml += `<span class="song-names song-name-${ind}" onclick="CurrentSongNum = ${ind}; document.querySelector('.audio').src = \`${SongArray[ind]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer;">${ind+1}. ${SongArray[ind]}</span>\n<br>`;
+}
+document.querySelector(".music-playlist-list").innerHTML = `${PlaylistHtml}`;
+for (let j = 0; j < SongArray.length; j++) {
+document.querySelector(".song-name-" + j).addEventListener("click", function() {
+for (let ind2 = 0; ind2 < SongArray.length; ind2++) {
+document.querySelector(".song-name-" + ind2).style = "color: white; cursor: pointer;";
+document.querySelector(".song-name-" + ind2).innerText = `${ind2+1}. ${SongArray[ind2]}`;
+}
+this.style = "color: yellow; cursor: pointer;";
+this.innerText = `» ${CurrentSongNum+1}. ${SongArray[CurrentSongNum]}`;
+});
+}
 if (localStorage.getItem('idiottestfailedforwxsite') == '1') {
 const ChancesOfIdiotTestFail = Math.round(Math.random() * 2);
 if (ChancesOfIdiotTestFail == 0) {
@@ -13,18 +80,32 @@ document.querySelector(".main-div").innerHTML = `<center><video src="RickRoll.mp
 document.querySelector(".main-div").innerHTML = `<center><video src="JoshHutchersonWhistle.mp4" autoplay style="width: 85vw; height: 85vh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
 }
 } else {
-var HTMLPage = "Home";
+var HTMLPage;
+HTMLPage = "Projects";
+PageSwitch();
+ShuffleSong();
+RenderMusicInfo();
 if (!window.location.search == "") {
-if ((HTMLPage == "Projects") || (window.location.search.split("?")[1].split("&")[0].split("page=")[1] == "projects")) {
+if (window.location.search.includes("page=")) {
+if (window.location.search.slice(window.location.search.indexOf("page=")).split("page=")[1].slice(window.location.search.slice(window.location.search.indexOf("page=")).split("page=")[1].indexOf("projects"), 8) == "projects") {
 HTMLPage = "Home";
 PageSwitch();
+console.log("home");
 } else {
 HTMLPage = "Projects";
 PageSwitch();
+console.log("projects");
 }
+}
+if (window.location.search.includes("songnum=")) {
+if (window.location.search.slice(window.location.search.indexOf("songnum=")).split("songnum=")[1].slice(window.location.search.slice(window.location.search.indexOf("songnum=")), 2).split("&")[0] < SongArray.length) {
+CurrentSongNum = window.location.search.slice(window.location.search.indexOf("songnum=")).split("songnum=")[1].slice(window.location.search.slice(window.location.search.indexOf("songnum=")), 2).split("&")[0] - 1;
+RenderMusicInfo();
 } else {
-HTMLPage = "Projects";
-PageSwitch();
+ShuffleSong();
+RenderMusicInfo();
+}
+}
 }
 }
 function PageSwitch() {
@@ -269,53 +350,6 @@ document.querySelector(".stop-btn").style.animation = "";
 document.querySelector(".next-track").style.animation = "";
 document.querySelector(".prev-track").style.animation = "";
 };
-var CurrentSong;
-const SongArray = [
-"Coldplay - Viva la Vida",
-"Coldplay - Clocks",
-"Coldplay - The Scientist",
-"Coldplay - Yellow",
-"Coldplay - Fix you",
-"Coldplay - In My Place",
-"Coldplay - Don't Panic",
-"Coldplay - Warning Sign",
-"Coldplay - The Hardest Part",
-"Coldplay - Miracles",
-"Coldplay - Talk",
-"Coldplay - Everything's Not Lost",
-"Coldplay - Swallowed in the Sea",
-"Keane - Silenced By The Night",
-"He Is We - I Wouldn't Mind",
-"Cast - Walkaway",
-"Soul Asylum - Runaway Train",
-"Green Day - Boulevard of Broken Dreams",
-"Green Day - Wake Me Up When September Ends",
-"Green Day - Good Riddance",
-"Green Day - Holiday",
-"Green Day - When I Come Around",
-"Green Day - Basket Case",
-"Green Day - Give Me Novacaine",
-"Green Day - Redundant",
-"Green Day - When It's Time",
-"Red Hot Chili Peppers - Snow (Hey Oh)",
-"Red Hot Chili Peppers - Californication",
-"Rascal Flatts - Life Is A Highway",
-"blink-182 - All the Small Things",
-"blink-182 - What's My Age Again",
-"blink-182 - Adam's Song",
-"blink-182 - The Rock Show",
-"blink-182 - I Miss You",
-"blink-182 - First Date",
-"blink-182 - Anthem",
-"blink-182 - Anthem Part Two",
-"blink-182 - Story Of A Lonely Guy",
-"blink-182 - Josie",
-"blink-182 - Man Overboard",
-"blink-182 - M+M's",
-"blink-182 - Stay Together For The Kids",
-"Oasis - Wonderwall",
-"Oasis - Champagne Supernova"
-];
 function ShuffleSong() {
 CurrentSongNum = Math.round(Math.random() * (SongArray.length - 1));
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
@@ -326,7 +360,6 @@ document.querySelector(".music-info").innerHTML = `
 <span>${SongArray[CurrentSongNum].split(" - ")[1]}</span>
 `;
 }
-ShuffleSong();
 function RenderMusicInfo() {
 document.querySelector(".music-info").innerHTML = `
 <span>♫&nbsp;</span> 
@@ -340,7 +373,7 @@ document.querySelector(".song-name-" + i).style.color = "white";
 document.querySelector(".song-name-" + i).innerText = `${i+1}. ${SongArray[i]}`;
 }
 document.querySelector(".song-name-" + CurrentSongNum).style.color = "yellow";
-document.querySelector(".song-name-" + CurrentSongNum).innerText = `» ${CurrentSongNum+1}. ${SongArray[CurrentSongNum]}`;
+document.querySelector(".song-name-" + CurrentSongNum).innerText = `» ${Number(CurrentSongNum)+1}. ${SongArray[CurrentSongNum]}`;
 }
 }
 function TrackChange(value) {
@@ -424,26 +457,6 @@ document.querySelector(".music-playlist").style.animation = "fade-out 0.7s ease"
 document.querySelector(".playlist-shower").innerText = "Show playlist";
 setTimeout(`document.querySelector\('.music-playlist'\).style.display = "none";`, 500);
 }
-}
-var PlaylistHtml = '';
-var j;
-for (var i = 0; i < SongArray.length; i++) {
-if (SongArray[i] == SongArray[CurrentSongNum]) {
-PlaylistHtml += `<span class="song-names song-name-${i}" onclick="CurrentSongNum = ${i}; document.querySelector('.audio').src = \`${SongArray[i]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer; color: yellow;">» ${i+1}. ${SongArray[i]}</span>\n<br>`;
-continue;
-}
-PlaylistHtml += `<span class="song-names song-name-${i}" onclick="CurrentSongNum = ${i}; document.querySelector('.audio').src = \`${SongArray[i]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer;">${i+1}. ${SongArray[i]}</span>\n<br>`;
-}
-document.querySelector(".music-playlist-list").innerHTML = `${PlaylistHtml}`;
-for (let j = 0; j < SongArray.length; j++) {
-document.querySelector(".song-name-" + j).addEventListener("click", function() {
-for (let i = 0; i < SongArray.length; i++) {
-document.querySelector(".song-name-" + i).style = "color: white; cursor: pointer;";
-document.querySelector(".song-name-" + i).innerText = `${i+1}. ${SongArray[i]}`;
-}
-this.style = "color: yellow; cursor: pointer;";
-this.innerText = `» ${CurrentSongNum+1}. ${SongArray[CurrentSongNum]}`;
-});
 }
 document.querySelector(".gear-icon").addEventListener("click", () => {
 if (document.querySelector("fieldset").style.display == "none") {
