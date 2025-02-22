@@ -98,9 +98,10 @@ console.log("projects");
 }
 }
 if (window.location.search.includes("songnum=")) {
-if (window.location.search.slice(window.location.search.indexOf("songnum=")).split("songnum=")[1].slice(window.location.search.slice(window.location.search.indexOf("songnum=")), 2).split("&")[0] < SongArray.length) {
+if (window.location.search.slice(window.location.search.indexOf("songnum=")).split("songnum=")[1].slice(window.location.search.slice(window.location.search.indexOf("songnum=")), 2).split("&")[0] <= SongArray.length) {
 CurrentSongNum = window.location.search.slice(window.location.search.indexOf("songnum=")).split("songnum=")[1].slice(window.location.search.slice(window.location.search.indexOf("songnum=")), 2).split("&")[0] - 1;
 RenderMusicInfo();
+document.querySelector(".audio").src = SongArray[CurrentSongNum];
 } else {
 ShuffleSong();
 RenderMusicInfo();
@@ -365,7 +366,7 @@ document.querySelector(".music-info").innerHTML = `
 <span>♫&nbsp;</span> 
 <span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
 <hr style="margin: 0;">
-<span>${SongArray[CurrentSongNum].split(" - ")[1]}</span>
+<span><b style="color: yellow;">${CurrentSongNum+1}.</b> ${SongArray[CurrentSongNum].split(" - ")[1]}</span>
 `;
 for (let o = 0; o < SongArray.length; o++) {
 for (let i = 0; i < SongArray.length; i++) {
