@@ -15,10 +15,10 @@ document.querySelector(".main-div").innerHTML = `<center><video src="JoshHutcher
 } else {
 var HTMLPage = "Home";
 if (!window.location.search == "") {
-if ((HTMLPage == "Home") & (window.location.search.split("?")[1].split("page=")[1] == "home")) {
+if ((HTMLPage == "Home") & (window.location.search.split("?")[1].split("&")[0].split("page=")[1] == "home")) {
 HTMLPage = "Projects";
 PageSwitch();
-} else if ((HTMLPage == "Projects") || (window.location.search.split("?")[1].split("page=")[1] == "projects")) {
+} else if ((HTMLPage == "Projects") || (window.location.search.split("?")[1].split("&")[0].split("page=")[1] == "projects")) {
 HTMLPage = "Home";
 PageSwitch();
 }
