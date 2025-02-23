@@ -250,6 +250,95 @@ padding: 1px 6px 4px 4px;
 box-shadow: -1.4px -1.4px 0.6px rgb(120, 120, 120) inset, -1px -1px 10px -2px rgb(25, 25, 25);
 user-select: none;
 }
-.audio {
-width: 85%;
+.audio-div {
+background-color: goldenrod;
+border-radius: 30px;
+width: 80%;
+padding: 2px;
+}
+input[data-audio-range] {
+-webkit-appearance: none;
+appearance: none;
+background: transparent;
+}
+input[data-audio-range]:focus {
+outline: none;
+}
+input[data-audio-range]::-webkit-slider-runnable-track {
+background-color: yellow;
+border-radius: 80px;
+transition: all 0.25s ease;
+height: 25px;
+position: relative;
+top: 8px;
+bottom: 0;
+left: 0;
+right: 0;
+}
+input[data-audio-range]::-webkit-slider-runnable-track:active {
+background-color: rgb(225, 200, 40);
+}
+input[data-audio-range]::-webkit-slider-thumb {
+-webkit-appearance: none;
+background-color: whitesmoke;
+width: 30px;
+height: 30px;
+border-radius: 100%;
+position: relative;
+top: -2.5px;
+bottom: 0;
+left: 0;
+right: 0;
+transition: all 0.25s ease;
+}
+input[data-audio-range]::-webkit-slider-thumb:hover {
+background-color: gold;
+border: 4px yellow solid;
+}
+input[data-audio-range]::-webkit-slider-thumb:active {
+background-color: orange;
+width: 26px;
+height: 26px;
+top: -0.5px;
+border: 2px yellow solid;
+box-shadow: 0px 10px 15px yellow, 0px -10px 15px yellow;
+}
+/*  ------ MOZILLA FIREFOX PROPERTIES ------
+input[data-audio-range]::-moz-slider-runnable-track {
+background-color: yellow;
+border-radius: 80px;
+transition: all 0.25s ease;
+height: 25px;
+position: relative;
+top: 8px;
+bottom: 0;
+left: 0;
+right: 0;
+}
+input[data-audio-range]::-moz-slider-runnable-track:active {
+background-color: rgb(175, 190, 90);
+}
+input[data-audio-range]::-moz-slider-thumb {
+background-color: whitesmoke;
+width: 30px;
+height: 30px;
+border-radius: 100%;
+position: relative;
+top: -2.5px;
+bottom: 0;
+left: 0;
+right: 0;
+transition: all 0.25s ease;
+}
+input[data-audio-range]::-moz-slider-thumb:hover {
+background-color: gold;
+border: 4px yellow solid;
+}
+input[data-audio-range]::-moz-slider-thumb:active {
+background-color: orange;
+width: 26px;
+height: 26px;
+top: -0.5px;
+border: 2px yellow solid;
+box-shadow: 0px 10px 15px yellow, 0px -10px 15px yellow;
 }
