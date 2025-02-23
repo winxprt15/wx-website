@@ -498,13 +498,15 @@ if (document.querySelector(".music-playlist").style.display == "none") {
 document.querySelector(".music-playlist").style.animation = "fade-in ease 0.6s";
 document.querySelector(".music-playlist").style.display = "block";
 document.querySelector(".music-playlist-div").style.animation = "music-playlist-div-anim 1.2s ease";
+document.querySelector(".music-playlist-div-h2").style.animation = "music-playlist-div-anim 1.2s ease";
 document.querySelector(".playlist-shower").innerText = "Hide playlist";
 setTimeout("document.querySelector('.music-playlist-div').style.animation = ''", 500);
 } else if (document.querySelector(".music-playlist").style.display == "block") {
 document.querySelector(".music-playlist-div").style.animation = "music-playlist-div-rev-anim 0.5s ease";
+document.querySelector(".music-playlist-div-h2").style.animation = "music-playlist-div-rev-anim 0.5s ease";
 document.querySelector(".music-playlist").style.animation = "fade-out 0.7s ease";
 document.querySelector(".playlist-shower").innerText = "Show playlist";
-setTimeout(`document.querySelector\('.music-playlist'\).style.display = "none";`, 500);
+setTimeout(`document.querySelector(".music-playlist").style.display = "none";`, 500);
 }
 }
 document.querySelector(".gear-icon").addEventListener("click", () => {
