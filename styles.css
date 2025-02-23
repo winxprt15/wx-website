@@ -91,6 +91,7 @@ border: none;
 .main-div {
 padding: 0;
 height: 100%;
+padding-bottom: 70px;
 }
 iframe {
 display: block;
@@ -117,7 +118,7 @@ overflow-x: hidden;
 .main-div {padding: 0;}
 }
 @media screen and (max-width: 500px) {
-.hr1 {margin-bottom: 250px;}
+.hr1 {margin-bottom: 300px;}
 .iframe1, .iframe2, .iframe3 {transform: scale(70%);}
 }
 @media screen and (max-width: 412px) {
@@ -188,7 +189,7 @@ height: 100%;
 position: fixed;
 z-index: 1;
 background-color: rgba(125, 120, 125, 0.9);
-border: outset 15px grey;
+/* display: none; (property used in html inline styles) */
 }
 .music-playlist-div {
 transition: all 0.5s linear;
@@ -205,8 +206,12 @@ text-align: right;
 right: 15vw;
 margin: 0;
 }
-.music-playlist:active {
-border: inset 15px grey;
+.music-playlist-div-h2 {
+position: fixed;
+top: 16vh;
+right: 15vw;
+margin: 0;
+animation: music-playlist-div-anim 1.2s ease;
 }
 .playlist-shower {
 color: yellow;
@@ -256,10 +261,121 @@ border-radius: 30px;
 width: 80%;
 padding: 2px;
 }
+.song-time {
+color: yellow;
+font-weight: 600;
+}
+.audio-controller {
+vertical-align: middle;
+outline: none;
+user-select: none;
+}
+.volume-controller {
+outline: none;
+}
+.volume-slider-div {
+background-color: gold;
+border-radius: 200px;
+position: relative;
+padding: 2px;
+transform: rotate(-90deg);
+bottom: 125px;
+left: 0;
+margin-left: 53vw;
+width: 150px;
+opacity: 0;
+transition: opacity 0.2s;
+}
+.keyboard-bindings {
+display: none;
+position: fixed; width: 100vw;
+height: 100vh;
+background: rgba(120, 120, 120, 0.7);
+color: white;
+animation: fade-in 1s ease;
+z-index: 1;
+}
+.play-pause-shower {
+margin-left: 50vw;
+margin-right: 50vw;
+width: 30px;
+height: 30px;
+display: none;
+cursor: default;
+top: 80vh;
+position: fixed;
+padding: 15px;
+background: rgba(0, 0, 255, 0.7);
+color: white;
+border-radius: 100px;
+animation: fade-in 0.225s ease;
+transform: scale(150%);
+z-index: 100;
+}
+.prev-track-shower {
+display: none;
+cursor: default;
+top: 50vh;
+left: 25vw;
+position: fixed;
+padding: 10px;
+background: rgba(0, 0, 255, 0.7);
+color: white;
+border-radius: 100px;
+animation: fade-in 0.225s ease;
+transform: scale(150%);
+z-index: 100;
+}
+.forw-track-shower {
+display: none;
+cursor: default;
+top: 50vh;
+right: 25vw;
+position: fixed;
+padding: 10px;
+background: rgba(0, 0, 255, 0.7);
+color: white;
+border-radius: 100px;
+animation: fade-in 0.225s ease;
+transform: scale(150%);
+z-index: 100;
+}
+.muted-audio-shower {
+margin-left: 50vw;
+margin-right: 50vw;
+width: 30px;
+height: 30px;
+display: none;
+cursor: default;
+top: 80vh;
+position: fixed;
+padding: 15px;
+background: rgba(0, 0, 255, 0.7);
+color: white;
+border-radius: 100px;
+animation: fade-in 0.225s ease;
+transform: scale(150%);
+z-index: 100;
+}
+.audio-div {
+margin-top: 20vh;
+height: 45px;
+position: fixed;
+left: 10%;
+right: 10%;
+bottom: 0;
+z-index: 2;
+}
+.gear-icon {
+cursor: pointer;
+display: inline;
+}
 input[data-audio-range] {
 -webkit-appearance: none;
+-moz-appearance: none;
 appearance: none;
 background: transparent;
+width: 55%;
 }
 input[data-audio-range]:focus {
 outline: none;
@@ -267,17 +383,20 @@ outline: none;
 input[data-audio-range]::-webkit-slider-runnable-track {
 background-color: yellow;
 border-radius: 80px;
-transition: all 0.25s ease;
+transition: all 0.2s ease;
 height: 25px;
 position: relative;
 top: 8px;
 bottom: 0;
 left: 0;
 right: 0;
-width: 70%;
+}
+input[data-audio-range]::-webkit-slider-runnable-track:hover {
+background-color: rgb(225, 200, 40);
 }
 input[data-audio-range]::-webkit-slider-runnable-track:active {
-background-color: rgb(225, 200, 40);
+background-color: rgb(205, 155, 35);
+border: 4px gold solid;
 }
 input[data-audio-range]::-webkit-slider-thumb {
 -webkit-appearance: none;
@@ -300,7 +419,7 @@ input[data-audio-range]::-webkit-slider-thumb:active {
 background-color: orange;
 width: 26px;
 height: 26px;
-top: -0.5px;
+top: -4px;
 border: 2px yellow solid;
 box-shadow: 0px 10px 15px yellow, 0px -10px 15px yellow;
 }
@@ -315,10 +434,13 @@ top: 8px;
 bottom: 0;
 left: 0;
 right: 0;
-width: 70%;
+}
+input[data-audio-range]::-moz-slider-runnable-track:hover {
+background-color: rgb(225, 200, 40);
 }
 input[data-audio-range]::-moz-slider-runnable-track:active {
-background-color: rgb(175, 190, 90);
+background-color: rgb(205, 155, 35);
+border: 4px gold solid;
 }
 input[data-audio-range]::-moz-slider-thumb {
 background-color: whitesmoke;
