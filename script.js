@@ -97,7 +97,7 @@ PageSwitch();
 }
 }
 if (window.location.search.includes("songnum=")) {
-if (window.location.search.slice(window.location.search.indexOf("songnum=")).split("songnum=")[1].slice(window.location.search.slice(window.location.search.indexOf("songnum=")), 2).split("&")[0] <= SongArray.length) {
+if ((window.location.search.slice(window.location.search.indexOf("songnum=")).split("songnum=")[1].slice(window.location.search.slice(window.location.search.indexOf("songnum=")), 2).split("&")[0] <= SongArray.length) && (window.location.search.slice(window.location.search.indexOf("songnum=")).split("songnum=")[1].slice(window.location.search.slice(window.location.search.indexOf("songnum=")), 2).split("&")[0] > 0)) {
 CurrentSongNum = window.location.search.slice(window.location.search.indexOf("songnum=")).split("songnum=")[1].slice(window.location.search.slice(window.location.search.indexOf("songnum=")), 2).split("&")[0] - 1;
 RenderMusicInfo();
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
@@ -407,7 +407,7 @@ document.querySelector(".music-info").innerHTML = `
 }
 function RenderMusicInfo() {
 document.querySelector(".music-info").innerHTML = `
-<span>♫&nbsp;</span> 
+<span>♫&nbsp;</span>
 <span><b>${SongArray[CurrentSongNum].split(" - ")[0]}</b></span>
 <hr style="border-color: yellow; margin: 0;">
 <span><b style="color: yellow;">${CurrentSongNum+1}.</b> ${SongArray[CurrentSongNum].split(" - ")[1]}</span>
