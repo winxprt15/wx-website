@@ -65,6 +65,7 @@ this.style.color = "yellow";
 this.innerHTML = `» <b>${CurrentSongNum+1}.</b> ${SongArray[CurrentSongNum]}`;
 });
 }
+document.querySelector(".audio").currentTime = 0.00001;
 if (localStorage.getItem('idiottestfailedforwxsite') == '1') {
 const ChancesOfIdiotTestFail = Math.round(Math.random() * 2);
 if (ChancesOfIdiotTestFail == 0) {
@@ -139,7 +140,7 @@ document.querySelector(".audio").pause();
 }
 function StopAudio() {
 document.querySelector(".audio").pause();
-document.querySelector(".audio").currentTime = 0;
+document.querySelector(".audio").currentTime = 0.00001;
 }
 var AudioImgColors;
 function BlueTheme() {
@@ -325,7 +326,50 @@ if (event.code == "KeyS") {
 document.querySelector('.gear-icon').click();
 }
 }
-
+document.querySelector(".song-range-input").addEventListener("input", () => {
+document.querySelector(".audio").currentTime = document.querySelector(".song-range-input").value / 1000 * document.querySelector(".audio").duration;
+});
+document.querySelector(".audio-controller").addEventListener("mouseover", () => {
+document.querySelector(".volume-slider-div").style.opacity = "1";
+});
+document.querySelector(".volume-slider-div").addEventListener("mouseover", () => {
+document.querySelector(".volume-slider-div").style.opacity = "1";
+});
+document.querySelector(".volume-slider-div").addEventListener("mouseleave", () => {
+document.querySelector(".volume-slider-div").style.opacity = "0";
+});
+document.querySelector(".audio-controller").addEventListener("mouseleave", () => {
+document.querySelector(".volume-slider-div").style.opacity = "0";
+});
+document.querySelector(".volume-slider-div").addEventListener("input", () => {
+document.querySelector(".audio").volume = document.querySelector(".volume-controller").value / 100;
+});
+document.querySelector(".audio-controller").addEventListener("click", () => {
+document.querySelector(".audio").muted = !document.querySelector(".audio").muted;
+});
+document.querySelector(".audio").addEventListener("volumechange", () => {
+if ((document.querySelector(".audio").muted) || (document.querySelector(".audio").volume == 0)) {
+document.querySelector(".audio-controller").src = "mute-yellow-xxl.png";
+} else if (document.querySelector(".audio").volume < 0.5) {
+document.querySelector(".audio-controller").src = "volume-down-yellow-xxl.png";
+} else {
+document.querySelector(".audio-controller").src = "volume-up-yellow-xxl.png";
+}
+});
+function ConvertSecsToMins(seconds) {
+let minutes = Math.floor(seconds / 60);
+let extraSeconds = seconds % 60;
+minutes = minutes < 10 ? "0" + minutes : minutes;
+extraSeconds = extraSeconds < 10 ? "0" + extraSeconds : extraSeconds;
+return minutes + ":" + extraSeconds;
+}
+function SongTimeLabelUpdater() {
+ConvertSecsToMins(document.querySelector(".audio").currentTime)
+var AudioCurrentTime = ConvertSecsToMins(document.querySelector(".audio").currentTime).slice(0, ConvertSecsToMins(document.querySelector(".audio").currentTime).indexOf("."))
+var AudioDurationTime = ConvertSecsToMins(document.querySelector(".audio").duration).slice(0, ConvertSecsToMins(document.querySelector(".audio").duration).indexOf("."))
+document.querySelector(".song-time").innerText = AudioCurrentTime + " / " + AudioDurationTime;
+document.querySelector(".song-range-input").value = document.querySelector(".audio").currentTime / document.querySelector(".audio").duration * 1000;
+}
 document.querySelector(".audio").onplay = function() {
 if (AudioImgColors == "blue") {
 document.querySelector(".play-pause-btn").src = 'pause-xxl-blue.png';
@@ -337,6 +381,7 @@ document.querySelector(".play-pause-btn").style.animation = "fade-in-out 2.5s li
 document.querySelector(".stop-btn").style.animation = "fade-in-out 2.5s linear infinite";
 document.querySelector(".next-track").style.animation = "fade-in-out 2.5s linear infinite";
 document.querySelector(".prev-track").style.animation = "fade-in-out 2.5s linear infinite";
+setInterval("SongTimeLabelUpdater();", 100);
 };
 document.querySelector(".audio").onpause = function () {
 if (AudioImgColors == "blue") {
@@ -381,23 +426,27 @@ if (value == 1) {
 if (CurrentSongNum == SongArray.length - 1) {
 CurrentSongNum = 0;
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
+document.querySelector(".audio").currentTime = 0.00001;
 document.querySelector(".audio").play();
 RenderMusicInfo();
 return;
 }
 CurrentSongNum += 1;
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
+document.querySelector(".audio").currentTime = 0.00001;
 document.querySelector(".audio").play();
 } else if (value == -1) {
 if (CurrentSongNum == 0) {
 CurrentSongNum = SongArray.length - 1;
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
+document.querySelector(".audio").currentTime = 0.00001;
 document.querySelector(".audio").play();
 RenderMusicInfo();
 return;
 }
 CurrentSongNum -= 1;
 document.querySelector(".audio").src = SongArray[CurrentSongNum] + ".mp3";
+document.querySelector(".audio").currentTime = 0.00001;
 document.querySelector(".audio").play();
 }
 RenderMusicInfo();
