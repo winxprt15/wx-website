@@ -208,7 +208,7 @@ margin: 0;
 }
 .music-playlist-div-h2 {
 position: fixed;
-top: 16vh;
+top: 115px;
 right: 15vw;
 margin: 0;
 animation: music-playlist-div-anim 1.2s ease;
