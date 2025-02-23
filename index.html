@@ -17,20 +17,31 @@ OnKeyDownAudioControls(windowEvent);
 <h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>
 </div>
 <div style="position: fixed; right: 20px; top: 3px; vertical-align: middle; display: inline-block; z-index: 100;">
-<img class="gear-icon" style="cursor: pointer; display: inline;" src="settings-xxl.png" width="35" draggable="false"/>
+<img class="gear-icon" src="settings-xxl.png" width="35" draggable="false"/>
 </div>
 </div>
 </center>
 <br><br>
+<div class="audio-div">
+<center>
+<label class="song-time">00:00 / 00:00</label>
+<input value="0" max="1000" min="0" type="range" tabindex="-1" class="song-range-input" data-audio-range/>
+<img width="40" class="audio-controller" src="volume-up-yellow-xxl.png" tabindex="-1" draggable="false"/>
+<div class="volume-slider-div">
+<input class="volume-controller" type="range" max="100" min="0" value="100"/>
+</div>
+</center>
+</div>
+<audio class="audio" onended="TrackChange(1)"></audio>
 <audio class="audio-sfx"></audio>
 <img style="position: fixed; z-index: -10; transform: rotate(10deg); top: 32.5vh; left: 5vw; opacity: 0.5;" width="175" src="media-player.PNG">
 <img style="position: fixed; z-index: -10; transform: rotate(-4deg); top: 40vh; left: 75vw; opacity: 0.5;" width="465" src="Code-Notepad.PNG">
 <img style="position: fixed; z-index: -10; transform: rotate(4deg); top: 70vh; left: 1vw; opacity: 0.65;" width="410" src="VMware-Image.PNG">
-<div class="play-pause-stop-div" style="z-index: 15; position: fixed; display: inline-block; margin-top: 38vh; margin-left: 89vw;">
+<div class="play-pause-stop-div" style="z-index: 15; position: fixed; display: inline-block; margin-top: 55vh; margin-left: 89vw;">
 <img class="play-pause-btn" title="Play music" style="display: block; curs" width="75" src="play-xxl.png" onclick="PlayPause();" draggable="false">
 <img class="stop-btn" title="Stop music" style="display: block; margin-top: 10px; cursor: pointer;" width="75" src="stop-xxl.png" onclick="StopAudio();" draggable="false">
 </div>
-<div class="next-prev-tracks" style="position: fixed; display: inline-block; z-index: 15; margin-top: 50vh; margin-left: 4%;">
+<div class="next-prev-tracks" style="position: fixed; display: inline-block; z-index: 15; margin-top: 55vh; margin-left: 4%;">
 <div class="prev-track" style="z-index: 15; transform: scaleX(-1); cursor: pointer;" title="Previous Track" onclick="TrackChange(-1);">
 <img class="backward-img-piece1" width="50" height="75" src="play-xxl.png" draggable="false"/>
 <img class="backward-img-piece2" style="margin-left: -25px;" width="50" height="75" src="play-xxl.png" draggable="false"/>
@@ -40,42 +51,33 @@ OnKeyDownAudioControls(windowEvent);
 <img class="forward-img-piece2" style="margin-left: -25px;" width="50" height="75" src="play-xxl.png" draggable="false"/>
 </div>
 </div>
-<div class="music-playlist" style="display: none;">
+<div style="display: none;" class="music-playlist">
 <center>
 <div class="music-playlist-div">
-<h2>Music playlist:</h2>
+<h2 class="music-playlist-div-h2">Music playlist:</h2>
 <div class="music-playlist-list">
 ...
 </div>
 </div>
-<div style="margin-top: 20vh; height: 45px;" class="audio-div">
-<label style="color: yellow;" class="song-time">00:00 / 00:00</label>
-<input style="width: 80%;" value="0" max="1000" min="0" type="range" tabindex="-1" class="song-range-input" data-audio-range/>
-<img style="vertical-align: middle; outline: none; user-select: none;" width="40" class="audio-controller" src="volume-up-yellow-xxl.png" tabindex="-1" draggable="false"/>
-<div class="volume-slider-div" style="background-color: gold; border-radius: 200px; position: relative; padding: 2px; transform: rotate(-90deg); bottom: 125px; left: 36vw; width: 150px; opacity: 0; transition: opacity 0.2s;">
-<input style="outline: none;" class="volume-controller" type="range" max="100" min="0" value="100"/>
-</div>
-</div>
-<audio class="audio" onended="TrackChange(1)"></audio>
 </center>
 </div>
-<div class="prev-track-shower" style="display: none; cursor: default; top: 50vh; left: 25vw; position: fixed; padding: 10px; background: rgba(0, 0, 255, 0.7); color: white; border-radius: 100px; animation: fade-in 0.225s ease; transform: scale(150%); z-index: 100;">
+<div class="prev-track-shower">
 <h1 style="margin: 0; user-select: none;">&laquo;</h1>
 </div>
-<div class="forw-track-shower" style="display: none; cursor: default; top: 50vh; right: 25vw; position: fixed; padding: 10px; background: rgba(0, 0, 255, 0.7); color: white; border-radius: 100px; animation: fade-in 0.225s ease; transform: scale(150%); z-index: 100;">
+<div class="forw-track-shower">
 <h1 style="margin: 0; user-select: none;">&raquo;</h1>
 </div>
 <center>
-<div class="play-pause-shower" style="margin-left: 50vw; margin-right: 50vw; width: 30px; height: 30px; display: none; cursor: default; top: 80vh; position: fixed; padding: 15px; background: rgba(0, 0, 255, 0.7); color: white; border-radius: 100px; animation: fade-in 0.225s ease; transform: scale(150%); z-index: 100;">
+<div class="play-pause-shower">
 <img width="30" class="play-pause-shower-img" src=""/>
 </div>
 </center>
 <center>
-<div class="muted-audio-shower" style="margin-left: 50vw; margin-right: 50vw; width: 30px; height: 30px; display: none; cursor: default; top: 90vh; position: fixed; padding: 15px; background: rgba(0, 0, 255, 0.7); color: white; border-radius: 100px; animation: fade-in 0.225s ease; transform: scale(150%); z-index: 100;">
+<div class="muted-audio-shower">
 <img width="30" class="muted-audio-shower-img" src=""/>
 </div>
 </center>
-<div style="display: none; position: fixed; width: 100vw; height: 100vh; background: rgba(120, 120, 120, 0.7); color: white; animation: fade-in 1s ease; z-index: 1;" class="keyboard-bindings">
+<div class="keyboard-bindings">
 <center>
 <h2>Keyboard bindings</h2>
 </center>
