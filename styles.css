@@ -274,6 +274,7 @@ top: 8px;
 bottom: 0;
 left: 0;
 right: 0;
+width: 70%;
 }
 input[data-audio-range]::-webkit-slider-runnable-track:active {
 background-color: rgb(225, 200, 40);
@@ -303,7 +304,7 @@ top: -0.5px;
 border: 2px yellow solid;
 box-shadow: 0px 10px 15px yellow, 0px -10px 15px yellow;
 }
-/*  ------ MOZILLA FIREFOX PROPERTIES ------
+/*  ------ MOZILLA FIREFOX PROPERTIES ------ */
 input[data-audio-range]::-moz-slider-runnable-track {
 background-color: yellow;
 border-radius: 80px;
@@ -314,6 +315,7 @@ top: 8px;
 bottom: 0;
 left: 0;
 right: 0;
+width: 70%;
 }
 input[data-audio-range]::-moz-slider-runnable-track:active {
 background-color: rgb(175, 190, 90);
