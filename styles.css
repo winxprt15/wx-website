@@ -4,6 +4,7 @@ color: whitesmoke;
 font-family: Verdana;
 margin: 0;
 overflow-x: hidden;
+touch-action: manipulation;
 }
 .header {
 background: linear-gradient(75deg, blue, green, rgb(0, 205, 50));
