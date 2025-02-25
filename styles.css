@@ -440,6 +440,15 @@ top: -4px;
 border: 2px yellow solid;
 box-shadow: 0px 10px 15px yellow, 0px -10px 15px yellow;
 }
+.volume-controller::-webkit-slider-thumb {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+height: 20px;
+width: 20px;
+background-color: rgb(215, 200, 80);
+border-radius: 100px;
+}
 /* ---------------------- */
 /*  ------ MOZILLA FIREFOX PROPERTIES ------ */
 input[data-audio-range]::-moz-range-track {
@@ -484,10 +493,19 @@ top: -0.5px;
 border: 2px yellow solid;
 box-shadow: 0px 10px 15px yellow, 0px -10px 15px yellow;
 }
+.volume-controller::-moz-range-thumb {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+height: 20px;
+width: 20px;
+background-color: rgb(215, 200, 80);
+border-radius: 100px;
+}
 /* --------------- */
 @keyframes volume-thumb-leaving {
-0% {width: 130px;}
-100% {width: 500px;}
+0% {width: 130px; transform: rotate(0deg);}
+100% {width: 500px; transform: rotate(720deg);}
 }
 .volume-controller {
 transition: all 1s ease;
@@ -496,14 +514,5 @@ appearance: none;
 -moz-appearance: none;
 height: 16px;
 background-color: yellow;
-border-radius: 100px;
-}
-.volume-controller::-webkit-slider-thumb {
-appearance: none;
--webkit-appearance: none;
--moz-appearance: none;
-height: 20px;
-width: 20px;
-background-color: rgb(215, 200, 80);
 border-radius: 100px;
 }
