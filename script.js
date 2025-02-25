@@ -74,7 +74,20 @@ var MessArray = ["Another smart guy...", "You maybe probably fucking couldn't do
 window.alert(MessArray[Math.round(Math.random() * 5)])
 });
 document.addEventListener('contextmenu', event => event.preventDefault());
-document.body.innerHTML = `\n<center style="font-family: Arial;">\n<span style="font-size: 40px; font-weight: 760;">Access denied on this page.<br>Message: We do not accept idiots</span>\n<p style="font-size: 20pt; font-weight: 450;">To ensure you are actually smart, try to find where the secret unlock button is</p>\n<button style="position: absolute; top: ${Math.round(Math.random() * 40 + 30)}vh; right: ${Math.round(Math.random() * 90)}vw; transform: scale(200%); opacity: 0.075; background-color: transparent; color: rgb(70, 70, 70);" onclick="localStorage.removeItem('idiottestfailedforwxsite'); window.location.href = window.location.href;" tabindex="-1">UNLOCK</button>\n</div>\n</center>\n`;
+document.body.innerHTML = `\n<audio class="audio-sfx" autoplay src=""></audio>\n<center style="font-family: Arial;">\n<span style="font-size: 40px; font-weight: 760;">Access denied on this page.<br>Message: We do not accept idiots</span>\n<p style="font-size: 20pt; font-weight: 450;">To ensure you are actually smart, try to find where the secret unlock button is</p>\n<button style="position: absolute; top: ${Math.round(Math.random() * 40 + 30)}vh; right: ${Math.round(Math.random() * 90)}vw; transform: scale(200%); opacity: 0.075; background-color: transparent; color: rgb(70, 70, 70);" onclick="localStorage.removeItem('idiottestfailedforwxsite'); window.location.href = window.location.href;" tabindex="-1">UNLOCK</button>\n</div>\n</center>\n`;
+document.body.style.height = "90vh";
+document.querySelector(".audio-sfx").src = "oops-idiot-test-failure.mp3";
+document.querySelector(".audio-sfx").play();
+var FailureSfxPlayed = document.querySelector(".audio-sfx").paused ? false : true;
+document.body.addEventListener("click", () => {
+if (document.querySelector(".audio-sfx").paused) {
+if (!FailureSfxPlayed) {
+document.querySelector(".audio-sfx").src = "oops-idiot-test-failure.mp3";
+document.querySelector(".audio-sfx").play();
+FailureSfxPlayed = true;
+}
+}
+});
 } else if (ChancesOfIdiotTestFail == 1) {
 document.querySelector(".main-div").innerHTML = `<center><video src="RickRoll.mp4" autoplay style="width: 85vw; height: 85vh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
 } else if (ChancesOfIdiotTestFail == 2) {
@@ -332,6 +345,9 @@ document.querySelector(".audio").currentTime = document.querySelector(".song-ran
 document.querySelector(".audio-controller").addEventListener("mouseover", () => {
 document.querySelector(".volume-slider-div").style.opacity = "1";
 });
+document.querySelector(".audio-controller").addEventListener("click", () => {
+document.querySelector(".audio").muted = !document.querySelector(".audio").muted;
+});
 document.querySelector(".volume-slider-div").addEventListener("mouseover", () => {
 document.querySelector(".volume-slider-div").style.opacity = "1";
 });
@@ -343,16 +359,25 @@ document.querySelector(".volume-slider-div").style.opacity = "0";
 });
 document.querySelector(".volume-slider-div").addEventListener("input", () => {
 document.querySelector(".audio").volume = document.querySelector(".volume-controller").value / 100;
-if (document.querySelector(".audio").volume == 1) {
-document.querySelector(".volume-controller").style = "animation: volume-thumb-leaving 1.2s ease-in-out;";
+if (document.querySelector(".audio").volume == 0.9) {
+if (localStorage.getItem("trollsettforwxsite") == 1) {
+if (document.querySelector(".audio-sfx").paused) {
+document.querySelector(".audio-sfx").src = "helicopter-helicopter.mp3";
+document.querySelector(".audio-sfx").play();
+}
 setTimeout(`
-document.querySelector(".volume-controller").style = "";
-document.querySelector(".volume-slider-div").style = "";
-`, 6000);
+document.querySelector(".volume-controller").style.animation = "volume-thumb-leaving 4s ease-in-out";
+document.querySelector(".volume-controller").style.width = "500px";
+`, 2500);
+setTimeout(`
+document.querySelector(".volume-controller").style.animation = "";
+document.querySelector(".volume-controller").style.width = "";
+`, 7000);
+}
 }
 });
-document.querySelector(".audio-controller").addEventListener("click", () => {
-document.querySelector(".audio").muted = !document.querySelector(".audio").muted;
+document.querySelector(".audio-controller").addEventListener("mouseover", () => {
+document.querySelector(".volume-slider-div").style.opacity = "1";
 });
 document.querySelector(".audio").addEventListener("volumechange", () => {
 if ((document.querySelector(".audio").muted) || (document.querySelector(".audio").volume == 0)) {
