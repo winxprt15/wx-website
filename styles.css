@@ -513,6 +513,7 @@ appearance: none;
 -webkit-appearance: none;
 -moz-appearance: none;
 height: 16px;
+width: 130px;
 background-color: yellow;
 border-radius: 100px;
 }
