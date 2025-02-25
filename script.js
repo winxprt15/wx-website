@@ -362,8 +362,15 @@ document.querySelector(".audio").volume = document.querySelector(".volume-contro
 if (document.querySelector(".audio").volume == 0.9) {
 if (localStorage.getItem("trollsettforwxsite") == 1) {
 if (document.querySelector(".audio-sfx").paused) {
+var SongPlaying;
+if (!document.querySelector(".audio").paused) {document.querySelector(".audio").pause(); SongPlaying=true;}
 document.querySelector(".audio-sfx").src = "helicopter-helicopter.mp3";
 document.querySelector(".audio-sfx").play();
+document.querySelector(".audio-sfx").onended = `
+if (SongPlaying) {
+document.querySelector(".audio").play();
+}
+`
 }
 setTimeout(`
 document.querySelector(".volume-controller").style.animation = "volume-thumb-leaving 4s ease-in-out";
