@@ -7,7 +7,6 @@ color: whitesmoke;
 font-family: Verdana;
 margin: 0;
 overflow-x: hidden;
-touch-action: manipulation;
 }
 .header {
 background: linear-gradient(75deg, blue, green, rgb(0, 205, 50));
@@ -97,10 +96,26 @@ padding: 0;
 height: 100%;
 padding-bottom: 70px;
 }
-iframe {
+iframe, .control10v4-image, .newtabhtml-image, .seclocker-image {
 display: block;
 transition: all 1s ease;
 z-index: 0;
+animation: animation-for-iframe 2s ease-in-out infinite running;
+border-radius: 10px;
+}
+@keyframes animation-for-iframe {
+25% {
+box-shadow: 5px 5px 5px black, -6px -6px 5px red;
+}
+50% {
+box-shadow: -5px -5px 5px black, 6px 6px 5px yellow;
+}
+75% {
+box-shadow: 5px 5px 5px black, -6px -6px 5px blue;
+}
+0%, 100% {
+box-shadow: -5px -5px 5px black, 6px 6px 5px green;
+}
 }
 .iframe1, .iframe2, .iframe3, .control10v4-image, .newtabhtml-image, .seclocker-image {z-index: 0;}
 .play-pause-btn:hover, .stop-btn:hover {
@@ -259,12 +274,6 @@ padding: 1px 6px 4px 4px;
 box-shadow: -1.4px -1.4px 0.6px rgb(120, 120, 120) inset, -1px -1px 10px -2px rgb(25, 25, 25);
 user-select: none;
 }
-.audio-div {
-background-color: goldenrod;
-border-radius: 30px;
-width: 80%;
-padding: 2px;
-}
 .song-time {
 color: yellow;
 font-weight: 600;
@@ -362,13 +371,16 @@ transform: scale(150%);
 z-index: 100;
 }
 .audio-div {
-margin-top: 20vh;
 height: 45px;
 position: fixed;
 left: 10%;
 right: 10%;
 bottom: 0;
 z-index: 2;
+background-color: goldenrod;
+border-radius: 30px;
+width: 80%;
+padding: 2px;
 }
 .gear-icon {
 cursor: pointer;
@@ -384,6 +396,7 @@ width: 55%;
 input[data-audio-range]:focus {
 outline: none;
 }
+/* --------- CHROME PROPERTIES -------- */
 input[data-audio-range]::-webkit-slider-runnable-track {
 background-color: yellow;
 border-radius: 80px;
@@ -427,8 +440,9 @@ top: -4px;
 border: 2px yellow solid;
 box-shadow: 0px 10px 15px yellow, 0px -10px 15px yellow;
 }
+/* ---------------------- */
 /*  ------ MOZILLA FIREFOX PROPERTIES ------ */
-input[data-audio-range]::-moz-slider-runnable-track {
+input[data-audio-range]::-moz-range-track {
 background-color: yellow;
 border-radius: 80px;
 transition: all 0.25s ease;
@@ -439,14 +453,14 @@ bottom: 0;
 left: 0;
 right: 0;
 }
-input[data-audio-range]::-moz-slider-runnable-track:hover {
+input[data-audio-range]::-moz-range-track:hover {
 background-color: rgb(225, 200, 40);
 }
-input[data-audio-range]::-moz-slider-runnable-track:active {
+input[data-audio-range]::-moz-range-track:active {
 background-color: rgb(205, 155, 35);
 border: 4px gold solid;
 }
-input[data-audio-range]::-moz-slider-thumb {
+input[data-audio-range]::-moz-range-thumb {
 background-color: whitesmoke;
 width: 30px;
 height: 30px;
@@ -458,15 +472,38 @@ left: 0;
 right: 0;
 transition: all 0.25s ease;
 }
-input[data-audio-range]::-moz-slider-thumb:hover {
+input[data-audio-range]::-moz-range-thumb:hover {
 background-color: gold;
 border: 4px yellow solid;
 }
-input[data-audio-range]::-moz-slider-thumb:active {
+input[data-audio-range]::-moz-range-thumb:active {
 background-color: orange;
 width: 26px;
 height: 26px;
 top: -0.5px;
 border: 2px yellow solid;
 box-shadow: 0px 10px 15px yellow, 0px -10px 15px yellow;
+}
+/* --------------- */
+@keyframes volume-thumb-leaving {
+0% {width: 130px;}
+100% {width: 500px;}
+}
+.volume-controller {
+transition: all 1s ease;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+height: 16px;
+background-color: yellow;
+border-radius: 100px;
+}
+.volume-controller::-webkit-slider-thumb {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+height: 20px;
+width: 20px;
+background-color: rgb(215, 200, 80);
+border-radius: 100px;
 }
