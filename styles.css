@@ -105,16 +105,16 @@ border-radius: 10px;
 }
 @keyframes animation-for-iframe {
 25% {
-box-shadow: 5px 5px 5px black, -6px -6px 5px red;
+box-shadow: 6px 6px 3px black, -8px -8px 8px yellow;
 }
 50% {
-box-shadow: -5px -5px 5px black, 6px 6px 5px yellow;
+box-shadow: -6px -6px 3px black, 8px 8px 8px yellow;
 }
 75% {
-box-shadow: 5px 5px 5px black, -6px -6px 5px blue;
+box-shadow: 6px 6px 3px black, -8px -8px 8px yellow;
 }
 0%, 100% {
-box-shadow: -5px -5px 5px black, 6px 6px 5px green;
+box-shadow: -6px -6px 3px black, 8px 8px 8px yellow;
 }
 }
 .iframe1, .iframe2, .iframe3, .control10v4-image, .newtabhtml-image, .seclocker-image {z-index: 0;}
