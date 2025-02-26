@@ -230,6 +230,7 @@ position: fixed;
 top: 115px;
 right: 15vw;
 margin: 0;
+font-size: 30px;
 animation: music-playlist-div-anim 1.2s ease;
 }
 .playlist-shower {
@@ -413,7 +414,6 @@ background-color: rgb(225, 200, 40);
 }
 input[data-audio-range]::-webkit-slider-runnable-track:active {
 background-color: rgb(205, 155, 35);
-border: 4px gold solid;
 }
 input[data-audio-range]::-webkit-slider-thumb {
 -webkit-appearance: none;
@@ -434,9 +434,6 @@ border: 4px yellow solid;
 }
 input[data-audio-range]::-webkit-slider-thumb:active {
 background-color: orange;
-width: 26px;
-height: 26px;
-top: -4px;
 border: 2px yellow solid;
 box-shadow: 0px 10px 15px yellow, 0px -10px 15px yellow;
 }
@@ -446,8 +443,15 @@ appearance: none;
 -moz-appearance: none;
 height: 20px;
 width: 20px;
-background-color: rgb(215, 200, 80);
+background-color: rgb(215, 180, 80);
 border-radius: 100px;
+transition: all 0.25s ease;
+}
+.volume-controller::-webkit-slider-thumb:hover {
+background-color: orange;
+}
+.volume-controller::-webkit-slider-thumb:active {
+background-color: rgb(150, 110, 10);
 }
 /* ---------------------- */
 /*  ------ MOZILLA FIREFOX PROPERTIES ------ */
@@ -484,6 +488,9 @@ transition: all 0.25s ease;
 input[data-audio-range]::-moz-range-thumb:hover {
 background-color: gold;
 border: 4px yellow solid;
+width: 26px;
+height: 26px;
+top: -0.5px;
 }
 input[data-audio-range]::-moz-range-thumb:active {
 background-color: orange;
@@ -499,8 +506,15 @@ appearance: none;
 -moz-appearance: none;
 height: 20px;
 width: 20px;
-background-color: rgb(215, 200, 80);
+background-color: rgb(215, 180, 80);
 border-radius: 100px;
+transition: all 0.25s ease;
+}
+.volume-controller::-moz-range-thumb:hover {
+background-color: orange;
+}
+.volume-controller::-moz-range-thumb:active {
+background-color: rgb(150, 110, 10);
 }
 /* --------------- */
 @keyframes volume-thumb-leaving {
@@ -516,4 +530,45 @@ height: 16px;
 width: 130px;
 background-color: yellow;
 border-radius: 100px;
+}
+.volume-controller:hover {
+opacity: 1;
+}
+@keyframes header-animation {
+0% {
+transform: skew(0deg, 0deg);
+}
+50% {
+transform: skew(-3deg, 1deg);
+}
+100% {
+transform: skew(-8deg, 4deg);
+}
+}
+.header h1 {
+animation-name: header-animation;
+animation-duration: 6s;
+animation-delay: 1.25s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+color: lime;
+vertical-align: top;
+margin-top: 0;
+margin-bottom: 0;
+display: inline-block;
+text-shadow: 0px 2px 20px black;
+}
+.header h2 {
+animation-name: header-animation;
+animation-duration: 8s;
+animation-delay: 3s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+color: darkblue;
+vertical-align: bottom;
+margin: 0;
+display: inline-block;
+text-shadow: 0px 0px 1.25px black;
 }
