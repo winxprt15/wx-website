@@ -126,7 +126,7 @@ function PageSwitch() {
 if (HTMLPage == "Projects") {
 document.querySelector(".main-div").innerHTML = '\n<center>\n<div style="animation: bigger-inputfield 7s linear; transform: scale(600%); position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.55); margin-top: 40vh; margin-right: 26vw;" class="mouse-leave-mess">\nWhat are you doing outside??\n<br><br>\n<input class="input-mouse-leave" type="text" placeholder="Please Describe">\n</div>\n<h3 style="margin-bottom: 5px; padding-left: 170px;">Welcome to my website!</h3>\n<span style="margin-bottom: 10px; padding-left: 170px;">Hello World!</span>\n<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Sunday 16/2/2025</span>\n<hr class="hr1" style="border-color: lime;">\n<h2 style="display: inline-block; font-size: 126%;">Upgrading Windows ME until it freezes&nbsp;</h2><h4 style="display: inline-block;">GREEK</h4>\n<br><span style="display: block;" class="section-desc">The ultimate experiment! It wasn\'t until 19th of April 2023 when I tried to install Windows ME and upgrade it without changing any hardware settings until I barely could install Windows 8.1 (I had all my ISOs in Greek language back then)</span>\n<p><iframe class="iframe1" src="https://www.youtube.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;mute=1&amp;autoplay=0&amp;color=white&amp;disablekb=1" width="560" height="315" title="Upgrading Windows ME until it crashes GREEK" frameborder="0" allowfullscreen=""></iframe></p>\n</center>\n<hr class="hr2" style="border-color: lightblue;">\n<center>\n<h2 style="display: block;">Easter eggs of old Windows versions</h2>\n<span style="display: inline-block;" class="section-desc">On the video above I have showed easter eggs of old Windows OSes. It would be quite ironical not knowing the existence of these back in the days when XP came out.\nBut it wasn\'t until 2001 when Microsoft had decided to remove these easter eggs and never put them again\n</span>\n<p><iframe class="iframe2" src="https://www.youtube.com/embed/SFmRsIMJ0aE?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0" width="560" height="315" title="Easter Eggs of old Windows OSes" frameborder="0" allowfullscreen=""></iframe></p>\n</center>\n<hr class="hr3" style="border-color: lime;">\n<div>\n<center>\n<h2 style="display: block; margin-bottom: -20px;">Installing Windows Whistler Build 2446</h2><h3 style="display: block;">(20th Anniversary)</h3>\n<span class="section-desc" style="display: inline-block;">On the video below, I installed and tried one of Windows Whistler\'s builds on a VM, since it was its 20th anniversary day. This build had many differences in comparison to the final and famous Windows XP version at a closer look, for instance the Red Moon Desert, shown as default in this build, was replaced with Bliss wallpaper in the final build</span>\n<p><iframe class="iframe3" width="560" height="315" src="https://www.youtube.com/embed/pAoysWh-PNY?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0" title="Installing Windows Whistler Build 2446" frameborder="0" allowfullscreen=""></iframe></p>\n</center>\n</div>\n';
 document.querySelector(".main-div").style.marginTop = "";
-document.querySelector(".header").innerHTML = `\n<h1 style="vertical-align: top; margin-top: 0; margin-bottom: 0; color: lime; display: inline-block;">WinXprt</h1><h2 style="vertical-align: bottom; margin: 0; color: darkblue; display: inline-block;">'s page</h2>\n`;
+document.querySelector(".header").innerHTML = `\n<h1>WinXprt</h1><h2>'s page</h2>\n`;
 document.querySelector(".a-link3").innerText = "Projects by me";
 document.querySelector(".a-link4").innerText = "Home page";
 document.title = "WinXprt Page";
@@ -498,22 +498,25 @@ if (localStorage.getItem("trollsettforwxsite") == '1') {document.getElementById(
 document.querySelector(".audio-sfx").volume = 0.6;
 var MouseOutMeme = 0;
 var PausedMusic;
-if (localStorage.getItem("trollsettforwxsite") == '1') {
 document.body.addEventListener("mouseenter", function() {
+if (localStorage.getItem("trollsettforwxsite") == '1') {
 document.querySelector(".mouse-leave-mess").style = "z-index: 15; position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
 document.querySelector(".input-mouse-leave").value = null;
 document.querySelector(".audio-sfx").pause();
 if (PausedMusic == 1) {
 if (document.querySelector(".audio").paused) {document.querySelector(".audio").play(); PausedMusic = null;}
 }
+}
 });
 document.body.addEventListener("mouseleave", function() {
+if (localStorage.getItem("trollsettforwxsite") == '1') {
 if (MouseOutMeme < 2) {
 document.querySelector(".mouse-leave-mess").style = "z-index: 15; animation: bigger-inputfield 7s linear; transform: scale(600%); position: fixed; display: inline-block; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.75); margin-top: 25vh; margin-right: 26vw;"
 document.querySelector(".audio-sfx").src="long-brain-fart.mp3";
 if (!document.querySelector(".audio").paused) {document.querySelector(".audio").pause(); PausedMusic = 1;}
 document.querySelector(".audio-sfx").play();
 MouseOutMeme++;
+}
 }
 });
 document.querySelector(".input-mouse-leave").addEventListener("keydown", function() {
@@ -523,7 +526,6 @@ document.querySelector(".mouse-leave-mess").innerHTML = `<span style="font-size:
 setTimeout(`window.location.href = "https://google.com"`, 1750);
 }
 });
-}
 TrollSett(null, 1);
 
 window.addEventListener('keydown', function() {
