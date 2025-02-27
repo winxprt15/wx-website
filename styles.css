@@ -169,7 +169,7 @@ overflow-x: hidden;
 }
 .music-playlist-list {transition: font-size 1s ease;}
 @media screen and (max-width: 720px) {
-.music-playlist-list {font-size: 12px;}
+.song-names {font-size: 16px;}
 }
 @media screen and (max-width: 415px) {
 .control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(45%);}
