@@ -49,10 +49,10 @@ var PlaylistHtml = '';
 var j;
 for (var ind = 0; ind < SongArray.length; ind++) {
 if (SongArray[ind] == SongArray[CurrentSongNum]) {
-PlaylistHtml += `<span class="song-names song-name-${ind}" onclick="CurrentSongNum = ${ind}; document.querySelector('.audio').src = \`${SongArray[ind]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer; color: yellow; display: block;">» ${ind+1}. ${SongArray[ind]}</span>\n`;
+PlaylistHtml += `<span class="song-names song-name-${ind}" onclick="CurrentSongNum = ${ind}; document.querySelector('.audio').src = \`${SongArray[ind]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer; color: yellow; display: inline-block;">» ${ind+1}. ${SongArray[ind]}</span>\n`;
 continue;
 }
-PlaylistHtml += `<span class="song-names song-name-${ind}" onclick="CurrentSongNum = ${ind}; document.querySelector('.audio').src = \`${SongArray[ind]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer; display: block;">${ind+1}. ${SongArray[ind]}</span>\n`;
+PlaylistHtml += `<span class="song-names song-name-${ind}" onclick="CurrentSongNum = ${ind}; document.querySelector('.audio').src = \`${SongArray[ind]}\` + '.mp3'; document.querySelector('.audio').play(); RenderMusicInfo();" style="cursor: pointer; display: inline-block;">${ind+1}. ${SongArray[ind]}</span>\n`;
 }
 document.querySelector(".music-playlist-list").innerHTML = `${PlaylistHtml}`;
 for (let j = 0; j < SongArray.length; j++) {
