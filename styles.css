@@ -102,6 +102,7 @@ transition: all 1s ease;
 z-index: 0;
 animation: animation-for-iframe 2s ease-in-out infinite running;
 border-radius: 10px;
+margin-top: 10px;
 }
 @keyframes animation-for-iframe {
 25% {
