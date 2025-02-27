@@ -132,7 +132,7 @@ transform: scale(70%);
 body {
 overflow-x: hidden;
 }
-.music-playlist-list {font-size: 12px;}
+.song-names {font-size: 16px;}
 }
 @media screen and (max-width: 501px) {
 .main-div {padding: 0;}
@@ -226,7 +226,7 @@ right: 15vw;
 margin: 0;
 }
 .song-names {
-font-size: medium;
+font-size: 12px;
 }
 .music-playlist-div-h2 {
 position: fixed;
