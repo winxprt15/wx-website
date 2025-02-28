@@ -277,6 +277,7 @@ user-select: none;
 .song-time {
 color: yellow;
 font-weight: 600;
+vertical-align: middle;
 }
 .audio-controller {
 vertical-align: middle;
@@ -285,6 +286,7 @@ user-select: none;
 }
 .volume-controller {
 outline: none;
+vertical-align: middle;
 }
 .volume-slider-div {
 background-color: gold;
@@ -392,6 +394,7 @@ input[data-audio-range] {
 appearance: none;
 background: transparent;
 width: 55%;
+vertical-align: middle;
 }
 input[data-audio-range]:focus {
 outline: none;
@@ -457,7 +460,7 @@ background-color: rgb(150, 110, 10);
 input[data-audio-range]::-moz-range-track {
 background-color: yellow;
 border-radius: 80px;
-transition: all 0.25s ease;
+transition: all 0.2s ease;
 height: 25px;
 position: relative;
 top: 8px;
@@ -473,6 +476,7 @@ background-color: rgb(205, 155, 35);
 border: 4px gold solid;
 }
 input[data-audio-range]::-moz-range-thumb {
+-moz-appearance: none;
 background-color: whitesmoke;
 width: 30px;
 height: 30px;
