@@ -277,16 +277,15 @@ user-select: none;
 .song-time {
 color: yellow;
 font-weight: 600;
-vertical-align: middle;
+display: inline-block;
+vertical-align: 12px;
 }
 .audio-controller {
-vertical-align: middle;
 outline: none;
 user-select: none;
 }
 .volume-controller {
 outline: none;
-vertical-align: middle;
 }
 .volume-slider-div {
 background-color: gold;
@@ -394,7 +393,9 @@ input[data-audio-range] {
 appearance: none;
 background: transparent;
 width: 55%;
-vertical-align: middle;
+}
+.song-range-input {
+vertical-align: top;
 }
 input[data-audio-range]:focus {
 outline: none;
@@ -429,6 +430,7 @@ bottom: 0;
 left: 0;
 right: 0;
 transition: all 0.25s ease;
+border: 1px grey solid;
 }
 input[data-audio-range]::-webkit-slider-thumb:hover {
 background-color: gold;
@@ -574,4 +576,9 @@ vertical-align: bottom;
 margin: 0;
 display: inline-block;
 text-shadow: 0px 0px 1.25px black;
+}
+@-moz-document url-prefix() {
+.song-time, .audio-controller, .song-range-input {
+vertical-align: middle;
+}
 }
