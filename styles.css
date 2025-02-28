@@ -153,6 +153,9 @@ overflow-x: hidden;
 .iframe1, .iframe2, .iframe3 {margin-top: -15px;}
 .control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(110%); margin-bottom: 25px;}
 }
+@media screen and (max-width: 700px) {
+.song-names {font-size: 20px;}
+}
 @media screen and (max-width: 501px) {
 .main-div {padding: 0;}
 }
@@ -220,9 +223,6 @@ user-select: none;
 text-align: right;
 right: 15vw;
 margin: 0;
-}
-.song-names {
-font-size: 16px;
 }
 .music-playlist-div-h2 {
 position: fixed;
