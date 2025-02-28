@@ -44,10 +44,10 @@ OnKeyDownAudioControls(windowEvent);
 <div class="next-prev-tracks" style="position: fixed; display: inline-block; z-index: 15; margin-top: 55vh; margin-left: 4%;">
 <div class="prev-track" style="z-index: 15; transform: scaleX(-1); cursor: pointer;" title="Previous Track" onclick="TrackChange(-1);">
 <img class="backward-img-piece1" width="50" height="75" src="play-xxl.png" draggable="false"/>
-<img class="backward-img-piece2" style="margin-left: -25px;" width="50" height="75" src="play-xxl.png" draggable="false"/>
+<img class="backward-img-piece2" style="margin-left: -25px;" width="45" height="75" src="play-xxl.png" draggable="false"/>
 </div>
-<div class="next-track" style="z-index: 15; cursor: pointer;" title="Next Track" onclick="TrackChange(1);">
-<img class="forward-img-piece1" width="50" height="75" src="play-xxl.png" draggable="false"/>
+<div class="next-track" style="z-index: 15; cursor: pointer; margin-top: 3.6px;" title="Next Track" onclick="TrackChange(1);">
+<img class="forward-img-piece1" width="45" height="75" src="play-xxl.png" draggable="false"/>
 <img class="forward-img-piece2" style="margin-left: -25px;" width="50" height="75" src="play-xxl.png" draggable="false"/>
 </div>
 </div>
@@ -240,9 +240,7 @@ this.innerText = 'See bindings';
 ">See bindings</button>
 <center><button style="transform: scale(125%); display: block; margin-top: 10px;" onclick="localStorage.clear(); window.alert('Changes will reset after reload');">Clear all settings</button></center>
 </fieldset>
-<div class="main-div">
-
-</div>
+<div class="main-div"></div>
 <script src="script.js"></script>
 </body>
 </html>
