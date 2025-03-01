@@ -620,14 +620,6 @@ setTimeout("document.querySelector('.gear-icon').style.animation = '';", 500);
 setTimeout("document.querySelector('fieldset').style.display = 'none';", 500);
 }
 });
-document.querySelector(".keyboard-bindings").addEventListener("click", () => {
-if (document.querySelector("fieldset").style.display == "block") {
-document.querySelector("fieldset").style.animation = "fade-out ease 0.5s";
-document.querySelector(".gear-icon").style.animation = "gear-rotate-reverse ease 0.5s";
-setTimeout("document.querySelector('.gear-icon').style.animation = '';", 500);
-setTimeout("document.querySelector('fieldset').style.display = 'none';", 500);
-}
-});
 
 //ONLY ON HOME PAGE. CODE ABOVE
 function YtIframeCookies(value) {
