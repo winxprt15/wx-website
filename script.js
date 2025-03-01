@@ -184,6 +184,9 @@ document.querySelector(".backward-img-piece1").src = "play-xxl-blue.png";
 document.querySelector(".backward-img-piece2").src = "play-xxl-blue.png";
 document.querySelector(".forward-img-piece1").src = "play-xxl-blue.png";
 document.querySelector(".forward-img-piece2").src = "play-xxl-blue.png";
+document.querySelector(".keyboard-bindings").style.backgroundColor = "rgba(0, 0, 150, 0.5)";
+document.querySelector(".music-playlist").style.backgroundColor = "rgba(0, 50, 100, 0.5)";
+document.querySelector("fieldset").style.backgroundColor = "rgba(0, 60, 120, 0.6)";
 localStorage.setItem('themeforwxsite', 'blue');
 document.getElementById('sett1').checked = true;
 }
@@ -206,6 +209,9 @@ document.querySelector(".backward-img-piece1").src = "play-xxl-green.png";
 document.querySelector(".backward-img-piece2").src = "play-xxl-green.png";
 document.querySelector(".forward-img-piece1").src = "play-xxl-green.png";
 document.querySelector(".forward-img-piece2").src = "play-xxl-green.png";
+document.querySelector(".keyboard-bindings").style.backgroundColor = "rgba(0, 150, 0, 0.5)";
+document.querySelector(".music-playlist").style.backgroundColor = "rgba(0, 100, 50, 0.5)";
+document.querySelector("fieldset").style.backgroundColor = "rgba(0, 120, 60, 0.6)";
 document.getElementById('sett2').checked = true;
 }
 if (localStorage.getItem('themeforwxsite') == 'green') {
@@ -221,6 +227,9 @@ document.querySelector(".backward-img-piece1").src = "play-xxl-green.png";
 document.querySelector(".backward-img-piece2").src = "play-xxl-green.png";
 document.querySelector(".forward-img-piece1").src = "play-xxl-green.png";
 document.querySelector(".forward-img-piece2").src = "play-xxl-green.png";
+document.querySelector(".keyboard-bindings").style.backgroundColor = "rgba(0, 150, 0, 0.5)";
+document.querySelector(".music-playlist").style.backgroundColor = "rgba(0, 100, 50, 0.5)";
+document.querySelector("fieldset").style.backgroundColor = "rgba(0, 120, 60, 0.6)";
 document.getElementById('sett2').checked = true;
 AudioImgColors = "green";
 } else {
@@ -236,6 +245,9 @@ document.querySelector(".backward-img-piece1").src = "play-xxl-blue.png";
 document.querySelector(".backward-img-piece2").src = "play-xxl-blue.png";
 document.querySelector(".forward-img-piece1").src = "play-xxl-blue.png";
 document.querySelector(".forward-img-piece2").src = "play-xxl-blue.png";
+document.querySelector(".keyboard-bindings").style.backgroundColor = "rgba(0, 0, 150, 0.5)";
+document.querySelector(".music-playlist").style.backgroundColor = "rgba(0, 50, 100, 0.5)";
+document.querySelector("fieldset").style.backgroundColor = "rgba(0, 60, 120, 0.6)";
 document.getElementById('sett1').checked = true;
 AudioImgColors = "blue";
 }
