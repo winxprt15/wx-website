@@ -223,6 +223,8 @@ user-select: none;
 text-align: right;
 right: 15vw;
 margin: 0;
+overflow-y: scroll;
+scroll-behavior: smooth;
 }
 .music-playlist-div-h2 {
 position: fixed;
@@ -283,7 +285,6 @@ vertical-align: 12px;
 .audio-controller {
 outline: none;
 user-select: none;
--webkit-touch-callout: none;
 }
 .volume-controller {
 outline: none;
@@ -541,7 +542,12 @@ border-radius: 100px;
 opacity: 1;
 }
 @keyframes header-animation {
-0% {
+0% {transform: rotate(0deg) skew(0deg);}
+25% {transform: rotateY(2deg) rotateX(2deg) skewX(-2deg) skewY(2deg);}
+50% {transform: rotateY(-2deg) rotateX(4deg) skewX(0deg) skewY(-2deg);}
+75% {transform: rotateY(2deg) rotateX(-2deg) skewX(1deg) skewY(2deg);}
+100% {transform: rotateY(4deg) rotateX(-3deg) skewX(4deg) skewY(-2deg);}
+/* 0% {
 transform: skew(0deg, 0deg);
 }
 50% {
@@ -549,12 +555,12 @@ transform: skew(-3deg, 1deg);
 }
 100% {
 transform: skew(-8deg, 4deg);
-}
+} */
 }
 .header h1 {
 animation-name: header-animation;
-animation-duration: 6s;
-animation-delay: 1.25s;
+animation-duration: 8s;
+animation-delay: 1.5s;
 animation-timing-function: linear;
 animation-iteration-count: infinite;
 animation-direction: alternate;
@@ -578,6 +584,7 @@ margin: 0;
 display: inline-block;
 text-shadow: 0px 0px 1.25px black;
 }
+/* ---- MOZILLA FIREFOX PROPERTIES. CODE ABOVE ---- */
 @-moz-document url-prefix() {
 .song-time, .audio-controller, .song-range-input {
 vertical-align: middle;
