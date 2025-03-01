@@ -358,6 +358,9 @@ document.querySelector(".volume-slider-div").style.opacity = "1";
 document.querySelector(".audio-controller").addEventListener("click", () => {
 document.querySelector(".audio").muted = !document.querySelector(".audio").muted;
 });
+document.querySelector(".audio-controller").addEventListener("contextmenu", () => {
+event.preventDefault();
+});
 document.querySelector(".volume-slider-div").addEventListener("mouseover", () => {
 document.querySelector(".volume-slider-div").style.opacity = "1";
 });
