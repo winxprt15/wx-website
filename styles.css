@@ -96,6 +96,9 @@ padding: 0;
 height: 100%;
 padding-bottom: 70px;
 }
+fieldset {
+backdrop-filter: blur(4px);
+}
 iframe, .control10v4-image, .newtabhtml-image, .seclocker-image {
 display: block;
 transition: all 1s ease;
