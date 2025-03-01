@@ -283,6 +283,7 @@ vertical-align: 12px;
 .audio-controller {
 outline: none;
 user-select: none;
+pointer-events: none;
 }
 .volume-controller {
 outline: none;
