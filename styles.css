@@ -52,10 +52,9 @@ border-radius: 100px;
 margin: 2px;
 user-select: none;
 pointer: default;
--webkit-tap-highlight-color: transparent;
 user-drag: none;
 }
-.a-link1:hover:after, .a-link2:hover:after {
+/* .a-link1:hover:after, .a-link2:hover:after {
 opacity: 1;
 }
 .a-link1:after, .a-link2:after {
@@ -75,6 +74,7 @@ border-radius: 15px;
 }
 .a-link1:after {content: "Visit my Instagram!";}
 .a-link2:after {content: "Visit my YouTube channel!";}
+*/
 .a-link1:hover, .a-link2:hover {
 transform: scale(115%);
 background-color: transparent;
