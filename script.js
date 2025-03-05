@@ -89,9 +89,9 @@ FailureSfxPlayed = true;
 }
 });
 } else if (ChancesOfIdiotTestFail == 1) {
-document.querySelector(".main-div").innerHTML = `<center><video src="RickRoll.mp4" autoplay style="width: 85vw; height: 85vh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
+document.querySelector(".main-div").innerHTML = `<center><video src="RickRoll.mp4" autoplay style="width: 85vw; height: 85dvh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
 } else if (ChancesOfIdiotTestFail == 2) {
-document.querySelector(".main-div").innerHTML = `<center><video src="JoshHutchersonWhistle.mp4" autoplay style="width: 85vw; height: 85vh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
+document.querySelector(".main-div").innerHTML = `<center><video src="JoshHutchersonWhistle.mp4" autoplay style="width: 85vw; height: 85dvh;" controls loop></video><span style="display: block;">Watch the video above till the end</span></center>`;
 }
 } else {
 var HTMLPage;
