@@ -21,7 +21,7 @@ to {clip-path: circle(135% at 17% 0%);}
 }
 .side-div-div {
 position: fixed;
-width: 16%;
+width: max(175px, 16%);
 z-index: 20;
 border-radius: 0px 0px 20px 50px;
 padding: 2px;
@@ -180,7 +180,6 @@ overflow-x: hidden;
 }
 @media screen and (max-width: 980px) {
 .section-desc {font-size: 20px; padding-left: 8%; padding-right: 8%;}
-.side-div-div {width: 164px;}
 }
 @media screen and (max-width: 900px) {
 .control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(75%);}
