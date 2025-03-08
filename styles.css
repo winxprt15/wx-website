@@ -15,10 +15,27 @@ height: 2.6em;
 width: 100%;
 position: fixed;
 }
+@keyframes side-div-anim {
+from {clip-path: circle(0% at 17% 0%);}
+to {clip-path: circle(135% at 17% 0%);}
+}
 .side-div-div {
 position: fixed;
 width: 16%;
 z-index: 20;
+border-radius: 0px 0px 20px 50px;
+padding: 2px;
+background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.6));
+transition: clip-path 1.25s ease;
+display: none;
+}
+.menu-icon {
+padding: 2px;
+border-radius: 10px;
+cursor: pointer;
+}
+.menu-icon:hover {
+background-color: rgba(100, 100, 100, 0.4);
 }
 .side-div-div ul li:hover {
 list-style-type: "O ";
@@ -140,7 +157,6 @@ overflow-x: hidden;
 .main-div {padding: 0;}
 }
 @media screen and (max-width: 500px) {
-.hr1 {margin-bottom: 300px;}
 .iframe1, .iframe2, .iframe3 {transform: scale(70%);}
 }
 @media screen and (max-width: 412px) {
@@ -162,13 +178,11 @@ overflow-x: hidden;
 @media screen and (max-width: 501px) {
 .main-div {padding: 0;}
 }
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 980px) {
 .section-desc {font-size: 20px; padding-left: 8%; padding-right: 8%;}
-.hr1 {margin-bottom: 230px;}
 .side-div-div {width: 164px;}
 }
 @media screen and (max-width: 900px) {
-.hr1 {margin-bottom: 250px;}
 .control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(75%);}
 .iframe1, .iframe2, .iframe3 {transform: scale(78%);}
 }
