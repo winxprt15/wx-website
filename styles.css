@@ -1,5 +1,7 @@
 * {
 -webkit-tap-highlight-color: transparent;
+scrollbar-width: auto;
+scrollbar-color: lime blue;
 }
 body {
 background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));
