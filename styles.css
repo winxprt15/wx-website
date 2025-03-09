@@ -653,6 +653,11 @@ margin: 0;
 display: inline-block;
 text-shadow: 0px 0px 1.25px black;
 }
+mark {
+background: linear-gradient(90deg, rgb(235, 210, 75), rgb(230, 200, 10));
+border-radius: 15px;
+color: white;
+}
 /* ---- MOZILLA FIREFOX PROPERTIES. CODE ABOVE ---- */
 @-moz-document url-prefix() {
 .song-time, .audio-controller, .song-range-input {
