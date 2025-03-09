@@ -656,7 +656,8 @@ text-shadow: 0px 0px 1.25px black;
 mark {
 background: linear-gradient(90deg, rgb(235, 210, 75), rgb(230, 200, 10));
 border-radius: 15px;
-color: white;
+padding: 2px 5px 2px 5px;
+color: rgb(55, 65, 155);
 }
 /* ---- MOZILLA FIREFOX PROPERTIES. CODE ABOVE ---- */
 @-moz-document url-prefix() {
