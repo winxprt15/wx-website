@@ -153,6 +153,11 @@ document.querySelector(".intro-span").innerHTML += `\n<p style="margin: 0; margi
 }
 }
 }
+if (window.location.href.includes("#")) {
+window.location.href = window.location.href.split("#")[0] + "#";
+} else {
+window.location.href += "#";
+}
 }
 document.querySelector(".a-link3").addEventListener("click", () => {
 PageSwitch();
@@ -170,7 +175,8 @@ document.querySelector(".audio").currentTime = 0.00001;
 }
 var AudioImgColors;
 function BlueTheme() {
-document.body.style.background = "linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100))";
+document.body.appendChild(document.createElement("style")).innerHTML = `body::after {background: linear-gradient(var(--body-bg-deg), rgb(0, 15, 80), rgb(0, 55, 100));}`;
+document.body.style.background = "linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 50, 120))";
 document.querySelector(".side-div-div").style.background = "linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7))";
 document.querySelector(".hr1").style.borderColor = "lime";
 document.querySelector(".hr2").style.borderColor = "lightblue";
@@ -194,6 +200,7 @@ localStorage.setItem('themeforwxsite', 'blue');
 document.getElementById('sett1').checked = true;
 }
 function GreenTheme() {
+document.body.appendChild(document.createElement("style")).innerHTML = `body::after {background: linear-gradient(var(--body-bg-deg), rgb(0, 80, 15), rgb(0, 100, 55));}`;
 document.body.style.background = "linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55))";
 document.querySelector(".side-div-div").style.background = "linear-gradient(75deg, green, rgba(0, 175, 40, 0.7))";
 document.querySelector(".hr1").style.borderColor = "lightblue";
@@ -218,6 +225,7 @@ document.querySelector("fieldset").style.backgroundColor = "rgba(0, 120, 60, 0.6
 document.getElementById('sett2').checked = true;
 }
 if (localStorage.getItem('themeforwxsite') == 'green') {
+document.body.appendChild(document.createElement("style")).innerHTML = `body::after {background: linear-gradient(var(--body-bg-deg), rgb(0, 80, 15), rgb(0, 100, 55));}`;
 document.body.style.background = "linear-gradient(90deg, rgb(0, 80, 15), rgb(0, 100, 55))";
 document.querySelector(".side-div-div").style.background = "linear-gradient(75deg, green, rgba(0, 175, 40, 0.7))";
 document.querySelector(".hr1").style.borderColor = "lightblue";
@@ -236,7 +244,8 @@ document.querySelector("fieldset").style.backgroundColor = "rgba(0, 120, 60, 0.6
 document.getElementById('sett2').checked = true;
 AudioImgColors = "green";
 } else {
-document.body.style.background = "linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100))";
+document.body.appendChild(document.createElement("style")).innerHTML = `body::after {background: linear-gradient(var(--body-bg-deg), rgb(0, 15, 80), rgb(0, 55, 100));}`;
+document.body.style.background = "linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 50, 125))";
 document.querySelector(".side-div-div").style.background = "linear-gradient(75deg, blue, rgba(0, 40, 175, 0.7))";
 document.querySelector(".hr1").style.borderColor = "lime";
 document.querySelector(".hr2").style.borderColor = "lightblue";
@@ -625,6 +634,7 @@ setTimeout("document.querySelector('fieldset').style.display = 'none';", 500);
 });
 document.querySelector(".menu-icon").addEventListener("click", () => {
 if (document.querySelector(".side-div-div").style.display == "none") {
+document.querySelector(".outer-music-info").style.top = "16.5em";
 document.querySelector(".intro-heading").style.paddingLeft = "170px";
 document.querySelector(".intro-span").style.paddingLeft = "170px";
 document.querySelector(".side-div-div").style.animation = "side-div-anim 1.5s ease";
@@ -634,6 +644,7 @@ setTimeout(`document.querySelector(".side-div-div").style.animation = "";`, 1500
 document.querySelector(".intro-heading").style.paddingLeft = "0px";
 document.querySelector(".intro-span").style.paddingLeft = "0px";
 document.querySelector(".side-div-div").style.animation = "side-div-anim 0.5s linear reverse";
+document.querySelector(".outer-music-info").style.top = "2.6em";
 setTimeout(`document.querySelector(".side-div-div").style.display = "none";
 document.querySelector(".side-div-div").style.animation = "";
 `, 500);
