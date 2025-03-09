@@ -34,7 +34,7 @@ from {background-position: 0% 0;}
 to {background-position: 135% 0;}
 }
 .header {
-background: linear-gradient(75deg, blue, green, rgb(0, 205, 50));
+background: linear-gradient(75deg, blue, green, rgb(0, 205, 50), blue);
 background-size: 400%;
 background-repeat: no;
 margin: 0;
