@@ -29,7 +29,7 @@ const SongArray = [
 "Red Hot Chili Peppers - Snow (Hey Oh)",
 "Red Hot Chili Peppers - Californication",
 "Linkin Park - What I've Done",
-"Linkin Park - In The End",
+"Linkin Park - In the End",
 "Linkin Park - Numb",
 "Linkin Park - Somewhere I Belong",
 "Linkin Park - Leave Out All The Rest",
