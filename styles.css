@@ -3,33 +3,78 @@
 scrollbar-width: auto;
 scrollbar-color: lime blue;
 }
+@property --body-bg-deg {
+syntax: "<angle>";
+inherits: false;
+initial-value: 90deg;
+}
+@keyframes body-bg-anim {
+from {--body-bg-deg: 0deg;}
+to {--body-bg-deg: -360deg;}
+}
 body {
-background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 55, 100));
 color: whitesmoke;
 font-family: Verdana;
 margin: 0;
 overflow-x: hidden;
+position: relative;
+}
+body::after {
+content: '';
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+animation: body-bg-anim 5s linear infinite;
+z-index: -11;
+}
+@keyframes header-anim {
+from {background-position: 0% 0;}
+to {background-position: 135% 0;}
 }
 .header {
 background: linear-gradient(75deg, blue, green, rgb(0, 205, 50));
+background-size: 400%;
+background-repeat: no;
 margin: 0;
 height: 2.6em;
 width: 100%;
 position: fixed;
+animation: header-anim 2s linear infinite;
 }
 @keyframes side-div-anim {
 from {clip-path: circle(0% at 17% 0%);}
 to {clip-path: circle(135% at 17% 0%);}
 }
-.side-div-div {
+.outer-side-div {
 position: fixed;
+top: 0px;
 width: max(175px, 16%);
 z-index: 20;
+}
+.side-div-div {
+position: relative;
+top: calc(2.6em + 0px);
+width: 100%;
+z-index: 20;
+padding: 5px;
 border-radius: 0px 0px 20px 50px;
-padding: 2px;
 background: linear-gradient(75deg, blue, rgba(0, 40, 175, 0.6));
 transition: clip-path 1.25s ease;
 display: none;
+height: max-content;
+}
+.outer-music-info {
+position: absolute;
+top: 2.6em;
+left: 0;
+background: linear-gradient(90deg, rgba(200, 200, 50, 0.7), rgba(250, 200, 100, 0.5));
+padding: 5px;
+width: 100%;
+z-index: 20;
+border-radius: 50px 20px 100px 0px;
+transition: all 0.75s ease;
 }
 .menu-icon {
 padding: 2px;
@@ -114,6 +159,7 @@ border: none;
 padding: 0;
 height: 100%;
 padding-bottom: 70px;
+margin-top: -25px;
 }
 fieldset {
 backdrop-filter: blur(4px);
@@ -254,13 +300,18 @@ animation: music-playlist-div-anim 1.2s ease;
 }
 .playlist-shower {
 color: yellow;
-padding: 2px;
+padding: 2px 15px 2px 15px;
 display: block;
 text-align: center;
 cursor: pointer;
 user-select: none;
 border-radius: 50px;
-font-weight: 550;	
+font-weight: 550;
+width: max-content;
+position: relative;
+top: 12.5px;
+left: 50%;
+transform: translate(-50%, -50%);	
 }
 .playlist-shower:hover {
 background-color: yellow;
