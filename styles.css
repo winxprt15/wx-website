@@ -18,6 +18,7 @@ font-family: Verdana;
 margin: 0;
 overflow-x: hidden;
 position: relative;
+animation: fade-in 1.5s ease;
 }
 body::after {
 content: '';
