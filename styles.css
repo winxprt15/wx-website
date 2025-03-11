@@ -13,6 +13,7 @@ from {--body-bg-deg: 0deg;}
 to {--body-bg-deg: -360deg;}
 }
 body {
+background: linear-gradient(90deg, rgb(0, 15, 80), rgb(0, 50, 120));
 color: whitesmoke;
 font-family: Verdana;
 margin: 0;
