@@ -641,14 +641,10 @@ setTimeout("document.querySelector('fieldset').style.display = 'none';", 500);
 document.querySelector(".menu-icon").addEventListener("click", () => {
 if (document.querySelector(".side-div-div").style.display == "none") {
 document.querySelector(".outer-music-info").style.top = "16.5em";
-document.querySelector(".intro-heading").style.paddingLeft = "170px";
-document.querySelector(".intro-span").style.paddingLeft = "170px";
 document.querySelector(".side-div-div").style.animation = "side-div-anim 1.5s ease";
 document.querySelector(".side-div-div").style.display = "block";
 setTimeout(`document.querySelector(".side-div-div").style.animation = "";`, 1500)
 } else if (document.querySelector(".side-div-div").style.display == "block") {
-document.querySelector(".intro-heading").style.paddingLeft = "0px";
-document.querySelector(".intro-span").style.paddingLeft = "0px";
 document.querySelector(".side-div-div").style.animation = "side-div-anim 0.5s linear reverse";
 document.querySelector(".outer-music-info").style.top = "2.6em";
 setTimeout(`document.querySelector(".side-div-div").style.display = "none";
