@@ -660,6 +660,9 @@ border-radius: 15px;
 padding: 2px 5px 2px 5px;
 color: rgb(55, 65, 155);
 }
+.intro-heading, .intro-span {
+padding-left: max(175px, 16%);
+}
 /* ---- MOZILLA FIREFOX PROPERTIES. CODE ABOVE ---- */
 @-moz-document url-prefix() {
 .song-time, .audio-controller, .song-range-input {
