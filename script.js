@@ -23,6 +23,7 @@ const SongArray = [
 "Green Day - Holiday",
 "Green Day - When I Come Around",
 "Green Day - Basket Case",
+"Green Day - Waiting",
 "Green Day - Give Me Novacaine",
 "Green Day - Redundant",
 "Green Day - When It's Time",
@@ -48,6 +49,7 @@ const SongArray = [
 "blink-182 - Man Overboard",
 "blink-182 - M+M's",
 "blink-182 - Stay Together For The Kids",
+"blink-182 - Every Time I Look For You",
 "Oasis - Wonderwall",
 "Oasis - Champagne Supernova"
 ];
