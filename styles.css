@@ -166,7 +166,7 @@ margin-top: -25px;
 fieldset {
 backdrop-filter: blur(4px);
 }
-iframe, .control10v4-image, .newtabhtml-image, .seclocker-image {
+iframe, .control10v4-image, .newtabhtml-image, .seclocker-image, .destroyer-screenshot {
 display: block;
 transition: all 1s ease;
 z-index: 0;
@@ -188,7 +188,7 @@ box-shadow: 6px 6px 3px black, -8px -8px 8px yellow;
 box-shadow: -6px -6px 3px black, 8px 8px 8px yellow;
 }
 }
-.iframe1, .iframe2, .iframe3, .control10v4-image, .newtabhtml-image, .seclocker-image {z-index: 0;}
+.iframe1, .iframe2, .iframe3, .control10v4-image, .newtabhtml-image, .seclocker-image, .destroyer-screenshot {z-index: 0;}
 .play-pause-btn:hover, .stop-btn:hover {
 cursor: pointer;
 }
@@ -220,7 +220,7 @@ overflow-x: hidden;
 @media screen and (min-width: 1700px) {
 .section-desc {font-size: 20px; margin-bottom: 25px;}
 .iframe1, .iframe2, .iframe3 {margin-top: -15px;}
-.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(110%); margin-bottom: 25px;}
+.control10v4-image, .newtabhtml-image, .seclocker-image, .destroyer-screenshot {transform: scale(110%); margin-bottom: 25px;}
 }
 @media screen and (max-width: 700px) {
 .song-names {font-size: 20px;}
@@ -232,18 +232,18 @@ overflow-x: hidden;
 .section-desc {font-size: 20px; padding-left: 8%; padding-right: 8%;}
 }
 @media screen and (max-width: 900px) {
-.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(75%);}
+.control10v4-image, .newtabhtml-image, .seclocker-image, .destroyer-screenshot {transform: scale(75%);}
 .iframe1, .iframe2, .iframe3 {transform: scale(78%);}
 }
 .music-playlist-list {transition: font-size 0.5s ease;}
 @media screen and (max-width: 415px) {
-.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(45%);}
+.control10v4-image, .newtabhtml-image, .seclocker-image, .destroyer-screenshot {transform: scale(45%);}
 }
 @media screen and (max-width: 370px) {
-.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(35%);}
+.control10v4-image, .newtabhtml-image, .seclocker-image, .destroyer-screenshot {transform: scale(35%);}
 }
 @media screen and (max-width: 351px) {
-.control10v4-image, .newtabhtml-image, .seclocker-image {transform: scale(20%);}
+.control10v4-image, .newtabhtml-image, .seclocker-image, .destroyer-screenshot {transform: scale(20%);}
 }
 .hr1 {transition: margin-bottom 1s ease;}
 .header {z-index: 5;}
