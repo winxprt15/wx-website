@@ -132,7 +132,7 @@ RenderMusicInfo();
 }
 function PageSwitch() {
 if (HTMLPage == "Projects") {
-document.querySelector(".main-div").innerHTML = '\n<center>\n<div style="animation: bigger-inputfield 7s linear; transform: scale(600%); position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.55); margin-top: 40vh; margin-right: 26vw;" class="mouse-leave-mess">\nWhat are you doing outside??\n<br><br>\n<input class="input-mouse-leave" type="text" placeholder="Please Describe">\n</div>\n<h3 style="margin-bottom: 5px; transition: padding-left 1s ease;" class="intro-heading">Welcome to my website!</h3>\n<span style="margin-bottom: 10px; transition: padding-left 1s ease;" class="intro-span">Hello World!</span>\n<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Sunday 16/2/2025</span>\n<hr class="hr1" style="border-color: lime;">\n<h2 style="display: inline-block; font-size: 126%;">Upgrading Windows ME until it freezes&nbsp;</h2><h4 style="display: inline-block;">GREEK</h4>\n<br><span style="display: block;" class="section-desc">The ultimate experiment! It wasn\'t until 19th of April 2023 when I tried to install Windows ME and upgrade it without changing any hardware settings until I barely could install Windows 8.1 (I had all my ISOs in Greek language back then)</span>\n<p><iframe class="iframe1" src="https://www.youtube.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;mute=1&amp;autoplay=0&amp;color=white&amp;disablekb=1" width="560" height="315" title="Upgrading Windows ME until it crashes GREEK" frameborder="0" allowfullscreen=""></iframe></p>\n</center>\n<hr class="hr2" style="border-color: lightblue;">\n<center>\n<h2 style="display: block;">Easter eggs of old Windows versions</h2>\n<span style="display: inline-block;" class="section-desc">On the video above I have showed easter eggs of old Windows OSes. It would be quite ironical not knowing the existence of these back in the days when XP came out.\nBut it wasn\'t until 2001 when Microsoft had decided to remove these easter eggs and never put them again\n</span>\n<p><iframe class="iframe2" src="https://www.youtube.com/embed/SFmRsIMJ0aE?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0" width="560" height="315" title="Easter Eggs of old Windows OSes" frameborder="0" allowfullscreen=""></iframe></p>\n</center>\n<hr class="hr3" style="border-color: lime;">\n<div>\n<center>\n<h2 style="display: block; margin-bottom: -20px;">Installing Windows Whistler Build 2446</h2><h3 style="display: block;">(20th Anniversary)</h3>\n<span class="section-desc" style="display: inline-block;">On the video below, I installed and tried one of Windows Whistler\'s builds on a VM, since it was its 20th anniversary day. This build had many differences in comparison to the final and famous Windows XP version at a closer look, for instance the Red Moon Desert, shown as default in this build, was replaced with Bliss wallpaper in the final build</span>\n<p><iframe class="iframe3" width="560" height="315" src="https://www.youtube.com/embed/pAoysWh-PNY?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0" title="Installing Windows Whistler Build 2446" frameborder="0" allowfullscreen=""></iframe></p>\n</center>\n</div>\n';
+document.querySelector(".main-div").innerHTML = '\n<center>\n<div style="animation: bigger-inputfield 7s linear; transform: scale(600%); position: fixed; display: none; padding: 10px; margin-top: 25px; background-color: rgba(100, 100, 100, 0.55); margin-top: 40vh; margin-right: 26vw;" class="mouse-leave-mess">\nWhat are you doing outside??\n<br><br>\n<input class="input-mouse-leave" type="text" placeholder="Please Describe">\n</div>\n<h3 style="margin-bottom: 5px; transition: padding-left 1s ease;" class="intro-heading">Welcome to my website!</h3>\n<span style="margin-bottom: 10px; transition: padding-left 1s ease;" class="intro-span">Hello World!</span>\n<span style="font-size: 10pt; display: inline-block; width: 100%; text-align: right;">Last update: Sunday 16/2/2025</span>\n<hr class="hr1" style="border-color: lime;">\n<h2 style="display: inline-block; font-size: 126%;">Destroyer Mode is here! <mark>NEW!</mark></h2><span class="section-desc">With the new site&apos;s feature you can destroy almost all elements of the site by adjusting their width and height just by dragging at the bottom right corner of any element.<br>All you need for that is to go to Settings &rarr; Toggle Destroyer Mode. Reload for the changes to take effect and there you go! You&apos;re in creative mode.</span>\n<a target="_blank" title="Screenshot of the destroyed site using the Destroyer Mode. Click to open image in new tab" href="DestroyerScreenShot.png"><img width="600" class="destroyer-screenshot" src="DestroyerScreenShot.png"></a>\n<hr class="hr2">\n<h2 style="display: inline-block; font-size: 126%;">Upgrading Windows ME until it freezes&nbsp;</h2><h4 style="display: inline-block;">GREEK</h4>\n<br><span style="display: block;" class="section-desc">The ultimate experiment! It wasn\'t until 19th of April 2023 when I tried to install Windows ME and upgrade it without changing any hardware settings until I barely could install Windows 8.1 (I had all my ISOs in Greek language back then)</span>\n<p><iframe class="iframe1" src="https://www.youtube.com/embed/07kkCVbjY7E?hl=en-us&amp;rel=0&amp;mute=1&amp;autoplay=0&amp;color=white&amp;disablekb=1" width="560" height="315" title="Upgrading Windows ME until it crashes GREEK" frameborder="0" allowfullscreen=""></iframe></p>\n</center>\n<hr class="hr3" style="border-color: lightblue;">\n<center>\n<h2 style="display: block;">Easter eggs of old Windows versions</h2>\n<span style="display: inline-block;" class="section-desc">On the video above I have showed easter eggs of old Windows OSes. It would be quite ironical not knowing the existence of these back in the days when XP came out.\nBut it wasn\'t until 2001 when Microsoft had decided to remove these easter eggs and never put them again\n</span>\n<p><iframe class="iframe2" src="https://www.youtube.com/embed/SFmRsIMJ0aE?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0" width="560" height="315" title="Easter Eggs of old Windows OSes" frameborder="0" allowfullscreen=""></iframe></p>\n</center>\n<hr class="hr4" style="border-color: lime;">\n<div>\n<center>\n<h2 style="display: block; margin-bottom: -20px;">Installing Windows Whistler Build 2446</h2><h3 style="display: block;">(20th Anniversary)</h3>\n<span class="section-desc" style="display: inline-block;">On the video below, I installed and tried one of Windows Whistler\'s builds on a VM, since it was its 20th anniversary day. This build had many differences in comparison to the final and famous Windows XP version at a closer look, for instance the Red Moon Desert, shown as default in this build, was replaced with Bliss wallpaper in the final build</span>\n<p><iframe class="iframe3" width="560" height="315" src="https://www.youtube.com/embed/pAoysWh-PNY?hl=en-us&amp;rel=0&amp;color=white&amp;disablekb=1&amp;mute=1&amp;autoplay=0" title="Installing Windows Whistler Build 2446" frameborder="0" allowfullscreen=""></iframe></p>\n</center>\n</div>\n';
 document.querySelector(".main-div").style.marginTop = "";
 document.querySelector(".header").innerHTML = `\n<h1>WinXprt</h1><h2>'s page</h2>\n`;
 document.querySelector(".a-link3").innerText = "Projects by me";
@@ -156,6 +156,12 @@ if (localStorage.getItem("trollsettforwxsite") == "1") {
 document.querySelector(".intro-span").innerHTML += `\n<p style="margin: 0; margin-left: 170px; text-align: center;">You're given my congrats for using another browser other than Chrome... 👏👏👏</p>`;
 }
 }
+}
+if (localStorage.getItem("destroyerforwxsite") == '1') {
+document.querySelectorAll("*").forEach(element => {
+element.style.overflow = "auto";
+element.style.resize = "both";
+});
 }
 if (window.location.href.includes("#")) {
 window.location.href = window.location.href.split("#")[0] + "#";
@@ -185,6 +191,7 @@ document.querySelector(".side-div-div").style.background = "linear-gradient(75de
 document.querySelector(".hr1").style.borderColor = "lime";
 document.querySelector(".hr2").style.borderColor = "lightblue";
 document.querySelector(".hr3").style.borderColor = "lime";
+document.querySelector(".hr4").style.borderColor = "lightblue";
 document.querySelector("fieldset").style.borderColor = "blue";
 AudioImgColors = "blue";
 if (document.querySelector(".audio").paused) {
@@ -210,6 +217,7 @@ document.querySelector(".side-div-div").style.background = "linear-gradient(75de
 document.querySelector(".hr1").style.borderColor = "lightblue";
 document.querySelector(".hr2").style.borderColor = "lime";
 document.querySelector(".hr3").style.borderColor = "lightblue";
+document.querySelector(".hr4").style.borderColor = "lime";
 document.querySelector("fieldset").style.borderColor = "green";
 localStorage.setItem('themeforwxsite', 'green');
 AudioImgColors = "green";
@@ -235,6 +243,7 @@ document.querySelector(".side-div-div").style.background = "linear-gradient(75de
 document.querySelector(".hr1").style.borderColor = "lightblue";
 document.querySelector(".hr2").style.borderColor = "lime";
 document.querySelector(".hr3").style.borderColor = "lightblue";
+document.querySelector(".hr4").style.borderColor = "lime";
 document.querySelector("fieldset").style.borderColor = "green";
 document.querySelector(".play-pause-btn").src = "play-xxl-green.png";
 document.querySelector(".stop-btn").src = "stop-xxl-green.png";
@@ -254,6 +263,7 @@ document.querySelector(".side-div-div").style.background = "linear-gradient(75de
 document.querySelector(".hr1").style.borderColor = "lime";
 document.querySelector(".hr2").style.borderColor = "lightblue";
 document.querySelector(".hr3").style.borderColor = "lime";
+document.querySelector(".hr4").style.borderColor = "lightblue";
 document.querySelector("fieldset").style.borderColor = "blue";
 document.querySelector(".play-pause-btn").src = "play-xxl-blue.png"
 document.querySelector(".stop-btn").src = "stop-xxl-blue.png";
@@ -649,6 +659,13 @@ setTimeout(`document.querySelector(".side-div-div").style.display = "none";
 document.querySelector(".side-div-div").style.animation = "";
 `, 500);
 }
+});
+
+document.querySelector(".destroyer-mode-label").innerHTML += localStorage.getItem("destroyerforwxsite") == null || localStorage.getItem("destroyerforwxsite") == '0' ? 'inactive ' : 'active ';
+document.querySelector(".destroyer-mode-btn").addEventListener("click", () => {
+localStorage.setItem("destroyerforwxsite", localStorage.getItem("destroyerforwxsite") == null || localStorage.getItem("destroyerforwxsite") == '0' ? '1' : '0')
+document.querySelector(".destroyer-mode-label").innerHTML = localStorage.getItem("destroyerforwxsite") == null || localStorage.getItem("destroyerforwxsite") == '0' ? 'Destroyer Mode is inactive ' : 'Destroyer Mode is active ';
+console.log("done");
 });
 
 //ONLY ON HOME PAGE. CODE ABOVE
